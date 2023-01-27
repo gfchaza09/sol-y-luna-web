@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sol y Luna - development</title>
+        <title>Sol y Luna - MatuDev</title>
         <meta
           name="description"
           content="Sitio web del restaurant Sol y Luna"
