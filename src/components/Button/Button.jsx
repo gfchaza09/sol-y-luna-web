@@ -1,0 +1,1 @@
+// Este componente se modificará o se eliminará
