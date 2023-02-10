@@ -5,11 +5,11 @@ import { CssBaseline } from "@nextui-org/react";
 // Components
 import ModalComponent from "@/components/Modal/ModalComponent";
 
-const Home = () => {
+const Location = () => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Home</title>
+        <title>Sol y Luna - Ubicaciones</title>
         <meta
           name="description"
           content="Sitio web del restaurant Sol y Luna"
@@ -20,13 +20,13 @@ const Home = () => {
       </Head>
       <main style={{ minHeight: "100vh" }}>
         <ModalComponent />
-        <Link href="/menu">Menu</Link>
-        <Link href="/about">Nosotros</Link>
-        <Link href="/location">Ubicación</Link>
-        <Link href="/services">Servicios</Link>
+        <Link href="/">Home</Link>
+        <Link href="/location/local1">Local1</Link>
+        <Link href="/location/local2">Local2</Link>
+        <Link href="/location/local3">Local3</Link>
       </main>
     </>
   );
 };
 
-export default Home;
+export default Location;
