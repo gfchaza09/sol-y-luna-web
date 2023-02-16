@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CssBaseline } from "@nextui-org/react";
 // Components
 import ModalComponent from "@/components/Modal/ModalComponent";
+import Footer from "@/components/Footer/Footer";
 
 const About = () => {
   return (
@@ -18,9 +19,9 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
         {CssBaseline.flush()}
       </Head>
-      <main style={{ minHeight: "100vh" }}>
+      <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
         <ModalComponent />
-        <Link href="/">Home</Link>
+        <Footer />
       </main>
     </>
   );
