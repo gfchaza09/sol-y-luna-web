@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.15",
     "@next/font": "13.1.5",
     "@nextui-org/react": "^1.0.0-beta.12",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
+    "framer-motion": "^9.0.3",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
