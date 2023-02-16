@@ -1,0 +1,27 @@
+.logo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav__container {
+    margin-bottom: 20px;
+}
+
+.nav__container > ul, .nav__container__slinks > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+@media screen and (max-width: 375px) {
+    .nav__container {
+        margin-bottom: 32px;
+    }
+
+    .nav__container > ul {
+        gap: 10px;
+    }
+}

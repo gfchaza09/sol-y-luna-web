@@ -5,6 +5,7 @@ import { CssBaseline } from "@nextui-org/react";
 // Components
 import ModalComponent from "@/components/Modal/ModalComponent";
 import Footer from "@/components/Footer/Footer";
+import ButtonComponent from "@/components/Button/ButtonComponent";
 
 const About = () => {
   return (
@@ -20,7 +21,7 @@ const About = () => {
         {CssBaseline.flush()}
       </Head>
       <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
-        <ModalComponent />
+        <ButtonComponent href="/">Más sobre nosotros</ButtonComponent>
         <Footer />
       </main>
     </>
