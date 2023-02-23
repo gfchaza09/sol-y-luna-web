@@ -6,6 +6,7 @@ import { CssBaseline } from "@nextui-org/react";
 import ModalComponent from "@/components/Modal/ModalComponent";
 import Footer from "@/components/Footer/Footer";
 import ButtonComponent from "@/components/Button/ButtonComponent";
+import NavBar from "@/components/NavBar/NavBar";
 
 const About = () => {
   return (
@@ -22,6 +23,8 @@ const About = () => {
       </Head>
       <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
         <ButtonComponent href="/">Más sobre nosotros</ButtonComponent>
+        <NavBar />
+
         <Footer />
       </main>
     </>
