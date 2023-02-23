@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 // NextUI
-import { CssBaseline } from "@nextui-org/react";
+import { CssBaseline, Spacer } from "@nextui-org/react";
 // Components
-import ModalComponent from "@/components/Modal/ModalComponent";
 import NavBar from "@/components/NavBar/NavBar";
+import Footer from "@/components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -20,13 +20,10 @@ const Home = () => {
         {CssBaseline.flush()}
       </Head>
       <NavBar/>
-      {/* <main style={{ minHeight: "100vh" }}>
-        <ModalComponent />
-        <Link href="/menu">Menu</Link>
-        <Link href="/about">Nosotros</Link>
-        <Link href="/location">Ubicación</Link>
-        <Link href="/services">Servicios</Link>
-      </main> */}
+      <Spacer />
+      <Spacer />
+
+      <Footer />
     </>
   );
 };
