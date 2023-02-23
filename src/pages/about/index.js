@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 // NextUI
 import { CssBaseline } from "@nextui-org/react";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 // Components
 import ModalComponent from "@/components/Modal/ModalComponent";
 import Footer from "@/components/Footer/Footer";
@@ -23,8 +24,6 @@ const About = () => {
       </Head>
       <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
         <ButtonComponent href="/">Más sobre nosotros</ButtonComponent>
-        <NavBar />
-
         <Footer />
       </main>
     </>
