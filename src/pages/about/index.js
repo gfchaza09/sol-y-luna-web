@@ -24,6 +24,7 @@ const About = () => {
       </Head>
       <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
         <ButtonComponent href="/">Más sobre nosotros</ButtonComponent>
+        <NavBar />
         <Footer />
       </main>
     </>
