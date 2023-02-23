@@ -1,0 +1,33 @@
+.btn {
+    border: 1px solid #fff;
+    border-radius: 12px;
+    background: #000;
+    color: #fff;
+    max-width: 190px;
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+}
+
+.btn__carrousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+    border-radius: 50%;
+    max-width: 56px;
+    width: 100%;
+    height: 56px;
+}
+
+@media screen and (max-width: 375px) {
+
+    .btn {
+        max-width: 159px;
+    }
+
+    .btn__carrousel {
+        max-width: 44px;
+        height: 44px;
+    }
+}

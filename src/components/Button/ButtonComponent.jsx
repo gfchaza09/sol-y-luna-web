@@ -1,9 +1,21 @@
-import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
-const ButtonComponent = ({children, href}) => {
-  return (
-    <Button as="a" href={href} css={{borderRadius: '$md', border:'$space$1 solid $white', background: '$black', width: '190px'}}>{children}</Button>
-  )
-}
+import classes from "./ButtonComponent.module.css";
 
-export default ButtonComponent
+const { btn, btn__carrousel } = classes;
+
+const ButtonComponent = ({ children, href, icon }) => {
+  return icon ? (
+    <button className={`${btn} ${btn__carrousel}`}>
+      {children}
+    </button>
+  ) : (
+    <Link href={href}>
+      <button className={btn}>
+        {children}
+      </button>
+    </Link>
+  );
+};
+
+export default ButtonComponent;
