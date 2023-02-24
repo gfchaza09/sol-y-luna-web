@@ -1,13 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
 // NextUI
 import { CssBaseline } from "@nextui-org/react";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 // Components
-import ModalComponent from "@/components/Modal/ModalComponent";
 import Footer from "@/components/Footer/Footer";
-import ButtonComponent from "@/components/Button/ButtonComponent";
 import NavBar from "@/components/NavBar/NavBar";
+import EmployeeCard from "@/components/Cards/EmployeeCard/EmployeeCard";
 
 const About = () => {
   return (
@@ -22,11 +19,11 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
         {CssBaseline.flush()}
       </Head>
+      <NavBar />
       <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
-        <ButtonComponent href="/">Más sobre nosotros</ButtonComponent>
-        <NavBar />
-        <Footer />
+        <EmployeeCard />
       </main>
+      <Footer />
     </>
   );
 };
