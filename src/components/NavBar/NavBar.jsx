@@ -57,7 +57,7 @@ function NavBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" color="secondary">
+      <AppBar component="nav" color="secondary" sx={{height:"75px", display:"flex", justifyContent:"center", alignContent:"center"}} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -68,7 +68,7 @@ function NavBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Link href="/">
+          <Link href="/" sx={{ marginRight: "10px" }}>
             <Image
               src="/assets/logo/sol_y_luna_dark.png"
               width={38}
@@ -76,6 +76,12 @@ function NavBar(props) {
               alt="logo"
             />
           </Link>
+          <Link 
+          href="/"
+          className="text-logo" >
+            Sol y Luna Restaurant
+          </Link>
+
           <Box sx={{ display: { xs: "none", sm: "block" }, ml: 12 }}>
             {navItems.map((item) => (
               <Link href={item.href} key={item.name}>
@@ -92,14 +98,6 @@ function NavBar(props) {
                 alt="logo"
                 width={20}
                 height={20}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="assets/icons-themes/sun-dark.svg"
-                alt="logo"
-                width={24}
-                height={24}
               />
             </Link>
           </Box>
@@ -127,7 +125,7 @@ function NavBar(props) {
       </Box>
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
-        <Typography>
+        <Typography className="h4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
           unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus
           quibusdam, aliquam dolore excepturi quae. Distinctio enim at eligendi
@@ -164,6 +162,22 @@ function NavBar(props) {
           facilis libero dolorem dolores sunt inventore perferendis, aut
           sapiente modi nesciunt.
         </Typography>
+        <br />
+        <h1>This is a heading 1</h1>
+        <br />
+        <h2>This is a heading 2</h2>
+        <br />
+        <h3>This is a heading 3</h3>
+        <br />
+        <h4>This is a heading 4</h4>
+        <br />
+        <h5>This is a heading 5</h5>
+        <br />
+        <h6>This is a heading 6</h6>
+        <br />
+        <a href="">anchor links</a>
+        <br />
+        <button>Im a button</button>
       </Box>
     </Box>
   );
