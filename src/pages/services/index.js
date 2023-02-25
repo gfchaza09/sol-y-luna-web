@@ -1,11 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-// NextUI
-import { CssBaseline } from "@nextui-org/react";
 // Components
-import ModalComponent from "@/components/Modal/ModalComponent";
 import NavBar from "@/components/NavBar/NavBar";
-
+import Footer from "@/components/Footer/Footer";
 
 const Services = () => {
   return (
@@ -18,13 +15,12 @@ const Services = () => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {CssBaseline.flush()}
       </Head>
-      <NavBar/>
+      <NavBar />
       <main style={{ minHeight: "100vh" }}>
-        <ModalComponent />
         <Link href="/">Home</Link>
       </main>
+      <Footer />
     </>
   );
 };
