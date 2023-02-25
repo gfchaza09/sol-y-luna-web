@@ -4,4 +4,20 @@
     height: 711px;
     background-color: #1c1c1c;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+
+.card__container > img {
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 375px) {
+    .card__container {
+        max-width: 335px;
+        height: 573px;
+    }
 }

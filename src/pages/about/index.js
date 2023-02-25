@@ -1,6 +1,4 @@
 import Head from "next/head";
-// NextUI
-import { CssBaseline } from "@nextui-org/react";
 // Components
 import Footer from "@/components/Footer/Footer";
 import NavBar from "@/components/NavBar/NavBar";
@@ -17,7 +15,6 @@ const About = () => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {CssBaseline.flush()}
       </Head>
       <NavBar />
       <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
