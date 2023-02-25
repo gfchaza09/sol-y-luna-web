@@ -7,6 +7,23 @@
   --font-Josefin: "Josefin Sans", sans-serif;
   --font-Lato: "Lato", sans-serif;
 
+  /* Heading size-line height */
+  --heading1-sizing: 50px;
+  --heading1-line-height: 50px;
+
+  --heading2-sizing: 40px;
+  --heading2-line-height: 45px;
+
+  --heading3-sizing: 28px;
+  --heading3-line-height: 28px;
+
+  --heading4-sizing: 22px;
+  --heading4-line-height: 25px;
+
+  --heading5-sizing: 17px;
+  --heading5-line-height: 22px;
+
+
   /* Color palette */
   --dark-bg: #111111;
   --light-bg: #f4f6f8;
@@ -39,40 +56,35 @@ body {
 /* Headings */
 h1 {
   font-family: var(--font-Josefin);
-  font-size: 50px;
-  line-height: 50px;
+  font-size: var(--heading1-sizing);
+  line-height: var(--heading1-line-height);
   font-weight: 800;
 }
 h2 {
   font-family: var(--font-Josefin);
-  font-size: 40px;
-  line-height: 45px;
+  font-size: var(--heading2-sizing);
+  line-height: var(--heading2-line-height);
   font-weight: 500;
 }
 h3 {
   font-family: var(--font-Josefin);
-  font-size: 28px;
-  line-height: 28px;
+  font-size: var(--heading3-sizing);
+  line-height: var(--heading3-line-height);
   font-weight: bold;
 }
 h4 {
   font-family: var(--font-Josefin);
-  font-size: 22px;
-  line-height: 25px;
+  font-size: var(--heading4-sizing);
+  line-height: var(--heading4-line-height);
   font-weight: 800;
 }
 h5 {
   font-family: var(--font-Josefin);
-  font-size: 17px;
-  line-height: 22px;
+  font-size: var(--heading5-sizing);
+  line-height: var(--heading5-line-height);
   font-weight: 500;
 }
-h6 {
-  font-family: var(--font-Josefin);
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
+
 
 a {
   font-family: var(--font-Lato);
@@ -90,7 +102,7 @@ button{
   background: var(--green-wsp);
 }
 
-/* Styled Headings */
+/* Heading styles */
 .h1{
   font-family: var(--font-Josefin);
   font-size: 50px;
@@ -121,14 +133,8 @@ button{
   line-height: 22px;
   font-weight: 500;
 }
-.h6 {
-  font-family: var(--font-Josefin);
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
 
-/* Titulo del logo */
+/* Logo title */
 .text-logo{
   font-family: var(--font-Lato);
   font-size: 17px;
@@ -137,4 +143,31 @@ button{
   text-decoration: none;
   color: var(--white);
 }
+
+/* labels styles */
+.link{
+  font-family: var(--font-Lato);
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* buttons styles */
+.button-nav{
+  font-family: var(--font-Lato);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform:capitalize;
+  color: var(--white);
+}
+
+/* Responsive styles */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
 
