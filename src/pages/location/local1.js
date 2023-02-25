@@ -1,9 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-// NextUI
-import { CssBaseline } from "@nextui-org/react";
 // Components
-import ModalComponent from "@/components/Modal/ModalComponent";
 
 const Local1 = () => {
   return (
@@ -16,10 +13,8 @@ const Local1 = () => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {CssBaseline.flush()}
       </Head>
       <main style={{ minHeight: "100vh" }}>
-        <ModalComponent />
         <Link href="/location">Atrás</Link>
       </main>
     </>

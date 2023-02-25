@@ -1,3 +1,15 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1440px;
+    width: 100%;
+    height: 292px;
+    background-color: #111111;
+}
+
 .logo__container {
     display: flex;
     justify-content: center;
@@ -7,6 +19,7 @@
 
 .nav__container {
     margin-bottom: 20px;
+    color: #666c70
 }
 
 .nav__container > ul, .nav__container__slinks > ul {
@@ -14,6 +27,10 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
+}
+
+.nav__container > ul > li, .nav__container__slinks > ul > li {
+    list-style: none;
 }
 
 @media screen and (max-width: 375px) {
