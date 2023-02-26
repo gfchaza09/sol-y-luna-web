@@ -17,12 +17,13 @@ import Button from "@mui/material/Button";
 import { Link } from "@mui/material";
 import Image from "next/image";
 
-const drawerWidth = 300;
+const drawerWidth = 350;
 const navItems = [
-  { name: "About", href: "/about" },
+  { name: "Inicio", href: "/" },
   { name: "Menu", href: "/menu" },
-  { name: "Services", href: "/services" },
-  { name: "Location", href: "/location" },
+  { name: "Nosotros", href: "/about" },
+  { name: "Servicios", href: "/services" },
+  { name: "Ubicaciones", href: "/location" },
 ];
 
 function NavBar(props) {
@@ -35,7 +36,7 @@ function NavBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Link href="/" >
+      <Link href="/">
         <Image
           src="/assets/logo/sol_y_luna_light.png"
           width={38}
@@ -47,11 +48,25 @@ function NavBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item.name}/>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              component="a"
+              href={item.href}
+            >
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem>
+          <ListItemButton disablePadding sx={{ textAlign: "center" }}>
+            <Image
+              src="assets/icons-themes/moon-dark.svg"
+              alt="logo"
+              width={20}
+              height={20}
+            />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
@@ -61,18 +76,22 @@ function NavBar(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
       <AppBar
+        enableColorOnDark
         component="nav"
-        color="secondary"
+        color="primary"
         sx={{
           height: "75px",
-          display: "flex",
           justifyContent: "center",
-          alignItems: "space-evenly",
         }}
       >
-        <Toolbar>
+        <Toolbar
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -82,27 +101,44 @@ function NavBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Link href="/" sx={{ marginRight: "10px" }}>
-            <Image
-              src="/assets/logo/sol_y_luna_dark.png"
-              width={38}
-              height={38}
-              alt="logo"
-            />
-          </Link>
-          <Link href="/" className="text-logo">
-            Sol y Luna Restaurant
-          </Link>
-
-          <Box sx={{ display: { xs: "none", sm: "block" }, ml: 12 }}>
+          <Box
+            sx={{
+              display: { xs: "flex", sm: "flex" },
+              justifyContent: "center",
+            }}
+          >
+            <Link
+              href="/"
+              sx={{
+                display: { xs: "block", md: "block" },
+                mr: 1,
+                textAlign: "center",
+              }}
+            >
+              <Image
+                src="/assets/logo/sol_y_luna_dark.png"
+                width={38}
+                height={38}
+                alt="logo"
+              />
+            </Link>
+            <Typography
+              className="button-nav"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: { xs: "block", md: "block" },
+              }}
+            >
+              Sol y Luna Restaurante
+            </Typography>
+          </Box>
+          <Box sx={{ display: { xs: "none", sm: "block" }, ml: 6 }} noWrap>
             {navItems.map((item) => (
               <Link href={item.href} key={item.name}>
-                <Button
-                  key={item}
-                  sx={{ marginRight: "1px" }}
-                  className={"button-nav"}
-                  variant="text"
-                >
+                <Button key={item} sx={{ mr: 1 }} className={"button-nav"}>
                   {item.name}
                 </Button>
               </Link>
@@ -142,69 +178,17 @@ function NavBar(props) {
       </Box>
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
-        <Typography className="h4">
+        <Typography className="h2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
           unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus
           quibusdam, aliquam dolore excepturi quae. Distinctio enim at eligendi
-          perferendis in cum quibusdam sed quae, accusantium et aperiam? Quod
-          itaque exercitationem, at ab sequi qui modi delectus quia corrupti
-          alias distinctio nostrum. Minima ex dolor modi inventore sapiente
-          necessitatibus aliquam fuga et. Sed numquam quibusdam at officia
-          sapiente porro maxime corrupti perspiciatis asperiores, exercitationem
-          eius nostrum consequuntur iure aliquam itaque, assumenda et! Quibusdam
-          temporibus beatae doloremque voluptatum doloribus soluta accusamus
-          porro reprehenderit eos inventore facere, fugit, molestiae ab officiis
-          illo voluptates recusandae. Vel dolor nobis eius, ratione atque
-          soluta, aliquam fugit qui iste architecto perspiciatis. Nobis,
-          voluptatem! Cumque, eligendi unde aliquid minus quis sit debitis
-          obcaecati error, delectus quo eius exercitationem tempore. Delectus
-          sapiente, provident corporis dolorum quibusdam aut beatae repellendus
-          est labore quisquam praesentium repudiandae non vel laboriosam quo ab
-          perferendis velit ipsa deleniti modi! Ipsam, illo quod. Nesciunt
-          commodi nihil corrupti cum non fugiat praesentium doloremque
-          architecto laborum aliquid. Quae, maxime recusandae? Eveniet dolore
-          molestiae dicta blanditiis est expedita eius debitis cupiditate porro
-          sed aspernatur quidem, repellat nihil quasi praesentium quia eos,
-          quibusdam provident. Incidunt tempore vel placeat voluptate iure
-          labore, repellendus beatae quia unde est aliquid dolor molestias
-          libero. Reiciendis similique exercitationem consequatur, nobis placeat
-          illo laudantium! Enim perferendis nulla soluta magni error, provident
-          repellat similique cupiditate ipsam, et tempore cumque quod! Qui, iure
-          suscipit tempora unde rerum autem saepe nisi vel cupiditate iusto.
-          Illum, corrupti? Fugiat quidem accusantium nulla. Aliquid inventore
-          commodi reprehenderit rerum reiciendis! Quidem alias repudiandae eaque
-          eveniet cumque nihil aliquam in expedita, impedit quas ipsum nesciunt
-          ipsa ullam consequuntur dignissimos numquam at nisi porro a, quaerat
-          rem repellendus. Voluptates perspiciatis, in pariatur impedit, nam
-          facilis libero dolorem dolores sunt inventore perferendis, aut
-          sapiente modi nesciunt.
         </Typography>
-        <br />
-        <h1>This is a heading 1</h1>
-        <br />
-        <h2>This is a heading 2</h2>
-        <br />
-        <h3>This is a heading 3</h3>
-        <br />
-        <h4>This is a heading 4</h4>
-        <br />
-        <h5>This is a heading 5</h5>
-        <br />
-        <h6>This is a heading 6</h6>
-        <br />
-        <a href="">anchor links</a>
-        <br />
-        <button>Im a button</button>
       </Box>
     </Box>
   );
 }
 
 NavBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
