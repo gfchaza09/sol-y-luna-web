@@ -46,8 +46,8 @@ function NavBar(props) {
       </Link>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablepadding="true">
             <ListItemButton
               sx={{ textAlign: "center" }}
               component="a"
@@ -58,7 +58,7 @@ function NavBar(props) {
           </ListItem>
         ))}
         <ListItem>
-          <ListItemButton disablePadding sx={{ textAlign: "center" }}>
+          <ListItemButton disablepadding="true" sx={{ textAlign: "center" }}>
             <Image
               src="assets/icons-themes/moon-dark.svg"
               alt="logo"
@@ -135,9 +135,9 @@ function NavBar(props) {
               Sol y Luna Restaurante
             </Typography>
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" }, ml: 6 }} noWrap>
-            {navItems.map((item) => (
-              <Link href={item.href} key={item.name}>
+          <Box sx={{ display: { xs: "none", sm: "block" }, ml: 6 }} nowrap="true">
+            {navItems.map((item, index) => (
+              <Link href={item.href} key={index}>
                 <Button key={item} sx={{ mr: 1 }} className={"button-nav"}>
                   {item.name}
                 </Button>

@@ -71,7 +71,7 @@ h1 {
   font-family: var(--font-Josefin);
   font-size: var(--heading1-sizing);
   line-height: var(--heading1-line-height);
-  font-weight: 800;
+  font-weight: 600;
 }
 h2 {
   font-family: var(--font-Josefin);
@@ -83,13 +83,13 @@ h3 {
   font-family: var(--font-Josefin);
   font-size: var(--heading3-sizing);
   line-height: var(--heading3-line-height);
-  font-weight: bold;
+  font-weight: 500;
 }
 h4 {
   font-family: var(--font-Josefin);
   font-size: var(--heading4-sizing);
   line-height: var(--heading4-line-height);
-  font-weight: 800;
+  font-weight: 600;
 }
 h5 {
   font-family: var(--font-Josefin);
@@ -103,7 +103,7 @@ a {
   font-family: var(--font-Lato);
   font-size: 17px;
   line-height: 25px;
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -128,7 +128,7 @@ button{
   font-family: var(--font-Josefin);
   font-size: 50px;
   line-height: 50px;
-  font-weight: 800;
+  font-weight: 600;
 }
 .h2 {
   font-family: var(--font-Josefin);
@@ -140,13 +140,13 @@ button{
   font-family: var(--font-Josefin);
   font-size: 28px;
   line-height: 28px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .h4 {
   font-family: var(--font-Josefin);
   font-size: 22px;
   line-height: 25px;
-  font-weight: 800;
+  font-weight: 500;
 }
 .h5 {
   font-family: var(--font-Josefin);
@@ -155,12 +155,27 @@ button{
   font-weight: 500;
 }
 
+/* Body variant */
+.body {
+  font-family: var(--font-Lato);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.body2 {
+  font-family: var(--font-Lato);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
 /* Logo title */
 .text-logo{
   font-family: var(--font-Lato);
   font-size: 17px;
   line-height: 25px;
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: none;
   color: var(--white);
 }
@@ -170,10 +185,19 @@ button{
   font-family: var(--font-Lato);
   font-size: 17px;
   line-height: 25px;
-  font-weight: 800;
+  font-weight: 500;
   text-decoration: none;
   color: var(--white);
 }
+.footer__link {
+  font-family: var(--font-Lato);
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--slate);
+}
+
 .footnote{
   font-family: var(--font-Lato);
   font-size: 13px;
@@ -184,7 +208,7 @@ button{
   font-family: var(--font-Lato);
   font-size: 14px;
   line-height: 20px;
-  font-weight: 800;
+  font-weight: 600;
 }
 .caption2{
   font-family: var(--font-Lato);

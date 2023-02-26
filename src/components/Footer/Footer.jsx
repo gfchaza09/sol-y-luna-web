@@ -1,9 +1,10 @@
+import { Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
 import classes from "./Footer.module.css";
 
-const { footer, logo__container, nav__container, nav__container__slinks } = classes;
+const { footer, logo__container, nav__container, nav__container__links, nav__container__slinks } = classes;
 
 const Footer = () => {
   return (
@@ -16,22 +17,22 @@ const Footer = () => {
               height={38}
               alt="logo"
             />
-            <p>Sol y Luna San Cristóbal</p>
+            <Typography className="text-logo">Sol y Luna San Cristóbal</Typography>
           </div>
         </Link>
         <nav className={nav__container}>
           <ul>
             <li>
-              <Link href="/menu">Menú</Link>
+              <Link href="/menu"><Typography className="footer__link">Menú</Typography></Link>
             </li>
             <li>
-              <Link href="/about">Nosotros</Link>
+              <Link href="/about"><Typography className="footer__link">Nosotros</Typography></Link>
             </li>
             <li>
-              <Link href="/services">Servicios</Link>
+              <Link href="/services"><Typography className="footer__link">Servicios</Typography></Link>
             </li>
             <li>
-              <Link href="/location">Ubicaciones</Link>
+              <Link href="/location"><Typography className="footer__link">Ubicaciones</Typography></Link>
             </li>
           </ul>
         </nav>
