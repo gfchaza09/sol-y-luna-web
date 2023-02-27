@@ -159,7 +159,7 @@ button{
 .body {
   font-family: var(--font-Lato);
   font-size: 17px;
-  line-height: 22px;
+  line-height: 25px;
   font-weight: 500;
 }
 
@@ -208,7 +208,7 @@ button{
   font-family: var(--font-Lato);
   font-size: 14px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 .caption2{
   font-family: var(--font-Lato);
