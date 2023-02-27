@@ -16,7 +16,7 @@
     margin-bottom: 24px;
 }
 
-.card__container > p:not(:last-child) {
+.card__container > h3, .card__container > h4 {
     margin-bottom: 8px;
 }
 

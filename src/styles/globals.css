@@ -189,7 +189,7 @@ button{
   text-decoration: none;
   color: var(--white);
 }
-.footer__link {
+.footer__link, .card__footnote {
   font-family: var(--font-Lato);
   font-size: 17px;
   line-height: 25px;
