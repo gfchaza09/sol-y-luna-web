@@ -206,6 +206,14 @@ button{
   color: var(--slate);
 }
 
+.card-link {
+  font-family: var(--font-Lato);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--beige);
+}
+
 .footnote{
   font-family: var(--font-Lato);
   font-size: 13px;
