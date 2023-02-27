@@ -23,16 +23,16 @@ const Footer = () => {
         <nav className={nav__container}>
           <ul>
             <li>
-              <Link href="/menu"><Typography className="footer__link">Menú</Typography></Link>
+              <Link href="/menu"><Typography className="footer-link">Menú</Typography></Link>
             </li>
             <li>
-              <Link href="/about"><Typography className="footer__link">Nosotros</Typography></Link>
+              <Link href="/about"><Typography className="footer-link">Nosotros</Typography></Link>
             </li>
             <li>
-              <Link href="/services"><Typography className="footer__link">Servicios</Typography></Link>
+              <Link href="/services"><Typography className="footer-link">Servicios</Typography></Link>
             </li>
             <li>
-              <Link href="/location"><Typography className="footer__link">Ubicaciones</Typography></Link>
+              <Link href="/location"><Typography className="footer-link">Ubicaciones</Typography></Link>
             </li>
           </ul>
         </nav>
