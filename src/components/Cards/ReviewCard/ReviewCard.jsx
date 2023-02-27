@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Typography } from '@mui/material';
 import Image from 'next/image';
+import { StarIcon } from '@heroicons/react/24/solid'
+import { Typography } from '@mui/material';
 
 import styles from './ReviewCard.module.css';
 
-const {card__container, review__container, data__container, date__container} = styles;
+const {card__container, review__container, data__container, date__container, rating} = styles;
 
 const ReviewCard = () => {
 
@@ -31,7 +32,7 @@ const ReviewCard = () => {
         <Typography className='button'>Loki Bright</Typography>
         <div className={date__container}>
           <Typography className='card-date'>31 de julio de 2022</Typography>
-          <Typography className='button'>4.5 estrella</Typography>
+          <Typography className={'button '+rating}>4.5 <StarIcon color='#F5C537' width={22} height={22}/></Typography>
         </div>
       </div> 
     </div>
