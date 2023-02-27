@@ -22,6 +22,7 @@ const About = () => {
       <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
         <EmployeeCard />
         <ReviewCard />
+        <ServiceCard />
       </main>
       <Footer />
     </>
