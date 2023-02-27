@@ -87,7 +87,6 @@ function NavBar(props) {
       >
         <Toolbar
           sx={{
-            width: "100%",
             display: "flex",
             justifyContent: "space-between",
           }}
@@ -128,14 +127,17 @@ function NavBar(props) {
               component="a"
               href="/"
               sx={{
-                mr: 2,
-                display: { xs: "block", md: "block" },
+                mr: 1,
+                display: { xs: "none", sm: "block"},
               }}
             >
-              Sol y Luna Restaurante
+              Sol y Luna Resto
             </Typography>
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" }, ml: 6 }} nowrap="true">
+          <Box
+            sx={{ display: { xs: "none", sm: "block"}, ml: 2 }}
+            nowrap="true"
+          >
             {navItems.map((item, index) => (
               <Link href={item.href} key={index}>
                 <Button key={item} sx={{ mr: 1 }} className={"button-nav"}>
@@ -144,7 +146,7 @@ function NavBar(props) {
               </Link>
             ))}
           </Box>
-          <Box sx={{ display: { xs: "block", sm: "block" }, ml: 6 }}>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Link href="#">
               <Image
                 src="assets/icons-themes/moon-dark.svg"
@@ -166,7 +168,7 @@ function NavBar(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", sm: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -176,14 +178,24 @@ function NavBar(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      {/* <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography className="h2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
           unde fugit veniam eius, perspiciatis sunt? Corporis qui ducimus
           quibusdam, aliquam dolore excepturi quae. Distinctio enim at eligendi
         </Typography>
-      </Box>
+        <br />
+        <Typography variant="h1">hola mundo como estan hoy?</Typography>
+        <Typography variant="h2">hola mundo como estan hoy?</Typography>
+        <Typography variant="h3">hola mundo como estan hoy?</Typography>
+        <Typography variant="h4">hola mundo como estan hoy?</Typography>
+        <Typography variant="h5">hola mundo como estan hoy?</Typography>
+        <br />
+        <Link href="#">Esto es un link</Link>
+        <Typography variant="p">Soy un parrafo</Typography>
+        <Button variant="contained">Hola soy un boton</Button>
+      </Box> */}
     </Box>
   );
 }

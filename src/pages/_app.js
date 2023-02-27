@@ -12,7 +12,7 @@ import HomeContextProvider from "@/context/HomeContext";
 export default function App({ Component, pageProps }) {
   return (
     <HomeContextProvider>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={darkTheme}>
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
