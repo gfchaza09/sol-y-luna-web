@@ -189,12 +189,20 @@ button{
   text-decoration: none;
   color: var(--white);
 }
-.footer__link, .card__footnote {
+.footer-link, .card-footnote {
   font-family: var(--font-Lato);
   font-size: 17px;
   line-height: 25px;
   font-weight: 500;
   text-decoration: none;
+  color: var(--slate);
+}
+
+.card-date {
+  font-family: var(--font-Lato);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
   color: var(--slate);
 }
 
@@ -215,6 +223,20 @@ button{
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
+}
+
+.review-text {
+  font-family: var(--font-Lato);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.review-text-mobile {
+  font-family: var(--font-Lato);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 /* buttons styles */
