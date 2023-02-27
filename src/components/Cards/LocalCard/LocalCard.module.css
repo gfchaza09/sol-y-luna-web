@@ -1,0 +1,39 @@
+.card__container {
+    max-width: 400px;
+    width: 100%;
+    height: 356px;
+    max-height: 396px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    filter: opacity(35%);
+    transition: all .6s ease-in-out;
+}
+
+.showcard {
+    filter: none;
+}
+
+.card__container > img {
+    border-radius: 6px;
+}
+
+.card__container > p {
+    text-align: center;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+    .card__container {
+        max-height: 273px;
+    }
+}
