@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 // Components
-import NavBar from "@/components/NavBar/NavBar";
-import Footer from "@/components/Footer/Footer";
+import Layout from "@/components/Layout/Layout";
 
 const Services = () => {
   return (
@@ -16,11 +15,11 @@ const Services = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
-      <main style={{ minHeight: "100vh" }}>
-        <Link href="/">Home</Link>
-      </main>
-      <Footer />
+      <Layout>
+        <main style={{ minHeight: "100vh" }}>
+          <Link href="/">Home</Link>
+        </main>
+      </Layout>
     </>
   );
 };
