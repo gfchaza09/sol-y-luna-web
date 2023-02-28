@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 // Components
+import Layout from "@/components/Layout/Layout";
 
 const Local2 = () => {
   return (
@@ -14,9 +15,11 @@ const Local2 = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main style={{ minHeight: "100vh" }}>
-        <Link href="/location">Atrás</Link>
-      </main>
+      <Layout>
+        <main style={{ minHeight: "100vh" }}>
+          <Link href="/location">Atrás</Link>
+        </main>
+      </Layout>
     </>
   );
 };
