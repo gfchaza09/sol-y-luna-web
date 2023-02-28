@@ -1,7 +1,8 @@
 .card__container {
     max-width: 1029px;
     width: 100%;
-    height: 388px;
+    min-height: 388px;
+    height: auto;
     background-color: #ffffff;
     border-radius: 12px;
     display: flex;
@@ -25,7 +26,7 @@
 @media screen and (max-width: 375px) {
     .card__container {
         max-width: 335px;
-        height: 505px;
+        min-height: 505px;
         flex-direction: column;
         padding: 30px;
     }
