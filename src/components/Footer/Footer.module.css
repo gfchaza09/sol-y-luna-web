@@ -3,10 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    max-width: 1440px;
+    gap: 24px;
+    max-width: 100vw;
     width: 100%;
     height: 292px;
+    padding: 100px 64px;
     margin: 0 auto;
     background-color: #111111;
 }
@@ -15,11 +16,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
+}
+
+.logo__container > p {
+    margin: 6px 0px; 
 }
 
 .nav__container {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .nav__container > ul, .nav__container__slinks > ul {
@@ -34,6 +39,11 @@
 }
 
 @media screen and (max-width: 375px) {
+
+    .footer {
+        padding: 0px 64px;
+    }
+
     .nav__container {
         margin-bottom: 32px;
     }
