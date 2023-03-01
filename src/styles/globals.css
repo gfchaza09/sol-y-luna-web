@@ -31,6 +31,7 @@
   --beige: #d0a554;
   --beige-dark-mode: #f1da9e;
   --grey-highlights: #d8c8ba;
+  
 
   /* Spacing */
   --spacing-xx-sm: 4px;
@@ -104,6 +105,7 @@ a {
   font-size: 17px;
   line-height: 25px;
   font-weight: 600;
+  color: var(--slate);
   text-decoration: none;
 }
 
@@ -251,7 +253,7 @@ button{
 .button-nav{
   font-family: var(--font-Lato);
   font-size: 16px;
-  line-height: 24px;
+  line-height: 40px;
   font-weight: 600;
   text-transform:capitalize;
   color: var(--white);

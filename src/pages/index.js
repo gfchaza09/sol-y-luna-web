@@ -1,7 +1,8 @@
 import Head from "next/head";
+import GridLayout from "@/components/GridLayout/GridLayout";
 
 // Components
-import Layout from "@/components/Layout/Layout";
+
 
 const Home = () => {
   return (
@@ -15,9 +16,9 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <main>Contenido</main>
-      </Layout>
+      
+      <main>Contenido</main>
+      
     </>
   );
 };
