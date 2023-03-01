@@ -1,8 +1,10 @@
 import Head from "next/head";
+import GridLayout from "@/components/GridLayout/GridLayout";
 
 // Components
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
+
 
 const Home = () => {
   return (
@@ -17,7 +19,9 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <main>Contenido</main>
+      <GridLayout >
+        <main>Contenido</main>
+      </GridLayout>
       <Footer />
     </>
   );
