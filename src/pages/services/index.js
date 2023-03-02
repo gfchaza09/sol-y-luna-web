@@ -3,7 +3,7 @@ import Link from "next/link";
 // Components
 import Layout from "@/components/Layout/Layout";
 
-const Services = () => {
+const Services = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ const Services = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
         <main style={{ minHeight: "100vh" }}>
           <Link href="/">Home</Link>
         </main>

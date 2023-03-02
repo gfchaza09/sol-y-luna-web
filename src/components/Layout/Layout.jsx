@@ -3,10 +3,10 @@ import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar'
 import WhatsappButton from '../WhatsappButton/WhatsappButton'
 
-const Layout = ({children}) => {
+const Layout = ({children, selectedTheme, toggleTheme}) => {
   return (
     <>
-        <NavBar />
+        <NavBar selectedTheme={selectedTheme} toggleTheme={toggleTheme}/>
         {children}
         <WhatsappButton />
         <Footer />

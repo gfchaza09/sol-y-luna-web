@@ -6,7 +6,7 @@ import ServiceCard from "@/components/Cards/ServiceCard/ServiceCard";
 import ReviewCard from "@/components/Cards/ReviewCard/ReviewCard";
 import LocalCard from "@/components/Cards/LocalCard/LocalCard";
 
-const About = () => {
+const About = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
@@ -18,7 +18,7 @@ const About = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
         <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
           <EmployeeCard />
           <ReviewCard />
