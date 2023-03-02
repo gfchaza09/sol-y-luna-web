@@ -1,22 +1,22 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 // Dark theme setup
 export const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: '#ff4400',
+      main: "#ff4400",
     },
     secondary: {
-      light: '#0066ff',
-      main: '#0044ff',
-      contrastText: '#ffcc00',
+      light: "#0066ff",
+      main: "#0044ff",
+      contrastText: "#ffcc00",
     },
     custom: {
-      light: '#ffa726',
-      main: '#f57c00',
-      dark: '#ef6c00',
-      contrastText: 'rgba(0, 0, 0, 0.87)',
+      light: "#ffa726",
+      main: "#f57c00",
+      dark: "#ef6c00",
+      contrastText: "rgba(0, 0, 0, 0.87)",
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,
@@ -52,19 +52,31 @@ export const darkTheme = createTheme({
       fontSize: 17,
       fontWeight: 500,
       lineHeight: "22px",
-    }
-  }
+    },
+    variants: [
+      {
+        props: { variant: "textLogo" },
+        style: {
+          fontFamily: '"Lato", sans-serif',
+          fontSize: "17px",
+          lineHeight: "25px",
+          fontWeight: 600,
+          textDecoration: "none",
+        },
+      },
+    ],
+  },
 });
 
 // Light theme setup
 export const lightTheme = createTheme({
   palette: {
-    mode: 'light', // Establece el modo de color en light
+    mode: "light", // Establece el modo de color en light
     primary: {
-      main: '#d0a554', // Define el color principal para el tema
+      main: "#d0a554", // Define el color principal para el tema
     },
     secondary: {
-      main: '#d8c8ba', // Define el color secundario para el tema
+      main: "#d8c8ba", // Define el color secundario para el tema
     },
   },
   typography: {
@@ -98,13 +110,18 @@ export const lightTheme = createTheme({
       fontSize: 17,
       fontWeight: 500,
       lineHeight: "22px",
-    }
-  }
+    },
+    variants: [
+      {
+        props: { variant: "textLogo" },
+        style: {
+          fontFamily: '"Lato", sans-serif',
+          fontSize: "17px",
+          lineHeight: "25px",
+          fontWeight: 600,
+          textDecoration: "none",
+        },
+      },
+    ],
+  },
 });
-
-
-
-
-
-
-

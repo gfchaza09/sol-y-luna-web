@@ -6,18 +6,26 @@ import classes from "./Footer.module.css";
 
 const { footer, logo__container, nav__container, nav__container__links, nav__container__slinks } = classes;
 
-const Footer = () => {
+const Footer = ({selectedTheme}) => {
   return (
     <footer className={footer}>
         <Link href="/">
           <div className={logo__container}>
-            <Image
+            {
+              selectedTheme === "light" ? <Image
+              src="/assets/logo/sol_y_luna_light.png"
+              width={38}
+              height={38}
+              alt="logo"
+            /> : <Image
               src="/assets/logo/sol_y_luna_dark.png"
               width={38}
               height={38}
               alt="logo"
             />
-            <Typography className="text-logo">Sol y Luna San Cristóbal</Typography>
+            }
+            
+            <Typography variant="textLogo" color={selectedTheme === "dark" ? "#ffffff" : "#000000"}>Sol y Luna San Cristóbal</Typography>
           </div>
         </Link>
         <nav className={nav__container}>
