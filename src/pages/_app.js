@@ -1,28 +1,33 @@
 import "@/styles/globals.css";
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 // Customs themes
-import { darkTheme, lightTheme } from '../themes/themes.js'
+import { darkTheme, lightTheme } from "../themes/themes.js";
 // Context
 import HomeContextProvider from "@/context/HomeContext";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }) {
-  const [isDarkMode, setIsDarkMode] = useState(true)
+  const [activeTheme, setActiveTheme] = useState(lightTheme);
+  const [selectedTheme, setSelectedTheme] = useState("light");
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode)
-  }
+    setSelectedTheme(selectedTheme === "light" ? "dark" : "light");
+  };
 
-  const theme = isDarkMode ? darkTheme : lightTheme;
-
+  useEffect(() => {
+    setActiveTheme(selectedTheme === "light" ? lightTheme : darkTheme);
+  }, [selectedTheme]);
 
   return (
     <HomeContextProvider>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={activeTheme}>
         <CssBaseline />
-        <Component {...pageProps} toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+        <Component
+          {...pageProps}
+          toggleTheme={toggleTheme}
+          selectedTheme={selectedTheme}
+        />
       </ThemeProvider>
     </HomeContextProvider>
   );

@@ -27,8 +27,8 @@ const navItems = [
   { name: "Ubicaciones", href: "/location" },
 ];
 
-function NavBar(props, toggleTheme, isDarkMode) {
-  const { window } = props;
+const NavBar = ({window, selectedTheme, toggleTheme}) => {
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -166,7 +166,7 @@ function NavBar(props, toggleTheme, isDarkMode) {
               aria-label="toggle theme"
               onClick={toggleTheme}
             >
-              {isDarkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+              {selectedTheme === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
           </Box>
         </Toolbar>

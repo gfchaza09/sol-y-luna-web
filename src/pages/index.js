@@ -1,10 +1,10 @@
 import Head from "next/head";
-import GridLayout from "@/components/GridLayout/GridLayout";
 
 // Components
+import GridLayout from "@/components/GridLayout/GridLayout";
+import Layout from "@/components/Layout/Layout";
 
-
-const Home = () => {
+const Home = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
@@ -16,9 +16,9 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <main>Contenido</main>
-      
+      <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
+        <main>Contenido</main>
+      </Layout>
     </>
   );
 };
