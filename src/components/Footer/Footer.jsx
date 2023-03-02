@@ -25,7 +25,7 @@ const Footer = ({selectedTheme}) => {
             />
             }
             
-            <Typography variant="textLogo" color={selectedTheme === "dark" ? "#ffffff" : "#000000"}>Sol y Luna San Cristóbal</Typography>
+            <Typography variant="textLogo">Sol y Luna San Cristóbal</Typography>
           </div>
         </Link>
         <nav className={nav__container}>
