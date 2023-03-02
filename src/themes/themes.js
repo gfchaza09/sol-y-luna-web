@@ -66,6 +66,63 @@ export const darkTheme = createTheme({
       },
     ],
   },
+  components: {
+    MuiTypography: {
+      variants: [
+        {
+          props: { variant: "textLogo" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "17px",
+            lineHeight: "25px",
+            fontWeight: 600,
+            textDecoration: "none",
+            color: "#ffffff",
+          },
+        },
+        {
+          props: { variant: "subtitleCard" },
+          style: {
+            fontFamily: '"Josefin Sans", sans-serif',
+            fontSize: 22,
+            fontWeight: 500,
+            lineHeight: "25px",
+            color: "#f1da9e",
+          },
+        },
+        {
+          props: { variant: "linkCard" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "16px",
+            lineHeight: "20px",
+            fontWeight: 500,
+            color: "#F1DA9E",
+          },
+        },
+        {
+          props: { variant: "footnoteCard" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "17px",
+            lineHeight: "25px",
+            fontWeight: 500,
+            color: "#F1DA9E",
+          },
+        },
+      ],
+    },
+    MuiCard: {
+      variants: [
+        {
+          props: { variant: "cardBackground" },
+          style: {
+            backgroundColor: "#1c1c1c",
+          },
+        },
+      ],
+    },
+  },
 });
 
 // Light theme setup
@@ -111,17 +168,52 @@ export const lightTheme = createTheme({
       fontWeight: 500,
       lineHeight: "22px",
     },
-    variants: [
-      {
-        props: { variant: "textLogo" },
-        style: {
-          fontFamily: '"Lato", sans-serif',
-          fontSize: "17px",
-          lineHeight: "25px",
-          fontWeight: 600,
-          textDecoration: "none",
+  },
+  components: {
+    MuiTypography: {
+      variants: [
+        {
+          props: { variant: "textLogo" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "17px",
+            lineHeight: "25px",
+            fontWeight: 600,
+            textDecoration: "none",
+            color: "#000000",
+          },
         },
-      },
-    ],
+        {
+          props: { variant: "subtitleCard" },
+          style: {
+            fontFamily: '"Josefin Sans", sans-serif',
+            fontSize: 22,
+            fontWeight: 500,
+            lineHeight: "25px",
+            color: "#d0a554",
+          },
+        },
+        {
+          props: { variant: "linkCard" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "16px",
+            lineHeight: "20px",
+            fontWeight: 500,
+            color: "#D0A554",
+          },
+        },
+        {
+          props: { variant: "footnoteCard" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "17px",
+            lineHeight: "25px",
+            fontWeight: 500,
+            color: "#6B7280",
+          },
+        },
+      ],
+    },
   },
 });
