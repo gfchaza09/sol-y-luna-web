@@ -2,6 +2,15 @@ import { createTheme } from "@mui/material/styles";
 
 // Dark theme setup
 export const darkTheme = createTheme({
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 640,
+      tablet2: 768,
+      laptop: 1024,
+      desktop: 1200,
+    },
+  },
   palette: {
     mode: "dark",
     primary: {
@@ -82,6 +91,17 @@ export const darkTheme = createTheme({
           },
         },
         {
+          props: { variant: "linkNavbar" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "16px",
+            lineHeight: "25px",
+            fontWeight: 600,
+            textDecoration: "none",
+            color: "#ffffff",
+          },
+        },
+        {
           props: { variant: "subtitleCard" },
           style: {
             fontFamily: '"Josefin Sans", sans-serif',
@@ -139,11 +159,30 @@ export const darkTheme = createTheme({
         },
       ],
     },
+    MuiAppBar: {
+      variants: [
+        {
+          props: { variant: "backgroundNavbar" },
+          style: {
+            backgroundColor: "#000000",
+          },
+        },
+      ],
+    },
   },
 });
 
 // Light theme setup
 export const lightTheme = createTheme({
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 640,
+      tablet2: 768,
+      laptop: 1024,
+      desktop: 1200,
+    },
+  },
   palette: {
     mode: "light", // Establece el modo de color en light
     primary: {
@@ -202,6 +241,17 @@ export const lightTheme = createTheme({
           },
         },
         {
+          props: { variant: "linkNavbar" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "16px",
+            lineHeight: "25px",
+            fontWeight: 600,
+            textDecoration: "none",
+            color: "#000000",
+          },
+        },
+        {
           props: { variant: "subtitleCard" },
           style: {
             fontFamily: '"Josefin Sans", sans-serif',
@@ -239,6 +289,16 @@ export const lightTheme = createTheme({
           props: { variant: "backgroundMenu" },
           style: {
             backgroundColor: "#F4F6F8",
+          },
+        },
+      ],
+    },
+    MuiAppBar: {
+      variants: [
+        {
+          props: { variant: "backgroundNavbar" },
+          style: {
+            backgroundColor: "#ffffff",
           },
         },
       ],
