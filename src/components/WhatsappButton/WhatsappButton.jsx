@@ -3,11 +3,11 @@ import React from 'react'
 
 import styles from './WhatsappButton.module.css';
 
-const {btn} = styles;
+const {btn, btn__mobile} = styles;
 
-const WhatsappButton = () => {
+const WhatsappButton = ({mobile}) => {
   return (
-    <button className={btn}>
+    <button className={mobile ? btn__mobile : btn}>
         <Image src="/assets/social-networks/whatsapp_logo.svg" width={32} height={32} alt="whatsapp"/>
     </button>
   )

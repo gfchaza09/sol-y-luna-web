@@ -23,7 +23,7 @@ const Layout = ({children, selectedTheme, toggleTheme}) => {
         <NavBar selectedTheme={selectedTheme} toggleTheme={toggleTheme}/>
         {children}
         {
-          width > 600 && <WhatsappButton />
+          width >= 600 && <WhatsappButton />
         }
         <Footer selectedTheme={selectedTheme}/>
     </>

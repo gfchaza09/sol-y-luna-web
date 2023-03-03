@@ -123,6 +123,22 @@ export const darkTheme = createTheme({
         },
       ],
     },
+    MuiList: {
+      variants: [
+        {
+          props: { variant: "backgroundMenu" },
+          style: {
+            backgroundColor: "#111111",
+          },
+        },
+        {
+          props: { variant: "backgroundMenuHeader" },
+          style: {
+            backgroundColor: "#1c1c1c",
+          },
+        },
+      ],
+    },
   },
 });
 
@@ -135,7 +151,7 @@ export const lightTheme = createTheme({
       navbar: "#ffffff",
     },
     secondary: {
-      main: "#d8c8ba", // Define el color secundario para el tema
+      main: "#F4F6F8", // Define el color secundario para el tema
     },
   },
   typography: {
@@ -213,6 +229,16 @@ export const lightTheme = createTheme({
             lineHeight: "25px",
             fontWeight: 500,
             color: "#6B7280",
+          },
+        },
+      ],
+    },
+    MuiList: {
+      variants: [
+        {
+          props: { variant: "backgroundMenu" },
+          style: {
+            backgroundColor: "#F4F6F8",
           },
         },
       ],
