@@ -5,7 +5,8 @@ export const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#ff4400",
+      main: "#D0A554",
+      navbar: "#1c1c1c",
     },
     secondary: {
       light: "#0066ff",
@@ -130,7 +131,8 @@ export const lightTheme = createTheme({
   palette: {
     mode: "light", // Establece el modo de color en light
     primary: {
-      main: "#d0a554", // Define el color principal para el tema
+      main: "#D0A554", // Define el color principal para el tema
+      navbar: "#ffffff",
     },
     secondary: {
       main: "#d8c8ba", // Define el color secundario para el tema
