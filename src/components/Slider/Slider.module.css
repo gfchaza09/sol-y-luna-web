@@ -1,0 +1,29 @@
+.container {
+	width: calc(100vw - 100px) ;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide {
+	max-width: 100%;
+	height: auto;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.slide.active {
+	opacity: 1;
+}
+
+.img{
+    width: 100vw;
+    height: 100vh;
+    min-width: 450px;
+}
+
+.button{
+    z-index: 3;
+}

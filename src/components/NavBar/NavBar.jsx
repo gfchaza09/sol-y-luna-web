@@ -27,8 +27,7 @@ const navItems = [
   { name: "Ubicaciones", href: "/location" },
 ];
 
-const NavBar = ({window, selectedTheme, toggleTheme}) => {
-
+const NavBar = ({ window, selectedTheme, toggleTheme }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -63,13 +62,18 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
           </ListItem>
         ))}
         <ListItem>
-          <ListItemButton disablepadding="true" sx={{ textAlign: "center" }}>
-            <Image
-              src="assets/icons-themes/moon-dark.svg"
-              alt="logo"
-              width={20}
-              height={20}
-            />
+          <ListItemButton disablepadding="true" sx={{ textAlign: "center"}}>
+            <IconButton
+              color="inherit"
+              aria-label="toggle theme"
+              onClick={toggleTheme}
+            >
+              {selectedTheme === "dark" ? (
+                <Brightness7Icon />
+              ) : (
+                <Brightness4Icon />
+              )}
+            </IconButton>
           </ListItemButton>
         </ListItem>
       </List>
@@ -166,7 +170,11 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
               aria-label="toggle theme"
               onClick={toggleTheme}
             >
-              {selectedTheme === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+              {selectedTheme === "dark" ? (
+                <Brightness7Icon />
+              ) : (
+                <Brightness4Icon />
+              )}
             </IconButton>
           </Box>
         </Toolbar>
@@ -193,7 +201,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
       </Box>
     </Box>
   );
-}
+};
 
 NavBar.propTypes = {
   window: PropTypes.func,
