@@ -1,9 +1,5 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -13,15 +9,17 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Link } from "@mui/material";
+import { AppBar, Box, Divider, Drawer, Link } from "@mui/material";
 import Image from "next/image";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
+
+// Components
+import { IOSSwitch } from "../IOSSwitch/IOSSwitch";
+import WhatsappButton from "../WhatsappButton/WhatsappButton";
 
 const drawerWidth = 350;
 const navItems = [
   { name: "Inicio", href: "/" },
-  { name: "Menu", href: "/menu" },
+  { name: "Menú", href: "/menu" },
   { name: "Nosotros", href: "/about" },
   { name: "Servicios", href: "/services" },
   { name: "Ubicaciones", href: "/location" },
@@ -38,19 +36,18 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ textAlign: "center" }}
-      backgroundColor="primary.main"
+      sx={{ textAlign: "center", width: "100%" }}
     >
       <Link href="/">
         <Image
-          src="/assets/logo/sol_y_luna_light.png"
+          src={selectedTheme==="light" ? "/assets/logo/sol_y_luna_light.png" : "/assets/logo/sol_y_luna_dark.png"}
           width={38}
           height={38}
           alt="logo"
         />
       </Link>
       <Divider />
-      <List>
+      <List sx={{ textAlign: "center", width: "100%", position: "relative" }}>
         {navItems.map((item, index) => (
           <ListItem key={index} disablepadding="true">
             <ListItemButton
@@ -58,20 +55,17 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
               component="a"
               href={item.href}
             >
-              <ListItemText primary={item.name} />
+              <Typography variant="h3">{item.name}</Typography>
             </ListItemButton>
           </ListItem>
         ))}
         <ListItem>
-          <ListItemButton disablepadding="true" sx={{ textAlign: "center" }}>
-            <Image
-              src="assets/icons-themes/moon-dark.svg"
-              alt="logo"
-              width={20}
-              height={20}
-            />
+          <ListItemButton disablepadding="true" sx={{ textAlign: "center", display: "flex", justifyContent: "space-between", alignItems: "center" }} color="inherit" aria-label="toggle theme" onClick={toggleTheme}>
+            <Typography variant="h3">Modo Claro</Typography>
+            <IOSSwitch checked={selectedTheme === "light"}/>
           </ListItemButton>
         </ListItem>
+        <WhatsappButton />
       </List>
     </Box>
   );
@@ -80,15 +74,14 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }} backgroundcolor="primary.navbar">
       <AppBar
-        enableColorOnDark
         component="nav"
-        color="primary"
         sx={{
           height: "75px",
           justifyContent: "center",
         }}
+        backgroundcolor="primary.navbar"
       >
         <Toolbar
           sx={{
@@ -120,7 +113,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
               }}
             >
               <Image
-                src="/assets/logo/sol_y_luna_dark.png"
+                src={selectedTheme === "light" ? "/assets/logo/sol_y_luna_light.png" : "/assets/logo/sol_y_luna_dark.png"}
                 width={38}
                 height={38}
                 alt="logo"
@@ -136,7 +129,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
                 display: { xs: "none", sm: "block" },
               }}
             >
-              Sol y Luna Resto
+              Sol y Luna Restaurante
             </Typography>
           </Box>
           <Box
@@ -152,22 +145,23 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
             ))}
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {/* <Link href="#" >
-              <Image
-                src="assets/icons-themes/moon-dark.svg"
-                alt="logo"
-                width={20}
-                height={20}
-                onClick={()=>{toggleTheme}}
-              />
-            </Link> */}
             <IconButton
               color="inherit"
               aria-label="toggle theme"
               onClick={toggleTheme}
             >
-              {selectedTheme === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-            </IconButton>
+              {selectedTheme === "dark" ? <Image
+                src="assets/icons-themes/sun-dark.svg"
+                alt="dark"
+                width={20}
+                height={20}
+              /> : <Image
+              src="assets/icons-themes/moon-dark.svg"
+              alt="light"
+              width={20}
+              height={20}
+            />}
+            </IconButton>  
           </Box>
         </Toolbar>
       </AppBar>
