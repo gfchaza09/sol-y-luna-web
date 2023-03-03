@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import Carrusel from '../Slider/Slider'
 import Footer from '../Footer/Footer'
+import Header from '../Header/Header'
 import NavBar from '../NavBar/NavBar'
 import WhatsappButton from '../WhatsappButton/WhatsappButton'
 
@@ -21,6 +23,7 @@ const Layout = ({children, selectedTheme, toggleTheme}) => {
   return (
     <>
         <NavBar selectedTheme={selectedTheme} toggleTheme={toggleTheme}/>
+        <Header />
         {children}
         {
           width >= 600 && <WhatsappButton />

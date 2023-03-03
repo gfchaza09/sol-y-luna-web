@@ -1,0 +1,182 @@
+{
+  "empleados": [
+    {
+      "nombre": "Carlos",
+      "apellido": "García",
+      "edad": 28,
+      "cargo": "Chef",
+      "descripcion": "Encargado de la creación y preparación de los platos principales del menú.",
+      "img": "https://example.com/carlos_garcia.jpg"
+    },
+    {
+      "nombre": "Laura",
+      "apellido": "Martínez",
+      "edad": 24,
+      "cargo": "Camarera",
+      "descripcion": "Atiende y proporciona un servicio de calidad a los clientes.",
+      "img": "https://example.com/laura_martinez.jpg"
+    },
+    {
+      "nombre": "Pedro",
+      "apellido": "Fernández",
+      "edad": 30,
+      "cargo": "Gerente",
+      "descripcion": "Encargado de la gestión y administración del restaurante.",
+      "img": "https://example.com/pedro_fernandez.jpg"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "García",
+        "edad": 28,
+        "cargo": "Chef",
+        "descripcion": "Encargado de la creación y preparación de los platos principales del menú.",
+        "img": "https://example.com/carlos_garcia.jpg"
+      },
+      {
+        "nombre": "Laura",
+        "apellido": "Martínez",
+        "edad": 24,
+        "cargo": "Camarera",
+        "descripcion": "Atiende y proporciona un servicio de calidad a los clientes.",
+        "img": "https://example.com/laura_martinez.jpg"
+      },
+      {
+        "nombre": "Pedro",
+        "apellido": "Fernández",
+        "edad": 30,
+        "cargo": "Gerente",
+        "descripcion": "Encargado de la gestión y administración del restaurante.",
+        "img": "https://example.com/pedro_fernandez.jpg"
+      },
+      {
+        "nombre": "Carlos",
+        "apellido": "García",
+        "edad": 28,
+        "cargo": "Chef",
+        "descripcion": "Encargado de la creación y preparación de los platos principales del menú.",
+        "img": "https://example.com/carlos_garcia.jpg"
+      },
+      {
+        "nombre": "Laura",
+        "apellido": "Martínez",
+        "edad": 24,
+        "cargo": "Camarera",
+        "descripcion": "Atiende y proporciona un servicio de calidad a los clientes.",
+        "img": "https://example.com/laura_martinez.jpg"
+      },
+      {
+        "nombre": "Pedro",
+        "apellido": "Fernández",
+        "edad": 30,
+        "cargo": "Gerente",
+        "descripcion": "Encargado de la gestión y administración del restaurante.",
+        "img": "https://example.com/pedro_fernandez.jpg"
+      },
+      {
+        "nombre": "Carlos",
+        "apellido": "García",
+        "edad": 28,
+        "cargo": "Chef",
+        "descripcion": "Encargado de la creación y preparación de los platos principales del menú.",
+        "img": "https://example.com/carlos_garcia.jpg"
+      },
+      {
+        "nombre": "Laura",
+        "apellido": "Martínez",
+        "edad": 24,
+        "cargo": "Camarera",
+        "descripcion": "Atiende y proporciona un servicio de calidad a los clientes.",
+        "img": "https://example.com/laura_martinez.jpg"
+      },
+      {
+        "nombre": "Pedro",
+        "apellido": "Fernández",
+        "edad": 30,
+        "cargo": "Gerente",
+        "descripcion": "Encargado de la gestión y administración del restaurante.",
+        "img": "https://example.com/pedro_fernandez.jpg"
+      }
+  ],
+  "locaciones": [
+    {
+      "nombre": "Restaurante La Terraza",
+      "direccion": "Calle 10 # 12-30",
+      "telefono": "3123456789",
+      "descripcion": "Ambiente acogedor con una amplia variedad de platos deliciosos.",
+      "servicios": "Wifi gratuito, estacionamiento público y zona de fumadores.",
+      "img": "https://example.com/la_terraza.jpg"
+    },
+    {
+      "nombre": "Restaurante El Mirador",
+      "direccion": "Carrera 8 # 15-40",
+      "telefono": "3123456789",
+      "descripcion": "Un lugar con una vista espectacular y una selección de platos exquisitos.",
+      "servicios": "Aire acondicionado, música en vivo y estacionamiento privado.",
+      "img": "https://example.com/el_mirador.jpg"
+    },
+    {
+      "nombre": "Restaurante La Fuente",
+      "direccion": "Calle 15 # 7-20",
+      "telefono": "3123456789",
+      "descripcion": "Un espacio tranquilo y acogedor con una amplia selección de platos vegetarianos.",
+      "servicios": "Jardín exterior, zona infantil y estacionamiento gratuito.",
+      "img": "https://example.com/la_fuente.jpg"
+    }
+  ],
+  "platos_principales": [
+    {
+      "nombre": "Filete de salmón",
+      "descripcion": "Delicioso filete de salmón fresco a la plancha con una salsa de limón y hierbas.",
+      "tipo": "Pescados",
+      "img": "https://example.com/filete_salmon.jpg"
+    },
+    {
+      "nombre": "Hamburguesa gourmet",
+      "descripcion": "Carne de res de alta calidad con queso cheddar derretido, tocino y vegetales frescos.",
+      "tipo": "Carnes",
+      "img": "https://example.com/hamburguesa_gourmet.jpg"
+    },
+    {
+      "nombre": "Lasagna de vegetales",
+      "descripcion": "Capas de pasta con relleno de espinacas, champiñones y una deliciosa salsa de tomate y queso gratinado.",
+      "tipo": "Vegetales",
+      "img": "https://example.com/filete_salmon.jpg"
+    },
+    {
+        "nombre": "Filete de salmón",
+        "descripcion": "Delicioso filete de salmón fresco a la plancha con una salsa de limón y hierbas.",
+        "tipo": "Pescados",
+        "img": "https://example.com/filete_salmon.jpg"
+      },
+      {
+        "nombre": "Hamburguesa gourmet",
+        "descripcion": "Carne de res de alta calidad con queso cheddar derretido, tocino y vegetales frescos.",
+        "tipo": "Carnes",
+        "img": "https://example.com/hamburguesa_gourmet.jpg"
+      },
+      {
+        "nombre": "Lasagna de vegetales",
+        "descripcion": "Capas de pasta con relleno de espinacas, champiñones y una deliciosa salsa de tomate y queso gratinado.",
+        "tipo": "Vegetales",
+        "img": "https://example.com/filete_salmon.jpg"
+      },
+      {
+        "nombre": "Filete de salmón",
+        "descripcion": "Delicioso filete de salmón fresco a la plancha con una salsa de limón y hierbas.",
+        "tipo": "Pescados",
+        "img": "https://example.com/filete_salmon.jpg"
+      },
+      {
+        "nombre": "Hamburguesa gourmet",
+        "descripcion": "Carne de res de alta calidad con queso cheddar derretido, tocino y vegetales frescos.",
+        "tipo": "Carnes",
+        "img": "https://example.com/hamburguesa_gourmet.jpg"
+      },
+      {
+        "nombre": "Lasagna de vegetales",
+        "descripcion": "Capas de pasta con relleno de espinacas, champiñones y una deliciosa salsa de tomate y queso gratinado.",
+        "tipo": "Vegetales",
+        "img": "https://example.com/filete_salmon.jpg"
+      }
+  ]
+}
