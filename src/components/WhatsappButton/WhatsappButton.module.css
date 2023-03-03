@@ -11,3 +11,17 @@
     right: 20px;
     bottom: 20px;
 }
+
+.btn__mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}

@@ -1,22 +1,22 @@
 import * as React from "react";
+import Image from "next/image";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { AppBar, Box, Divider, Drawer, Link } from "@mui/material";
-import Image from "next/image";
+import { AppBar, Box, ButtonBase, Drawer, Link } from "@mui/material";
 
+import { XMarkIcon } from "@heroicons/react/24/solid";
 // Components
 import { IOSSwitch } from "../IOSSwitch/IOSSwitch";
 import WhatsappButton from "../WhatsappButton/WhatsappButton";
 
-const drawerWidth = 350;
 const navItems = [
   { name: "Inicio", href: "/" },
   { name: "Menú", href: "/menu" },
@@ -29,6 +29,8 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  const router = useRouter();
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -38,16 +40,20 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
       onClick={handleDrawerToggle}
       sx={{ textAlign: "center", width: "100%" }}
     >
-      <Link href="/">
-        <Image
-          src={selectedTheme==="light" ? "/assets/logo/sol_y_luna_light.png" : "/assets/logo/sol_y_luna_dark.png"}
-          width={38}
-          height={38}
-          alt="logo"
-        />
-      </Link>
-      <Divider />
-      <List sx={{ textAlign: "center", width: "100%", position: "relative" }}>
+      <List variant="backgroundMenuHeader" sx={{height: "10vh", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 32px"}}>
+        <Link href="/">
+          <Image
+            src={selectedTheme==="light" ? "/assets/logo/sol_y_luna_light.png" : "/assets/logo/sol_y_luna_dark.png"}
+            width={38}
+            height={38}
+            alt="logo"
+          />
+        </Link>
+        <ButtonBase>
+          <XMarkIcon width={44} height={44} onClick={()=>setMobileOpen(true)}/>
+        </ButtonBase>
+      </List>
+      <List variant="backgroundMenu" sx={{ textAlign: "center", width: "100%", height: "90vh" , position: "relative" }}>
         {navItems.map((item, index) => (
           <ListItem key={index} disablepadding="true">
             <ListItemButton
@@ -55,7 +61,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
               component="a"
               href={item.href}
             >
-              <Typography variant="h3">{item.name}</Typography>
+              <Typography variant="h3" className={router.pathname === item.href ? 'active-link' : ''}>{item.name}</Typography>
             </ListItemButton>
           </ListItem>
         ))}
@@ -65,7 +71,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
             <IOSSwitch checked={selectedTheme === "light"}/>
           </ListItemButton>
         </ListItem>
-        <WhatsappButton />
+        <WhatsappButton mobile />
       </List>
     </Box>
   );
@@ -87,7 +93,8 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
           sx={{
             display: "flex",
             justifyContent: "space-between",
-          }}
+          }
+        }
         >
           <IconButton
             color="inherit"
@@ -178,7 +185,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
             display: { xs: "block", sm: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: "100%",
             },
           }}
         >
