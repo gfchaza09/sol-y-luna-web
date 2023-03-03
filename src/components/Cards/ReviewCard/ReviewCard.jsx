@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { StarIcon } from '@heroicons/react/24/solid'
-import { Typography } from '@mui/material';
+import { Card, Typography } from '@mui/material';
 
 import styles from './ReviewCard.module.css';
 
@@ -23,7 +23,7 @@ const ReviewCard = () => {
   }, []);
 
   return (
-    <div className={card__container}>
+    <Card variant='cardBackground' className={card__container}>
       <div className={review__container}>
         <Image src="https://upload.wikimedia.org/wikipedia/commons/9/90/El_empleado_del_mes.jpg" width={72} height={72} alt="review"/>
         <div className={data__container}>
@@ -39,7 +39,7 @@ const ReviewCard = () => {
           </div>
         </div> 
       </div>
-    </div>
+    </Card>
   )
 }
 
