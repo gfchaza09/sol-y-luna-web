@@ -6,13 +6,11 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { AppBar, Box, ButtonBase, Drawer, Link } from "@mui/material";
+import { AppBar, Box, ButtonBase, Drawer, Link, Button, Typography, Toolbar } from "@mui/material";
 
-import { XMarkIcon } from "@heroicons/react/24/solid";
+// Icons
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import {MoonIcon, SunIcon} from "@heroicons/react/24/outline"
 // Components
 import { IOSSwitch } from "../IOSSwitch/IOSSwitch";
 import WhatsappButton from "../WhatsappButton/WhatsappButton";
@@ -40,7 +38,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
       onClick={handleDrawerToggle}
       sx={{ textAlign: "center", width: "100%" }}
     >
-      <List variant="backgroundMenuHeader" sx={{height: "10vh", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 32px"}}>
+      <List variant="backgroundMenuHeader" sx={{height: "8vh", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "36px 20px"}}>
         <Link href="/">
           <Image
             src={selectedTheme==="light" ? "/assets/logo/sol_y_luna_light.png" : "/assets/logo/sol_y_luna_dark.png"}
@@ -53,7 +51,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
           <XMarkIcon width={44} height={44} onClick={()=>setMobileOpen(true)}/>
         </ButtonBase>
       </List>
-      <List variant="backgroundMenu" sx={{ textAlign: "center", width: "100%", height: "90vh" , position: "relative" }}>
+      <List variant="backgroundMenu" sx={{ textAlign: "center", width: "100%", height: "92vh" , position: "relative" }}>
         {navItems.map((item, index) => (
           <ListItem key={index} disablepadding="true">
             <ListItemButton
@@ -80,43 +78,48 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }} backgroundcolor="primary.navbar">
+    <Box sx={{ display: "flex" }}>
       <AppBar
         component="nav"
         sx={{
           height: "75px",
           justifyContent: "center",
         }}
-        backgroundcolor="primary.navbar"
+        variant="backgroundNavbar"
       >
         <Toolbar
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-          }
-        }
+          sx={{display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%',
+            padding: '20px',
+            flexDirection: {tablet: 'row', mobile: 'row-reverse'}
+          }}
         >
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 6, display: { sm: "none" } }}
+            sx={{ display: { tablet: "none" } }}
           >
-            <MenuIcon />
+            <Bars3Icon width={44} height={44} color={selectedTheme === "light" ? "#000000" :"#ffffff"}/>
           </IconButton>
           <Box
             sx={{
-              display: { xs: "flex", sm: "flex" },
+              display: { mobile: "flex", tablet: "flex" },
               justifyContent: "center",
+              marginLeft: {mobile: "0px", laptop: "80px", desktop: "100px"},
             }}
           >
             <Link
               href="/"
               sx={{
-                display: { xs: "block", md: "block" },
-                mr: 1,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
                 textAlign: "center",
+                gap: "20px",
+                textDecoration: "none",
               }}
             >
               <Image
@@ -125,49 +128,35 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
                 height={38}
                 alt="logo"
               />
+              <Typography
+                variant="linkNavbar"
+                sx={{
+                  mr: 1,
+                  display: { mobile: "none", tablet2: "block" },
+                }}
+                >
+                Sol y Luna Restaurante
+              </Typography>
             </Link>
-            <Typography
-              className="button-nav"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 1,
-                display: { xs: "none", sm: "block" },
-              }}
-            >
-              Sol y Luna Restaurante
-            </Typography>
           </Box>
           <Box
-            sx={{ display: { xs: "none", sm: "block" }, ml: 2 }}
+            sx={{ display: { mobile: "none", tablet: "flex" }, alignItems: "center", gap: "36px", marginRight: {mobile: "0px", laptop: "80px", desktop: "100px"}}}
             nowrap="true"
           >
             {navItems.map((item, index) => (
-              <Link href={item.href} key={index}>
-                <Button key={item} sx={{ mr: 1 }} className={"button-nav"}>
-                  {item.name}
-                </Button>
+              <Link href={item.href} key={index} sx={{textDecoration: 'none'}}>
+                <Typography key={item} variant="linkNavbar" className={`${router.pathname === item.href ? 'active-link' : ''}`}>{item.name}</Typography>
               </Link>
             ))}
-          </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+
             <IconButton
               color="inherit"
               aria-label="toggle theme"
               onClick={toggleTheme}
             >
-              {selectedTheme === "dark" ? <Image
-                src="assets/icons-themes/sun-dark.svg"
-                alt="dark"
-                width={20}
-                height={20}
-              /> : <Image
-              src="assets/icons-themes/moon-dark.svg"
-              alt="light"
-              width={20}
-              height={20}
-            />}
+              {
+                selectedTheme === "dark" ? <SunIcon width={20} height={20} color="#ffffff"/> : <MoonIcon width={20} height={20} color="#000000"/>
+              }
             </IconButton>  
           </Box>
         </Toolbar>
@@ -182,7 +171,7 @@ const NavBar = ({window, selectedTheme, toggleTheme}) => {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "block" },
+            display: { mobile: "block", tablet: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: "100%",
