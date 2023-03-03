@@ -20,9 +20,9 @@ import WhatsappButton from "../WhatsappButton/WhatsappButton";
 const navItems = [
   { name: "Inicio", href: "/" },
   { name: "Menú", href: "/menu" },
-  { name: "Nosotros", href: "/about" },
-  { name: "Servicios", href: "/services" },
-  { name: "Ubicaciones", href: "/location" },
+  { name: "Nosotros", href: "/nosotros" },
+  { name: "Servicios", href: "/servicios" },
+  { name: "Ubicaciones", href: "/ubicaciones" },
 ];
 
 const NavBar = ({window, selectedTheme, toggleTheme}) => {
