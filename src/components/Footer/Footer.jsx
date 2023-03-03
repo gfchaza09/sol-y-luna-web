@@ -4,7 +4,14 @@ import Link from "next/link";
 
 import classes from "./Footer.module.css";
 
-const { footer, logo__container, nav__container, nav__container__links, nav__container__slinks } = classes;
+const { footer, logo__container, nav__container, nav__container__slinks } = classes;
+
+const navItems = [
+  { name: "Menú", href: "/menu" },
+  { name: "Nosotros", href: "/nosotros" },
+  { name: "Servicios", href: "/servicios" },
+  { name: "Ubicaciones", href: "/ubicaciones" },
+];
 
 const Footer = ({selectedTheme}) => {
   return (
@@ -30,18 +37,13 @@ const Footer = ({selectedTheme}) => {
         </Link>
         <nav className={nav__container}>
           <ul>
-            <li>
-              <Link href="/menu"><Typography className="footer-link">Menú</Typography></Link>
-            </li>
-            <li>
-              <Link href="/about"><Typography className="footer-link">Nosotros</Typography></Link>
-            </li>
-            <li>
-              <Link href="/services"><Typography className="footer-link">Servicios</Typography></Link>
-            </li>
-            <li>
-              <Link href="/location"><Typography className="footer-link">Ubicaciones</Typography></Link>
-            </li>
+            {
+              navItems.map((item, index)=> (
+                <li key={index}>
+                  <Link href={item.href}><Typography className="footer-link">{item.name}</Typography></Link>
+                </li>
+              ))
+            }
           </ul>
         </nav>
         <nav className={nav__container__slinks}>

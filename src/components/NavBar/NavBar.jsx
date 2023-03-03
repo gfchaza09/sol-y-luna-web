@@ -1,34 +1,32 @@
 import * as React from "react";
+import Image from "next/image";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { Link } from "@mui/material";
-import Image from "next/image";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { AppBar, Box, ButtonBase, Drawer, Link, Button, Typography, Toolbar } from "@mui/material";
 
-const drawerWidth = 350;
+// Icons
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import {MoonIcon, SunIcon} from "@heroicons/react/24/outline"
+// Components
+import { IOSSwitch } from "../IOSSwitch/IOSSwitch";
+import WhatsappButton from "../WhatsappButton/WhatsappButton";
+
 const navItems = [
   { name: "Inicio", href: "/" },
-  { name: "Menu", href: "/menu" },
-  { name: "Nosotros", href: "/about" },
-  { name: "Servicios", href: "/services" },
-  { name: "Ubicaciones", href: "/location" },
+  { name: "Menú", href: "/menu" },
+  { name: "Nosotros", href: "/nosotros" },
+  { name: "Servicios", href: "/servicios" },
+  { name: "Ubicaciones", href: "/ubicaciones" },
 ];
 
 const NavBar = ({ window, selectedTheme, toggleTheme }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const router = useRouter();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -37,19 +35,22 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ textAlign: "center" }}
-      backgroundColor="primary.main"
+      sx={{ textAlign: "center", width: "100%" }}
     >
-      <Link href="/">
-        <Image
-          src="/assets/logo/sol_y_luna_light.png"
-          width={38}
-          height={38}
-          alt="logo"
-        />
-      </Link>
-      <Divider />
-      <List>
+      <List variant="backgroundMenuHeader" sx={{height: "8vh", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "36px 20px"}}>
+        <Link href="/">
+          <Image
+            src={selectedTheme==="light" ? "/assets/logo/sol_y_luna_light.png" : "/assets/logo/sol_y_luna_dark.png"}
+            width={38}
+            height={38}
+            alt="logo"
+          />
+        </Link>
+        <ButtonBase>
+          <XMarkIcon width={44} height={44} onClick={()=>setMobileOpen(true)}/>
+        </ButtonBase>
+      </List>
+      <List variant="backgroundMenu" sx={{ textAlign: "center", width: "100%", height: "92vh" , position: "relative" }}>
         {navItems.map((item, index) => (
           <ListItem key={index} disablepadding="true">
             <ListItemButton
@@ -57,25 +58,21 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
               component="a"
               href={item.href}
             >
-              <ListItemText primary={item.name} />
+              <Typography variant="h3" className={router.pathname === item.href ? 'active-link' : ''}>{item.name}</Typography>
             </ListItemButton>
           </ListItem>
         ))}
         <ListItem>
-          <ListItemButton disablepadding="true" sx={{ textAlign: "center"}}>
-            <IconButton
-              color="inherit"
-              aria-label="toggle theme"
-              onClick={toggleTheme}
-            >
-              {selectedTheme === "dark" ? (
-                <Brightness7Icon />
-              ) : (
-                <Brightness4Icon />
-              )}
-            </IconButton>
+          <ListItemButton disablepadding="true" sx={{ textAlign: "center" }}>
+            <Image
+              src="assets/icons-themes/moon-dark.svg"
+              alt="logo"
+              width={20}
+              height={20}
+            />
           </ListItemButton>
         </ListItem>
+        <WhatsappButton mobile />
       </List>
     </Box>
   );
@@ -86,18 +83,19 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
   return (
     <Box sx={{ display: "flex" }}>
       <AppBar
-        enableColorOnDark
         component="nav"
-        color="primary"
         sx={{
           height: "75px",
           justifyContent: "center",
         }}
+        variant="backgroundNavbar"
       >
         <Toolbar
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
+          sx={{display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%',
+            padding: '20px',
+            flexDirection: {tablet: 'row', mobile: 'row-reverse'}
           }}
         >
           <IconButton
@@ -105,76 +103,61 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 6, display: { sm: "none" } }}
+            sx={{ display: { tablet: "none" } }}
           >
-            <MenuIcon />
+            <Bars3Icon width={44} height={44} color={selectedTheme === "light" ? "#000000" :"#ffffff"}/>
           </IconButton>
           <Box
             sx={{
-              display: { xs: "flex", sm: "flex" },
+              display: { mobile: "flex", tablet: "flex" },
               justifyContent: "center",
+              marginLeft: {mobile: "0px", laptop: "80px", desktop: "100px"},
             }}
           >
             <Link
               href="/"
               sx={{
-                display: { xs: "block", md: "block" },
-                mr: 1,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
                 textAlign: "center",
+                gap: "20px",
+                textDecoration: "none",
               }}
             >
               <Image
-                src="/assets/logo/sol_y_luna_dark.png"
+                src={selectedTheme === "light" ? "/assets/logo/sol_y_luna_light.png" : "/assets/logo/sol_y_luna_dark.png"}
                 width={38}
                 height={38}
                 alt="logo"
               />
+              <Typography
+                variant="linkNavbar"
+                sx={{
+                  mr: 1,
+                  display: { mobile: "none", tablet2: "block" },
+                }}
+                >
+                Sol y Luna Restaurante
+              </Typography>
             </Link>
-            <Typography
-              className="button-nav"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 1,
-                display: { xs: "none", sm: "block" },
-              }}
-            >
-              Sol y Luna Resto
-            </Typography>
           </Box>
           <Box
-            sx={{ display: { xs: "none", sm: "block" }, ml: 2 }}
+            sx={{ display: { mobile: "none", tablet: "flex" }, alignItems: "center", gap: "36px", marginRight: {mobile: "0px", laptop: "80px", desktop: "100px"}}}
             nowrap="true"
           >
             {navItems.map((item, index) => (
-              <Link href={item.href} key={index}>
-                <Button key={item} sx={{ mr: 1 }} className={"button-nav"}>
-                  {item.name}
-                </Button>
+              <Link href={item.href} key={index} sx={{textDecoration: 'none'}}>
+                <Typography key={item} variant="linkNavbar" className={`${router.pathname === item.href ? 'active-link' : ''}`}>{item.name}</Typography>
               </Link>
             ))}
-          </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {/* <Link href="#" >
-              <Image
-                src="assets/icons-themes/moon-dark.svg"
-                alt="logo"
-                width={20}
-                height={20}
-                onClick={()=>{toggleTheme}}
-              />
-            </Link> */}
+
             <IconButton
               color="inherit"
               aria-label="toggle theme"
               onClick={toggleTheme}
             >
-              {selectedTheme === "dark" ? (
-                <Brightness7Icon />
-              ) : (
-                <Brightness4Icon />
-              )}
+              {selectedTheme === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
           </Box>
         </Toolbar>
@@ -189,10 +172,10 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "block" },
+            display: { mobile: "block", tablet: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: "100%",
             },
           }}
         >

@@ -2,10 +2,20 @@ import { createTheme } from "@mui/material/styles";
 
 // Dark theme setup
 export const darkTheme = createTheme({
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 640,
+      tablet2: 768,
+      laptop: 1024,
+      desktop: 1200,
+    },
+  },
   palette: {
     mode: "dark",
     primary: {
-      main: "#ff4400",
+      main: "#D0A554",
+      navbar: "#1c1c1c",
     },
     secondary: {
       light: "#0066ff",
@@ -81,6 +91,17 @@ export const darkTheme = createTheme({
           },
         },
         {
+          props: { variant: "linkNavbar" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "16px",
+            lineHeight: "25px",
+            fontWeight: 600,
+            textDecoration: "none",
+            color: "#ffffff",
+          },
+        },
+        {
           props: { variant: "subtitleCard" },
           style: {
             fontFamily: '"Josefin Sans", sans-serif',
@@ -122,18 +143,54 @@ export const darkTheme = createTheme({
         },
       ],
     },
+    MuiList: {
+      variants: [
+        {
+          props: { variant: "backgroundMenu" },
+          style: {
+            backgroundColor: "#111111",
+          },
+        },
+        {
+          props: { variant: "backgroundMenuHeader" },
+          style: {
+            backgroundColor: "#1c1c1c",
+          },
+        },
+      ],
+    },
+    MuiAppBar: {
+      variants: [
+        {
+          props: { variant: "backgroundNavbar" },
+          style: {
+            backgroundColor: "#000000",
+          },
+        },
+      ],
+    },
   },
 });
 
 // Light theme setup
 export const lightTheme = createTheme({
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 640,
+      tablet2: 768,
+      laptop: 1024,
+      desktop: 1200,
+    },
+  },
   palette: {
     mode: "light", // Establece el modo de color en light
     primary: {
-      main: "#d0a554", // Define el color principal para el tema
+      main: "#D0A554", // Define el color principal para el tema
+      navbar: "#ffffff",
     },
     secondary: {
-      main: "#d8c8ba", // Define el color secundario para el tema
+      main: "#F4F6F8", // Define el color secundario para el tema
     },
   },
   typography: {
@@ -184,6 +241,17 @@ export const lightTheme = createTheme({
           },
         },
         {
+          props: { variant: "linkNavbar" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "16px",
+            lineHeight: "25px",
+            fontWeight: 600,
+            textDecoration: "none",
+            color: "#000000",
+          },
+        },
+        {
           props: { variant: "subtitleCard" },
           style: {
             fontFamily: '"Josefin Sans", sans-serif',
@@ -211,6 +279,26 @@ export const lightTheme = createTheme({
             lineHeight: "25px",
             fontWeight: 500,
             color: "#6B7280",
+          },
+        },
+      ],
+    },
+    MuiList: {
+      variants: [
+        {
+          props: { variant: "backgroundMenu" },
+          style: {
+            backgroundColor: "#F4F6F8",
+          },
+        },
+      ],
+    },
+    MuiAppBar: {
+      variants: [
+        {
+          props: { variant: "backgroundNavbar" },
+          style: {
+            backgroundColor: "#ffffff",
           },
         },
       ],
