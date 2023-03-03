@@ -38,11 +38,11 @@ const Footer = ({selectedTheme}) => {
         <nav className={nav__container}>
           <ul>
             {
-              navItems.map((item, index)=> {
+              navItems.map((item, index)=> (
                 <li key={index}>
                   <Link href={item.href}><Typography className="footer-link">{item.name}</Typography></Link>
                 </li>
-              })
+              ))
             }
           </ul>
         </nav>
