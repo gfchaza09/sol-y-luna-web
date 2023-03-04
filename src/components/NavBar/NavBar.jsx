@@ -12,7 +12,6 @@ import {
   ButtonBase,
   Drawer,
   Link,
-  Button,
   Typography,
   Toolbar,
 } from "@mui/material";
@@ -49,7 +48,6 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
 
   const drawer = (
     <Box
-      onClick={handleDrawerToggle}
       sx={{ textAlign: "center", width: "100%" }}
     >
       <List
@@ -78,7 +76,7 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
           <XMarkIcon
             width={44}
             height={44}
-            onClick={() => setMobileOpen(true)}
+            onClick={() => setMobileOpen(false)}
           />
         </ButtonBase>
       </List>
