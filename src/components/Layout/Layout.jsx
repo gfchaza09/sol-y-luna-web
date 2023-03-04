@@ -26,7 +26,7 @@ const Layout = ({children, selectedTheme, toggleTheme}) => {
         <Header />
         {children}
         {
-          width >= 600 && <WhatsappButton />
+          width >= 640 && <WhatsappButton />
         }
         <Footer selectedTheme={selectedTheme}/>
     </>

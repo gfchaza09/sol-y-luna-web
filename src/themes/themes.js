@@ -6,7 +6,7 @@ export const darkTheme = createTheme({
     values: {
       mobile: 0,
       tablet: 640,
-      tablet2: 768,
+      tablet2: 820,
       laptop: 1024,
       desktop: 1200,
     },
@@ -178,7 +178,7 @@ export const lightTheme = createTheme({
     values: {
       mobile: 0,
       tablet: 640,
-      tablet2: 768,
+      tablet2: 820,
       laptop: 1024,
       desktop: 1200,
     },
