@@ -1,0 +1,57 @@
+{
+  "index": {
+    "titulo": "Bienvenidos a nuestro sitio web",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed justo ligula. Pellentesque fermentum eros vel arcu rutrum faucibus. Suspendisse potenti. Nam sed velit eu dolor viverra venenatis. Integer eget tellus sed dolor dapibus efficitur."
+  },
+  "about": {
+    "titulo": "Acerca de nosotros",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed justo ligula. Pellentesque fermentum eros vel arcu rutrum faucibus. Suspendisse potenti. Nam sed velit eu dolor viverra venenatis. Integer eget tellus sed dolor dapibus efficitur."
+  },
+  "menu": {
+    "titulo": "Nuestro menú",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed justo ligula. Pellentesque fermentum eros vel arcu rutrum faucibus. Suspendisse potenti. Nam sed velit eu dolor viverra venenatis. Integer eget tellus sed dolor dapibus efficitur.",
+    "platos": [
+      {
+        "nombre": "Hamburguesa",
+        "descripcion": "Carne de res, lechuga, tomate y queso",
+        "precio": 9.99
+      },
+      {
+        "nombre": "Pizza",
+        "descripcion": "Masa delgada, salsa de tomate, queso, champiñones y pepperoni",
+        "precio": 12.99
+      },
+      {
+        "nombre": "Ensalada César",
+        "descripcion": "Lechuga romana, pollo a la parrilla, croutones y aderezo César",
+        "precio": 8.99
+      }
+    ]
+  },
+  "servicios": {
+    "titulo": "Nuestros servicios",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed justo ligula. Pellentesque fermentum eros vel arcu rutrum faucibus. Suspendisse potenti. Nam sed velit eu dolor viverra venenatis. Integer eget tellus sed dolor dapibus efficitur.",
+    "servicios_ofrecidos": [
+      "Catering para eventos",
+      "Servicio de mesa",
+      "Entrega a domicilio"
+    ]
+  },
+  "locaciones": {
+    "locacion1": {
+      "nombre": "Sucursal 1",
+      "direccion": "Calle 123, Ciudad A",
+      "horario": "Lunes - Viernes 10:00am - 8:00pm"
+    },
+    "locacion2": {
+      "nombre": "Sucursal 2",
+      "direccion": "Calle 456, Ciudad B",
+      "horario": "Lunes - Sábado 11:00am - 9:00pm"
+    },
+    "locacion3": {
+      "nombre": "Sucursal 3",
+      "direccion": "Calle 789, Ciudad C",
+      "horario": "Martes - Domingo 9:00am - 10:00pm"
+    }
+  }
+}
