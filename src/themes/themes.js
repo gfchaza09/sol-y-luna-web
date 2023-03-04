@@ -131,6 +131,12 @@ export const darkTheme = createTheme({
             color: "#F1DA9E",
           },
         },
+        {
+          props: { variant: "modalWhatsappColor" },
+          style: {
+            color: "#ffffff",
+          },
+        },
       ],
     },
     MuiCard: {
@@ -165,6 +171,16 @@ export const darkTheme = createTheme({
           props: { variant: "backgroundNavbar" },
           style: {
             backgroundColor: "#000000",
+          },
+        },
+      ],
+    },
+    MuiAccordion: {
+      variants: [
+        {
+          props: { variant: "backgroundAccordion" },
+          style: {
+            backgroundColor: "#1c1c1c",
           },
         },
       ],
@@ -279,6 +295,12 @@ export const lightTheme = createTheme({
             lineHeight: "25px",
             fontWeight: 500,
             color: "#6B7280",
+          },
+        },
+        {
+          props: { variant: "modalWhatsappColor" },
+          style: {
+            color: "#000000",
           },
         },
       ],

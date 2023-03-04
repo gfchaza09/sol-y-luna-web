@@ -5,9 +5,12 @@ import styles from './WhatsappButton.module.css';
 
 const {btn, btn__mobile} = styles;
 
-const WhatsappButton = ({mobile}) => {
+const WhatsappButton = ({mobile, handleOpen, mobileOpen}) => {
   return (
-    <button className={mobile ? btn__mobile : btn}>
+    <button className={mobile ? btn__mobile : btn} onClick={()=>{
+      handleOpen()
+      // setMobileOpen(false)
+      }}>
         <Image src="/assets/social-networks/whatsapp_logo.svg" width={32} height={32} alt="whatsapp"/>
     </button>
   )
