@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
@@ -23,6 +23,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 // Components
 import { IOSSwitch } from "../IOSSwitch/IOSSwitch";
 import WhatsappButton from "../WhatsappButton/WhatsappButton";
+import ModalComponent from "../Modal/ModalComponent";
 
 const navItems = [
   { name: "Inicio", href: "/" },
@@ -33,13 +34,18 @@ const navItems = [
 ];
 
 const NavBar = ({ window, selectedTheme, toggleTheme }) => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const router = useRouter();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  // Configuración del modal de WhatsApp
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const drawer = (
     <Box
@@ -118,7 +124,8 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
             <IOSSwitch checked={selectedTheme === "light"} />
           </ListItemButton>
         </ListItem>
-        <WhatsappButton mobile />
+        <WhatsappButton mobile handleOpen={handleOpen} setmobileOpen={setMobileOpen}/>
+        <ModalComponent handleClose={handleClose} open={open} selectedTheme={selectedTheme}/>
       </List>
     </Box>
   );
