@@ -6,6 +6,8 @@ import NavBar from '../NavBar/NavBar'
 import WhatsappButton from '../WhatsappButton/WhatsappButton'
 import ModalComponent from '../Modal/ModalComponent'
 
+
+
 const Layout = ({children, selectedTheme, toggleTheme}) => {
 
   const [width, setWidth] = useState(undefined);

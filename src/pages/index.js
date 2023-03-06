@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 // Components
-import GridLayout from "@/components/GridLayout/GridLayout";
+
 import Layout from "@/components/Layout/Layout";
 
 const Home = ({ selectedTheme, toggleTheme }) => {

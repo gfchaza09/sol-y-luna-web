@@ -6,6 +6,10 @@ import { darkTheme, lightTheme } from "../themes/themes.js";
 // Context
 import HomeContextProvider from "@/context/HomeContext";
 import { useEffect, useState } from "react";
+// Carrousel react-slick
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 export default function App({ Component, pageProps }) {
   const [activeTheme, setActiveTheme] = useState(lightTheme);
