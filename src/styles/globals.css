@@ -192,9 +192,6 @@ button{
   text-decoration: none;
   color: var(--white);
 }
-.active-link {
-  font-weight: 700;
-}
 .footer-link {
   font-family: var(--font-Lato);
   font-size: 17px;
