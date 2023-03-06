@@ -56,11 +56,11 @@ const ModalComponent = ({open, handleClose, selectedTheme}) => {
               <AccordionDetails sx={{display: 'flex', flexDirection:'column', gap: "24px"}}>
                 <Link href={`https://wa.me/${item.tel}`} target="_blank" sx={{display:'flex', flexDirection: 'column', textTransform: 'none', width: '100%'}}>
                   <Typography className="body2" variant="modalWhatsappColor">Realizar reservación</Typography>
-                  <Typography className="caption2">Hacer una reservación en la sucursal</Typography>
+                  <Typography sx={{fontSize:12, lineHeight: '18px', fontWeight: 500}}>Hacer una reservación en la sucursal</Typography>
                 </Link>
                 <Link href={`https://wa.me/${item.tel}`} target="_blank" sx={{display:'flex', flexDirection: 'column', textTransform: 'none'}}>
                   <Typography className="body2" variant="modalWhatsappColor">Realizar pedido</Typography>
-                  <Typography className="caption2">Hacer un pedido para delivery o take out en la sucursal</Typography>
+                  <Typography sx={{fontSize:12, lineHeight: '18px', fontWeight: 500}}>Hacer un pedido para delivery o take out en la sucursal</Typography>
                 </Link>
               </AccordionDetails>
             </Accordion>
