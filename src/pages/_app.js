@@ -8,6 +8,8 @@ import { darkTheme, lightTheme } from "../themes/themes.js";
 import HomeContextProvider from "@/context/HomeContext";
 import { useThemeDarkLight } from "@/hooks/useThemeDarkLight.js";
 
+
+
 export default function App({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false);
   const [activeTheme, setActiveTheme] = useState(lightTheme);

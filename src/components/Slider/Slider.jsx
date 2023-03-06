@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import estilos from "./Slider.module.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -8,8 +8,9 @@ import { Button } from "@mui/material";
 
 
 function Slider({ imagenes }) {
+
  
-  const [imagenActual, setImagenActual] = React.useState(0);
+  const [imagenActual, setImagenActual] = useState(0);
   const cantidad = imagenes?.length;
 
  
@@ -25,7 +26,7 @@ function Slider({ imagenes }) {
 
   return (
     <div className={estilos.container}>
-      <Button onClick={anteriorImagen} className={estilos.button}><ArrowBackIosIcon /></Button>
+      <Button onClick={anteriorImagen} className={estilos.button_back}><ArrowBackIosIcon /></Button>
       {imagenes.map((imagen, index) => {
         return (
           <div
@@ -36,11 +37,11 @@ function Slider({ imagenes }) {
             }
             key={index}
           >
-            {imagenActual === index && <Image className={estilos.img} key={index} src={imagen} alt="imagen" width={800} height={800} />}
+            {imagenActual === index && <Image className={estilos.img} key={index} src={imagen} alt="imagen" layout="fill"/>}
           </div>
         );
       })}
-      <Button onClick={siguienteImagen} className={estilos.button}><ArrowForwardIosIcon /></Button>
+      <Button onClick={siguienteImagen} className={estilos.button_right}><ArrowForwardIosIcon /></Button>
     </div>
   );
 }
