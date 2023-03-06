@@ -40,7 +40,7 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
+  
   // Configuración del modal de WhatsApp
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -160,7 +160,6 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
             <Bars3Icon
               width={44}
               height={44}
-              color={selectedTheme === "light" ? "#000000" : "#ffffff"}
             />
           </IconButton>
           <Box
@@ -183,7 +182,7 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
             >
               <Image
                 src={
-                  selectedTheme === "light"
+                  selectedTheme !== "dark"
                     ? "/assets/logo/sol_y_luna_light.png"
                     : "/assets/logo/sol_y_luna_dark.png"
                 }
@@ -234,10 +233,10 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
               aria-label="toggle theme"
               onClick={toggleTheme}
             >
-              {selectedTheme === "dark" ? (
-                <SunIcon width={20} height={20} color="#ffffff" />
+              {selectedTheme !== "light" ? (
+                <SunIcon width={20} height={20} />
               ) : (
-                <MoonIcon width={20} height={20} color="#000000" />
+                <MoonIcon width={20} height={20} />
               )}
             </IconButton>
           </Box>
