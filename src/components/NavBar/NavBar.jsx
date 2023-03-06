@@ -98,7 +98,7 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
             >
               <Typography
                 variant="h3"
-                className={router.pathname === item.href ? "active-link" : ""}
+                sx={router.pathname === item.href ? {fontWeight: 700} : {}}
               >
                 {item.name}
               </Typography>
@@ -219,9 +219,7 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
                 <Typography
                   key={item}
                   variant="linkNavbar"
-                  className={`${
-                    router.pathname === item.href ? "active-link" : ""
-                  }`}
+                  sx={router.pathname === item.href ? {fontWeight: 700} : {}}
                 >
                   {item.name}
                 </Typography>
