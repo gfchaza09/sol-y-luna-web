@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -5,15 +6,14 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { darkTheme, lightTheme } from "../themes/themes.js";
 // Context
 import HomeContextProvider from "@/context/HomeContext";
-import { useEffect, useState } from "react";
-// Carrousel react-slick
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { useThemeDarkLight } from "@/hooks/useThemeDarkLight.js";
+
 
 
 export default function App({ Component, pageProps }) {
+  const [mounted, setMounted] = useState(false);
   const [activeTheme, setActiveTheme] = useState(lightTheme);
-  const [selectedTheme, setSelectedTheme] = useState("light");
+  const [selectedTheme, setSelectedTheme] = useThemeDarkLight();
 
   const toggleTheme = () => {
     setSelectedTheme(selectedTheme === "light" ? "dark" : "light");
@@ -22,6 +22,14 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     setActiveTheme(selectedTheme === "light" ? lightTheme : darkTheme);
   }, [selectedTheme]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <HomeContextProvider>
