@@ -16,6 +16,7 @@ export const darkTheme = createTheme({
     primary: {
       main: "#D0A554",
       navbar: "#1c1c1c",
+      footer: "#111111",
     },
     secondary: {
       light: "#0066ff",
@@ -204,6 +205,7 @@ export const lightTheme = createTheme({
     primary: {
       main: "#D0A554", // Define el color principal para el tema
       navbar: "#ffffff",
+      footer: "#ffffff",
     },
     secondary: {
       main: "#F4F6F8", // Define el color secundario para el tema
