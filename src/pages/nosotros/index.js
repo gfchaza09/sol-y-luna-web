@@ -22,7 +22,6 @@ const About = ({ selectedTheme, toggleTheme }) => {
         <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
           <EmployeeCard />
           <ReviewCard />
-          <LocalCard />
           <ServiceCard />
         </main>
       </Layout>

@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +15,7 @@ const navItems = [
 
 const Footer = ({selectedTheme}) => {
   return (
-    <footer className={footer}>
+    <Container component="footer" className={footer} sx={{display: "flex", bgcolor: "primary.footer"}}>
         <Link href="/">
           <div className={logo__container}>
             {
@@ -82,7 +82,7 @@ const Footer = ({selectedTheme}) => {
             </li>
           </ul>
         </nav>
-    </footer>
+    </Container>
   );
 };
 
