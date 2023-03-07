@@ -99,7 +99,6 @@ export const darkTheme = createTheme({
             lineHeight: "25px",
             fontWeight: 600,
             textDecoration: "none",
-            color: "#ffffff",
           },
         },
         {
@@ -266,7 +265,6 @@ export const lightTheme = createTheme({
             lineHeight: "25px",
             fontWeight: 600,
             textDecoration: "none",
-            color: "#000000",
           },
         },
         {
