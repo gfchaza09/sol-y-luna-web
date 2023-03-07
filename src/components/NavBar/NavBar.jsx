@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import {
   AppBar,
   Box,
   ButtonBase,
   Drawer,
+  IconButton,
   Link,
+  List,
+  ListItem,
+  ListItemButton,
   Typography,
   Toolbar,
 } from "@mui/material";
@@ -23,6 +23,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { IOSSwitch } from "../IOSSwitch/IOSSwitch";
 import WhatsappButton from "../WhatsappButton/WhatsappButton";
 import ModalComponent from "../Modal/ModalComponent";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const navItems = [
   { name: "Inicio", href: "/" },
@@ -43,6 +44,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
   
   // Animación navbar transparente
   const [clientWindowHeight, setClientWindowHeight] = useState("");
+  const [width, setWidth] = useWindowWidth();
 
   const handleScroll = () => {
     setClientWindowHeight(window.scrollY);
@@ -54,14 +56,31 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
   });
 
   const [backgroundTransparacy, setBackgroundTransparacy] = useState("00");
+  const [color, setColor] = useState("#FFFFFF");
+  const [logo, setLogo] = useState({desktop: "/assets/logo/sol_y_luna_light.png", 
+  mobile: "/assets/logo/sol_y_luna_light.png"});
 
   useEffect(() => {
-    if (clientWindowHeight > 75) {
-      setBackgroundTransparacy("FF");
+    if (width >= 640) {
+      if (clientWindowHeight > 75) {
+        setBackgroundTransparacy("FF");
+      } else {
+        setBackgroundTransparacy("00");
+        setColor("#FFFFFF");
+        setLogo({...logo, desktop:"/assets/logo/sol_y_luna_dark.png"})
+      }
+      if (clientWindowHeight > 75 && selectedTheme === "light") {
+        setColor("#000000")
+        setLogo({...logo, desktop: "/assets/logo/sol_y_luna_light.png"})
+      }
+      if (clientWindowHeight > 75 && selectedTheme === "dark") {
+        setColor("#FFFFFF")
+        setLogo({...logo, desktop: "/assets/logo/sol_y_luna_dark.png"})
+      }
     } else {
-      setBackgroundTransparacy("00");
+      setLogo({...logo, mobile: `${selectedTheme === "light" ? "/assets/logo/sol_y_luna_light.png" : "/assets/logo/sol_y_luna_dark.png"}`})
     }
-  }, [clientWindowHeight]);
+  }, [clientWindowHeight, selectedTheme, width]);
 
   // Configuración del modal de WhatsApp
   const [open, setOpen] = useState(false);
@@ -160,8 +179,9 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
         sx={{
           height: "75px",
           justifyContent: "center",
-          bgcolor: `${selectedTheme === "light" ? "#ffffff" : "#1C1C1C"}${backgroundTransparacy}`,
-          transition: "all .4s linear"
+          bgcolor: `${selectedTheme === "light" ? "#ffffff" : "#1C1C1C"}${width >= 640 ? backgroundTransparacy : ""}`,
+          color: `${width >= 640 ? color : ""}`,
+          transition: "color, background .4s linear"
         }}
         variant="backgroundNavbar"
       >
@@ -205,11 +225,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
               }}
             >
               <Image
-                src={
-                  selectedTheme !== "dark"
-                    ? "/assets/logo/sol_y_luna_light.png"
-                    : "/assets/logo/sol_y_luna_dark.png"
-                }
+                src={width >= 640 ? logo.desktop : logo.mobile}
                 width={38}
                 height={38}
                 alt="logo"
@@ -219,6 +235,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
                 sx={{
                   mr: 1,
                   display: { mobile: "none", tablet2: "block" },
+                  color: `${color}`
                 }}
               >
                 Sol y Luna Restaurante
@@ -238,7 +255,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
               <Link
                 href={item.href}
                 key={index}
-                sx={{ textDecoration: "none" }}
+                sx={{ textDecoration: "none", color: `${color}` }}
               >
                 <Typography
                   key={item}
