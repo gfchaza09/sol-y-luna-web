@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Card, Typography } from '@mui/material';
 
@@ -8,18 +7,7 @@ const {card__container} = styles;
 
 const EmployeeCard = () => {
 
-  const [width, setWidth] = useState(undefined);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    const handleResize = () => {
-        setWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const [width, setWidth] = useWindowWidth();
 
   return (
     <Card variant="cardBackground" className={card__container}>

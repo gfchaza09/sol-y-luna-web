@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import { Card, Typography } from '@mui/material';
 
 import styles from './LocalCard.module.css';
+import { useWindowWidth } from '@/hooks/useWindowWidth';
 
 const {card__container, showcard, link} = styles;
 
@@ -12,18 +13,7 @@ const LocalCard = ({data}) => {
 
   const [showButton, setShowButton] = useState(false);
 
-  const [width, setWidth] = useState(undefined);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    const handleResize = () => {
-        setWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const [width, setWidth] = useWindowWidth();
 
   return (
     <Card variant="cardBackground" onMouseEnter={() => setShowButton(true)} onMouseLeave={()=>setShowButton(false)} className={`${card__container} ${showButton ? `${showcard}` : ''}`}>
