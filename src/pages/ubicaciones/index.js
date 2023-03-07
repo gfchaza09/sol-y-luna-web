@@ -5,6 +5,8 @@ import Image from "next/image";
 import Layout from "@/components/Layout/Layout";
 import { Typography } from "@mui/material";
 import LocalCard from "@/components/Cards/LocalCard/LocalCard";
+import Hero from "@/components/Hero/Hero";
+import GridLayout from "@/components/GridLayout/GridLayout";
 
 const locations = [
   {
@@ -47,20 +49,9 @@ const Location = ({ selectedTheme, toggleTheme }) => {
           style={{
             minHeight: "100vh",
             width: "100%",
-            maxWidth: "1440px",
-            margin: "0px auto",
           }}
         >
-          <div
-            style={{ width: "100%", minHeight: "600px", position: "relative" }}
-          >
-            <Image
-              src="/assets/images/ubicaciones.jpg"
-              alt="hero"
-              fill
-              sizes="100vw"
-            />
-          </div>
+          <Hero title="UBICACIONES" image="/assets/images/ubicaciones.jpg" />
           <div>
             <Typography
               variant="h2"
@@ -69,19 +60,11 @@ const Location = ({ selectedTheme, toggleTheme }) => {
             >
               NUESTRAS UBICACIONES
             </Typography>
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "414px",
-              }}
-            >
+            <GridLayout>
               {locations.map((location, index) => (
                 <LocalCard key={index} data={location} />
               ))}
-            </div>
+            </GridLayout>
           </div>
         </main>
       </Layout>

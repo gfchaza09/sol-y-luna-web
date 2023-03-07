@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
@@ -32,15 +32,37 @@ const navItems = [
   { name: "Ubicaciones", href: "/ubicaciones" },
 ];
 
-const NavBar = ({ window, selectedTheme, toggleTheme }) => {
+const NavBar = ({ selectedTheme, toggleTheme }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
-
+  
   const router = useRouter();
-
+  
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
   
+  // Animación navbar transparente
+  const [clientWindowHeight, setClientWindowHeight] = useState("");
+
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll); 
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  const [backgroundTransparacy, setBackgroundTransparacy] = useState("00");
+
+  useEffect(() => {
+    if (clientWindowHeight > 75) {
+      setBackgroundTransparacy("FF");
+    } else {
+      setBackgroundTransparacy("00");
+    }
+  }, [clientWindowHeight]);
+
   // Configuración del modal de WhatsApp
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -129,15 +151,17 @@ const NavBar = ({ window, selectedTheme, toggleTheme }) => {
   );
 
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    window !== undefined ? () => window.document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex"}}>
       <AppBar
         component="nav"
         sx={{
           height: "75px",
           justifyContent: "center",
+          bgcolor: `${selectedTheme === "light" ? "#ffffff" : "#1C1C1C"}${backgroundTransparacy}`,
+          transition: "all .4s linear"
         }}
         variant="backgroundNavbar"
       >

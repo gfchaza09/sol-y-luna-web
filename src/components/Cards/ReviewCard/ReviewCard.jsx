@@ -1,26 +1,15 @@
-import { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { StarIcon } from '@heroicons/react/24/solid'
 import { Card, Typography } from '@mui/material';
 
 import styles from './ReviewCard.module.css';
+import { useWindowWidth } from '@/hooks/useWindowWidth';
 
 const {card__container, review__container, data__container, personaldata__container, date__container, rating__container, rating} = styles;
 
 const ReviewCard = () => {
 
-  const [width, setWidth] = useState(undefined);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    const handleResize = () => {
-        setWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const [width, setWidth] = useWindowWidth()
 
   return (
     <Card variant='cardBackground' className={card__container}>
