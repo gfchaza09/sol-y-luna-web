@@ -9,6 +9,14 @@ import { Button } from "@mui/material";
 
 function Slider({ imagenes }) {
 
+  const mockImagenes = [
+    "https://picsum.photos/id/980/1000",
+    "https://picsum.photos/id/981/1000",
+    "https://picsum.photos/id/982/1000",
+    "https://picsum.photos/id/983/1000",
+    "https://picsum.photos/id/984/1000"
+  ];
+
  
   const [imagenActual, setImagenActual] = useState(0);
   const cantidad = imagenes?.length;
