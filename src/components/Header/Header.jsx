@@ -16,9 +16,7 @@ const Header = () => {
 
   return (
     <Box >
-      <Slider imagenes={mockImagenes} />
-      {/* <Carrousel/> */}
-      {/* <SimpleSlider/> */}
+      
     </Box>
   );
 };
