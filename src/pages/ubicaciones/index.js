@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 // Components
 import Layout from "@/components/Layout/Layout";
 import { Typography } from "@mui/material";

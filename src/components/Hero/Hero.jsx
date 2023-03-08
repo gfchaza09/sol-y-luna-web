@@ -12,7 +12,6 @@ const Hero = ({title, image}) => {
             alt="hero"
             fill
             sizes="100vw 100vh"
-            priority
         />
         <ButtonBase sx={{position: "absolute", bottom: "0", left: "50%", zIndex: 100}}>
             <ChevronDownIcon width={40} height={40} color="#FFFFFF"/>
