@@ -255,7 +255,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
               <Link
                 href={item.href}
                 key={index}
-                sx={{ textDecoration: "none", color: `${color}` }}
+                sx={{ textDecoration: "none", color: `${color}`}}
               >
                 <Typography
                   key={item}

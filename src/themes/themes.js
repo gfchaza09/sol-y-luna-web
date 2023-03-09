@@ -5,6 +5,7 @@ export const darkTheme = createTheme({
   breakpoints: {
     values: {
       mobile: 0,
+      mobile2: 420,
       tablet: 640,
       tablet2: 820,
       laptop: 1024,
@@ -193,6 +194,7 @@ export const lightTheme = createTheme({
   breakpoints: {
     values: {
       mobile: 0,
+      mobile2: 420,
       tablet: 640,
       tablet2: 820,
       laptop: 1024,
