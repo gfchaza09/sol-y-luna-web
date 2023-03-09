@@ -3,7 +3,6 @@ import Link from "next/link";
 // Components
 import Layout from "@/components/Layout/Layout";
 import Carrusel from "@/components/Slider/Slider";
-import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
 import Hero from "@/components/Hero/Hero";
 import { Box } from "@mui/system";
@@ -11,10 +10,7 @@ import { Typography } from "@mui/material";
 import SwitchButton from "@/components/SwitchButton/SwitchButton";
 
 const Menu = ({ selectedTheme, toggleTheme }) => {
-  let { scrollYProgress } = useScroll()
-  let y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
-
-
+  
 
   return (
     <>
@@ -41,8 +37,6 @@ const Menu = ({ selectedTheme, toggleTheme }) => {
           </Typography>
         </Box>
         <SwitchButton />
-
-
         <Carrusel />
       </Layout>
     </>
