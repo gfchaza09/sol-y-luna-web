@@ -1,10 +1,10 @@
 import Head from "next/head";
+import { Grid, Typography } from "@mui/material";
 // Components
 import Layout from "@/components/Layout/Layout";
-import { Typography } from "@mui/material";
 import LocalCard from "@/components/Cards/LocalCard/LocalCard";
 import Hero from "@/components/Hero/Hero";
-import GridLayout from "@/components/GridLayout/GridLayout";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const locations = [
   {
@@ -31,6 +31,8 @@ const locations = [
 ];
 
 const Location = ({ selectedTheme, toggleTheme }) => {
+  const [width, setWidth] = useWindowWidth();
+
   return (
     <>
       <Head>
@@ -43,26 +45,40 @@ const Location = ({ selectedTheme, toggleTheme }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
-        <main
-          style={{
-            minHeight: "100vh",
-            width: "100%",
-          }}
-        >
+        <main>
           <Hero title="UBICACIONES" image="/assets/images/ubicaciones.jpg" />
           <div>
             <Typography
-              variant="h2"
+              variant={width > 420 ? (width > 640 ? "h2" : "h4") : "h5"}
               component="h2"
-              sx={{ margin: "142px 100px 64px" }}
+              sx={{
+                margin: { mobile: "77px 0px 32px", tablet: "142px 50px 64px" },
+                textAlign: "center",
+              }}
             >
               NUESTRAS UBICACIONES
             </Typography>
-            <GridLayout>
+            <Grid
+              container
+              spacing={2}
+              direction={{ mobile: "column", tablet: "row" }}
+              justifyContent="center"
+              sx={{
+                marginBottom: {
+                  mobile: "214px",
+                  mobile2: "300px",
+                  tablet: "400px",
+                },
+              }}
+            >
               {locations.map((location, index) => (
-                <LocalCard key={index} data={location} />
+                <LocalCard
+                  key={index}
+                  data={location}
+                  selectedTheme={selectedTheme}
+                />
               ))}
-            </GridLayout>
+            </Grid>
           </div>
         </main>
       </Layout>

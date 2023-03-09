@@ -1,20 +1,26 @@
-import React from 'react'
 import Image from 'next/image'
 import { ButtonBase, Container, Typography } from '@mui/material'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
+import { useWindowWidth } from '@/hooks/useWindowWidth'
 
-const Hero = ({title, image}) => {
+const Hero = ({title, image, subtitle}) => {
+
+  const [width, setWidth] = useWindowWidth();
+
   return (
-    <Container sx={{ height: "800px", position: "relative", opacity: 0.8}}>
-        <Typography component="h1" variant="h1" sx={{color: "#FFFFFF", position: "absolute", top: "50%", left: "50%", zIndex: 100}}>{title}</Typography>
+    <Container sx={{ width:"100vw", maxWidth:"100%" ,height: "100vh", position: "relative"}}>
+        <Typography component="h1" variant={width >= 640 ? "h1" : "h2"} sx={{color: "#FFFFFF", position: "absolute", top: "0", left:"0", bottom: "0", right: "0", textAlign: "center", margin: "400px auto", zIndex: 100}}>{title}</Typography>
         <Image
             src={image}
             alt="hero"
             fill
-            sizes="100vw 100vh"
+            style={{width:"100%", height: "100%", top: 0, left: 0, opacity: `0.9`, objectFit: "cover"}}
         />
-        <ButtonBase sx={{position: "absolute", bottom: "0", left: "50%", zIndex: 100}}>
-            <ChevronDownIcon width={40} height={40} color="#FFFFFF"/>
+        {
+          subtitle && <Typography component="h4" variant={h4}>{subtitle}</Typography>
+        }
+        <ButtonBase sx={{position: "absolute", bottom: "10px", left: "49%", zIndex: 100}}>
+            <ChevronDownIcon width={50} height={50} color="#FFFFFF"/>
         </ButtonBase>
     </Container>
   )
