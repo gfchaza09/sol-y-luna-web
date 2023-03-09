@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
 const Hero = ({title, image}) => {
   return (
-    <Container sx={{ height: "800px", position: "relative", opacity: 0.8}}>
+    <Container sx={{ height: "100vh", position: "relative", opacity: 0.8}}>
         <Typography component="h1" variant="h1" sx={{color: "#FFFFFF", position: "absolute", top: "50%", left: "50%", zIndex: 100}}>{title}</Typography>
         <Image
             src={image}

@@ -5,6 +5,7 @@ import EmployeeCard from "@/components/Cards/EmployeeCard/EmployeeCard";
 import ServiceCard from "@/components/Cards/ServiceCard/ServiceCard";
 import ReviewCard from "@/components/Cards/ReviewCard/ReviewCard";
 import LocalCard from "@/components/Cards/LocalCard/LocalCard";
+import Hero from "@/components/Hero/Hero";
 
 const About = ({ selectedTheme, toggleTheme }) => {
   return (
@@ -20,9 +21,10 @@ const About = ({ selectedTheme, toggleTheme }) => {
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
         <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
-          <EmployeeCard />
+          <Hero title="NOSOTROS" image="/assets/images/imagen-nosotros-min.jpg"/>
+          {/* <EmployeeCard />
           <ReviewCard />
-          <ServiceCard />
+          <ServiceCard /> */}
         </main>
       </Layout>
     </>
