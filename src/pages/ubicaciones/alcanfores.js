@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Link from "next/link";
 // Components
 import Layout from "@/components/Layout/Layout";
+import Hero from "@/components/Hero/Hero";
 
 const Local1 = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Local1</title>
+        <title>Sol y Luna - Alcanfores</title>
         <meta
           name="description"
           content="Sitio web del restaurant Sol y Luna"
@@ -16,8 +16,12 @@ const Local1 = ({ selectedTheme, toggleTheme }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
-        <main style={{ minHeight: "100vh" }}>
-          <Link href="/location">Atrás</Link>
+        <main>
+          <Hero
+            title={"SOL Y LUNA ALCANFORES"}
+            subtitle={`📍 Periférico Norte Poniente #40, Los Alcanfores 967.146.7419`}
+            image="/assets/images/sol-y-luna-alcanfores-min.jpg"
+          />
         </main>
       </Layout>
     </>

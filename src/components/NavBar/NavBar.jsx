@@ -26,11 +26,11 @@ import ModalComponent from "../Modal/ModalComponent";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const navItems = [
-  { name: "Inicio", href: "/" },
-  { name: "Menú", href: "/menu" },
-  { name: "Nosotros", href: "/nosotros" },
-  { name: "Servicios", href: "/servicios" },
-  { name: "Ubicaciones", href: "/ubicaciones" },
+  { name: "Inicio", href: "/", hrefLocations: []},
+  { name: "Menú", href: "/menu", hrefLocations: []},
+  { name: "Nosotros", href: "/nosotros", hrefLocations: []},
+  { name: "Servicios", href: "/servicios", hrefLocations: []},
+  { name: "Ubicaciones", href: "/ubicaciones", hrefLocations: ["/ubicaciones/alcanfores", "/ubicaciones/centro", "/ubicaciones/boulevard"] },
 ];
 
 const NavBar = ({ selectedTheme, toggleTheme }) => {
@@ -139,7 +139,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
             >
               <Typography
                 variant="h3"
-                sx={router.pathname === item.href ? {fontWeight: 700} : {}}
+                sx={(router.pathname === item.href || item.hrefLocations.includes(router.pathname)) ? {fontWeight: 700} : {}}
               >
                 {item.name}
               </Typography>

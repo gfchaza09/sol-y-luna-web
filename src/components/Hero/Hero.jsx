@@ -8,20 +8,24 @@ const Hero = ({title, image, subtitle}) => {
   const [width, setWidth] = useWindowWidth();
 
   return (
-    <Container sx={{ width:"100vw", maxWidth:"100%" ,height: "100vh", position: "relative"}}>
-        <Typography component="h1" variant={width >= 640 ? "h1" : "h2"} sx={{color: "#FFFFFF", position: "absolute", top: "0", left:"0", bottom: "0", right: "0", textAlign: "center", margin: "400px auto", zIndex: 100}}>{title}</Typography>
+    <Container sx={{ width:"100vw", maxWidth:"100%" ,height: "100vh", position: "relative", padding: "0px"}}>
         <Image
             src={image}
             alt="hero"
             fill
             style={{width:"100%", height: "100%", top: 0, left: 0, filter: "brightness(60%)", objectFit: "cover"}}
         />
-        {
-          subtitle && <Typography component="h4" variant={h4}>{subtitle}</Typography>
-        }
-        <ButtonBase sx={{position: "absolute", bottom: "10px", left: "49%", zIndex: 100}}>
-            <ChevronDownIcon width={50} height={50} color="#FFFFFF"/>
-        </ButtonBase>
+        <Container sx={{color:"#FFFFFF" ,position: "absolute", top: "0", left: "0", bottom: "0", right: "0", textAlign:"center", margin: {mobile: "220px auto", tablet: "400px auto"}}}>
+          <Typography component="h1" variant={width >= 640 ? "h1" : "h2"} sx={{marginBottom: "12px"}}>{title}</Typography>
+          {
+            subtitle && <Typography component="h4" variant="h4" sx={{display: {mobile: "none", tablet: "block"}}}>{subtitle}</Typography>
+          }
+        </Container>
+        <Container sx={{width:"100%", position: "absolute", bottom: "10px", zIndex: 100, display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <ButtonBase>
+              <ChevronDownIcon width={50} height={50} color="#FFFFFF"/>
+          </ButtonBase>
+        </Container>
     </Container>
   )
 }
