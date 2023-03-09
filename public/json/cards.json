@@ -90,13 +90,13 @@
       "servicio": "Delivery",
       "descripcion": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.Contamos con delivery en nuestra principal sucursal. Solo tienes que contactarte a través de nuestro Whatsapp.",
       "detalle": "Disponible en sucursal",
-      "imagen":""
+      "imagen":"/assets/images/delivery.jpg"
     },
     {
       "servicio": "Take Away",
       "descripcion": "Sabemos lo valioso que es tu tiempo, por eso es que intentamos estar listos para brindar el servicio más rápido con nuestra comida para llevar.",
       "detalle": "Disponible en todas las sucursales.",
-      "imagen":""
+      "imagen":"/assets/images/delivery.jpg"
     },
     {
       "servicio": "Promociones",
