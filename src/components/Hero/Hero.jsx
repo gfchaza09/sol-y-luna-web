@@ -14,7 +14,7 @@ const Hero = ({title, image, subtitle}) => {
             src={image}
             alt="hero"
             fill
-            style={{width:"100%", height: "100%", top: 0, left: 0, opacity: `0.9`, objectFit: "cover"}}
+            style={{width:"100%", height: "100%", top: 0, left: 0, filter: "brightness(60%)", objectFit: "cover"}}
         />
         {
           subtitle && <Typography component="h4" variant={h4}>{subtitle}</Typography>

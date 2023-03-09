@@ -11,21 +11,21 @@ const locations = [
     name: "SOL Y LUNA ALCANFORES",
     description:
       "Nuestra sucursal principal. Cuenta con estacionamiento, un área de juegos y un salón de eventos para reservar.",
-    image: "/assets/images/sol-y-luna-alcanfores.jpg",
+    image: "/assets/images/sol-y-luna-alcanfores-min.jpg",
     href: "/ubicaciones/alcanfores",
   },
   {
     name: "SOL Y LUNA BOULEVARD",
     description:
       "Ideal si estás buscando comida al paso. Aunque también puedes disfrutar de la comida en nuestro agradable ambiente de Sol y Luna Boulevard.",
-    image: "/assets/images/sol-y-luna-boulevard.jpg",
+    image: "/assets/images/sol-y-luna-boulevard-min.jpg",
     href: "/ubicaciones/boulevard",
   },
   {
     name: "SOL Y LUNA CENTRO",
     description:
       "Ubicada en el corazón de San Cristóbal de las Casas, esta sucursal es la más frecuentada por nuestros clientes turistas.",
-    image: "/assets/images/sol-y-luna-alcanfores.jpg",
+    image: "/assets/images/sol-y-luna-centro-min.jpg",
     href: "/ubicaciones/centro",
   },
 ];
@@ -61,14 +61,17 @@ const Location = ({ selectedTheme, toggleTheme }) => {
             <Grid
               container
               spacing={2}
-              direction={{ mobile: "column", tablet: "row" }}
               justifyContent="center"
               sx={{
+                maxWidth: "1440px",
+                width: "auto",
                 marginBottom: {
                   mobile: "214px",
                   mobile2: "300px",
                   tablet: "400px",
                 },
+                marginLeft: { mobile: "20px", tablet: "auto" },
+                marginRight: { mobile: "20px", tablet: "auto" },
               }}
             >
               {locations.map((location, index) => (
