@@ -20,3 +20,4 @@ const HomeContextProvider = ({children}) => {
 };
 
 export default HomeContextProvider;
+

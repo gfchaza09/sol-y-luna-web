@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Card, Typography } from '@mui/material';
 
 import styles from './EmployeeCard.module.css';
+import { useWindowWidth } from '@/hooks/useWindowWidth';
 
 const {card__container} = styles;
 

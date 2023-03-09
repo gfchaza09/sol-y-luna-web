@@ -252,6 +252,28 @@ button{
   color: var(--white);
 }
 
+.button-beige{
+  font-family: var(--font-Josefin);
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 600;
+  text-transform:capitalize;
+  color: var(--black);
+  background-color: var(--beige-dark-mode);
+
+}
+
+.button-black{
+  font-family: var(--font-Josefin);
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 600;
+  text-transform:capitalize;
+  color: var(--white);
+  background-color: var(--black);
+
+}
+
 /* Responsive styles */
 @media (prefers-color-scheme: dark) {
   html {

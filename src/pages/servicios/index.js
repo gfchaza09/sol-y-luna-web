@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 // Components
 import Layout from "@/components/Layout/Layout";
+import Hero from "@/components/Hero/Hero";
 
 const Services = ({ selectedTheme, toggleTheme }) => {
   return (
@@ -16,6 +17,7 @@ const Services = ({ selectedTheme, toggleTheme }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
+        <Hero title="SERVICIOS" image="/assets/images/services-header.jpg"/>
         <main style={{ minHeight: "100vh" }}>
           <Link href="/">Home</Link>
         </main>
