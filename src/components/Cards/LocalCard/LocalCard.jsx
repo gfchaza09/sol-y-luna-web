@@ -51,7 +51,7 @@ const LocalCard = ({data, selectedTheme}) => {
           {
             showButton && (
               <Link href={data.href} className={link}>
-                <Typography variant='linkCard'>Cómo llegar</Typography> <ChevronRightIcon color={selectedTheme === "light" ? '#D0A554' : '#F1DA9E'} width={20} height={20} />
+                <Typography variant='linkCard'>Cómo llegar</Typography> <ChevronRightIcon color={selectedTheme === "light" ? '#6B7280' : '#F1DA9E'} width={20} height={20} />
               </Link>
             )
           }

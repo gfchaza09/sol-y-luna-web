@@ -8,7 +8,7 @@ const Hero = ({title, image, subtitle}) => {
   const [width, setWidth] = useWindowWidth();
 
   return (
-    <Container sx={{ width:"100vw", maxWidth:"100%" ,height: "100vh", position: "relative", padding: "0px"}}>
+    <Container component="section" sx={{ width:"100vw", maxWidth:"100%" ,height: "100vh", position: "relative", padding: "0px"}}>
         <Image
             src={image}
             alt="hero"
