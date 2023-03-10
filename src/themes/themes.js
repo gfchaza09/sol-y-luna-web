@@ -24,6 +24,9 @@ export const darkTheme = createTheme({
       main: "#0044ff",
       contrastText: "#ffcc00",
     },
+    background: {
+      default: "#111111",
+    },
     custom: {
       light: "#ffa726",
       main: "#f57c00",
@@ -211,6 +214,9 @@ export const lightTheme = createTheme({
     secondary: {
       main: "#F4F6F8", // Define el color secundario para el tema
     },
+    background: {
+      default: "#F4F6F8",
+    },
   },
   typography: {
     fontFamily: '"Lato", sans-serif',
@@ -286,7 +292,7 @@ export const lightTheme = createTheme({
             fontSize: "16px",
             lineHeight: "20px",
             fontWeight: 500,
-            color: "#D0A554",
+            color: "#6B7280",
           },
         },
         {
@@ -303,6 +309,16 @@ export const lightTheme = createTheme({
           props: { variant: "modalWhatsappColor" },
           style: {
             color: "#000000",
+          },
+        },
+      ],
+    },
+    MuiCard: {
+      variants: [
+        {
+          props: { variant: "cardBackground" },
+          style: {
+            backgroundColor: "#FFFFFF",
           },
         },
       ],

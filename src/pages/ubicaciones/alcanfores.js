@@ -1,7 +1,9 @@
 import Head from "next/head";
+
 // Components
 import Layout from "@/components/Layout/Layout";
 import Hero from "@/components/Hero/Hero";
+import MapContainer from "@/components/MapContainer/MapContainer";
 
 const Local1 = ({ selectedTheme, toggleTheme }) => {
   return (
@@ -22,10 +24,10 @@ const Local1 = ({ selectedTheme, toggleTheme }) => {
             subtitle={`📍 Periférico Norte Poniente #40, Los Alcanfores 967.146.7419`}
             image="/assets/images/sol-y-luna-alcanfores-min.jpg"
           />
+          <MapContainer selectedTheme={selectedTheme} />
         </main>
       </Layout>
     </>
   );
 };
-
 export default Local1;
