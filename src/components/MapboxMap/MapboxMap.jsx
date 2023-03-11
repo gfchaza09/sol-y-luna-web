@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
-import mapboxgl from 'mapbox-gl';
+import { useEffect, useRef, useState } from "react";
+import mapboxgl from "mapbox-gl";
 
-const MapboxMap = ({selectedTheme, longLat}) => {
-
+const MapboxMap = ({ selectedTheme, longLat, linkLocation }) => {
   const [map, setMap] = useState();
 
   const mapNode = useRef(null);
@@ -15,15 +14,26 @@ const MapboxMap = ({selectedTheme, longLat}) => {
       container: node,
       accessToken:
         "pk.eyJ1IjoiZ2ZjaGF6YTA5IiwiYSI6ImNsZjIxaXI5ZDAzMzkzeG1veDZsNTMzbG8ifQ.JFi25asPOPU568PgXB6tZw",
-      style: `${selectedTheme === "light" ? "mapbox://styles/mapbox/light-v11" : "mapbox://styles/mapbox/dark-v11"}`,
+      style: `${
+        selectedTheme === "light"
+          ? "mapbox://styles/mapbox/light-v11"
+          : "mapbox://styles/mapbox/dark-v11"
+      }`,
       center: longLat,
       zoom: 16,
     });
 
     const marker = new mapboxgl.Marker({
-        color: "#973939",
-        draggable: false,
-    }).setLngLat(longLat).addTo(mapboxMap)
+      color: "#973939",
+      draggable: false,
+    })
+      .setLngLat(longLat)
+      .setPopup(
+        new mapboxgl.Popup({ closeButton: false, className: `mapbox-container ${selectedTheme === "light" ? "mapbox-container-light" : "mapbox-container-dark" }` }).setHTML(
+          `<a class="mapbox-text ${selectedTheme === "light" ? "mapbox-text-light" : "mapbox-text-dark"}" href=${linkLocation} target="_blank">Cómo llegar</a>`
+        )
+      )
+      .addTo(mapboxMap);
 
     setMap(mapboxMap);
 
@@ -32,12 +42,7 @@ const MapboxMap = ({selectedTheme, longLat}) => {
     };
   }, [selectedTheme]);
 
-  return (
-    <div
-        ref={mapNode}
-        style={{ height: "100%", width: "100%" }}
-    ></div>
-  )
-}
+  return <div ref={mapNode} style={{ height: "100%", width: "100%" }}></div>;
+};
 
-export default MapboxMap
+export default MapboxMap;

@@ -52,6 +52,9 @@ const Local2 = ({ selectedTheme, toggleTheme }) => {
           selectedTheme={selectedTheme}
           title={"SOL Y LUNA CENTRO"}
           longLat={[-92.63567871594242, 16.73693712378187]}
+          linkLocation={
+            "https://maps.google.com/maps/dir//Sol+y+Luna+Centro+Francisco+I.+Madero+6+Zona+Centro+29200+San+Crist%C3%B3bal+de+las+Casas,+Chis.,+M%C3%A9xico/@16.7368929,-92.6356795,19z/data=!4m5!4m4!1m0!1m2!1m1!1s0x85ed453e6fca5f99:0x3aad373d953831f1"
+          }
         />
         <GalleryContainer itemData={itemData} />
       </Layout>
