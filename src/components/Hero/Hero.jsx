@@ -15,7 +15,7 @@ const Hero = ({title, image, subtitle}) => {
             fill
             style={{width:"100%", height: "100%", top: 0, left: 0, filter: "brightness(60%)", objectFit: "cover"}}
         />
-        <Container sx={{color:"#FFFFFF" ,position: "absolute", top: "0", left: "0", bottom: "0", right: "0", textAlign:"center", margin: {mobile: "220px auto", tablet: "400px auto"}}}>
+        <Container sx={{ display:"flex", flexDirection: "column", justifyContent: {mobile: "flex-start" ,tablet: "center"}, alignItems: "center", color:"#FFFFFF" ,position: "absolute", top: "0", left: "0", bottom: "0", right: "0", textAlign:"center", margin: {mobile: "220px auto", tablet: "0px auto"}}}>
           <Typography component="h1" variant={width >= 640 ? "h1" : "h2"} sx={{marginBottom: "12px"}}>{title}</Typography>
           {
             subtitle && <Typography component="h4" variant="h4" sx={{display: {mobile: "none", tablet: "block"}}}>{subtitle}</Typography>

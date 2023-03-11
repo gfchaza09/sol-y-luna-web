@@ -189,6 +189,21 @@ export const darkTheme = createTheme({
         },
       ],
     },
+    MuiButtonBase: {
+      variants: [
+        {
+          props: { variant: "contactButton" },
+          style: {
+            borderRadius: "12px",
+            border: "1px solid #F1DA9E",
+            color: "#F1DA9E",
+            fontWeight: 500,
+            fontSize: 16,
+            lineHeight: "20px",
+          },
+        },
+      ],
+    },
   },
 });
 
@@ -339,6 +354,21 @@ export const lightTheme = createTheme({
           props: { variant: "backgroundNavbar" },
           style: {
             backgroundColor: "#ffffff",
+          },
+        },
+      ],
+    },
+    MuiButtonBase: {
+      variants: [
+        {
+          props: { variant: "contactButton" },
+          style: {
+            borderRadius: "12px",
+            border: "1px solid #6B7280",
+            color: "#6B7280",
+            fontWeight: 500,
+            fontSize: 16,
+            lineHeight: "20px",
           },
         },
       ],
