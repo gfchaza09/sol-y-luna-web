@@ -2,6 +2,7 @@ import Head from "next/head";
 // Components
 import Layout from "@/components/Layout/Layout";
 import Hero from "@/components/Hero/Hero";
+import MapContainer from "@/components/MapContainer/MapContainer";
 
 const Local3 = ({ selectedTheme, toggleTheme }) => {
   return (
@@ -21,6 +22,11 @@ const Local3 = ({ selectedTheme, toggleTheme }) => {
             title={"SOL Y LUNA BOULEVARD"}
             subtitle={`📍 Carretera Panamericana #1118, Boulevard 967.129.1668`}
             image="/assets/images/sol-y-luna-boulevard-min.jpg"
+          />
+          <MapContainer
+            selectedTheme={selectedTheme}
+            title={"SOL Y LUNA BOULEVARD"}
+            longLat={[-92.64092288220887, 16.73076706016034]}
           />
         </main>
       </Layout>

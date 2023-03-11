@@ -1,8 +1,9 @@
+import { ButtonBase } from "@mui/material";
 import Link from "next/link";
 
 import classes from "./ButtonComponent.module.css";
 
-const { btn, btn__carrousel } = classes;
+const {btn,  btn__link, btn__carrousel } = classes;
 
 const ButtonComponent = ({ children, href, icon, target }) => {
   return icon ? (
@@ -10,11 +11,11 @@ const ButtonComponent = ({ children, href, icon, target }) => {
       {children}
     </button>
   ) : (
-    <Link href={href} target={target ? target : ""}>
-      <button className={btn}>
-        {children}
-      </button>
-    </Link>
+    <ButtonBase variant="contactButton" sx={{maxWidth: "190px", width: "100%", height: "48px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+      <Link className={btn__link} href={href} target={target ? target : ""}>
+          {children}
+      </Link>
+    </ButtonBase>
   );
 };
 

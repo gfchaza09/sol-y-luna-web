@@ -2,6 +2,7 @@ import Head from "next/head";
 // Components
 import Layout from "@/components/Layout/Layout";
 import Hero from "@/components/Hero/Hero";
+import MapContainer from "@/components/MapContainer/MapContainer";
 
 const Local2 = ({ selectedTheme, toggleTheme }) => {
   return (
@@ -23,6 +24,11 @@ const Local2 = ({ selectedTheme, toggleTheme }) => {
             image="/assets/images/sol-y-luna-centro-min.jpg"
           />
         </main>
+        <MapContainer
+          selectedTheme={selectedTheme}
+          title={"SOL Y LUNA CENTRO"}
+          longLat={[-92.63567871594242, 16.73693712378187]}
+        />
       </Layout>
     </>
   );

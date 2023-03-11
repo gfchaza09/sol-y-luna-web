@@ -24,7 +24,11 @@ const Local1 = ({ selectedTheme, toggleTheme }) => {
             subtitle={`📍 Periférico Norte Poniente #40, Los Alcanfores 967.146.7419`}
             image="/assets/images/sol-y-luna-alcanfores-min.jpg"
           />
-          <MapContainer selectedTheme={selectedTheme} />
+          <MapContainer
+            selectedTheme={selectedTheme}
+            title={"SOL Y LUNA ALCANFORES"}
+            longLat={[-92.6616916687117, 16.739256938965195]}
+          />
         </main>
       </Layout>
     </>

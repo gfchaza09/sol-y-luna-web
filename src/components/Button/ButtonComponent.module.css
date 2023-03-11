@@ -20,6 +20,14 @@
     height: 56px;
 }
 
+.btn__link {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    width: 100%;
+}
+
 @media screen and (max-width: 375px) {
 
     .btn {
