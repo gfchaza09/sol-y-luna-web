@@ -3,8 +3,32 @@ import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
 import Hero from "@/components/Hero/Hero";
 import MapContainer from "@/components/MapContainer/MapContainer";
+import GalleryContainer from "@/components/GalleryContainer/GalleryContainer";
 
 const Local3 = ({ selectedTheme, toggleTheme }) => {
+  const itemData = [
+    {
+      img: "/assets/images/galeries/galeria-boulevard-1-min.png",
+      title: "Muñeca",
+      rows: 2,
+      cols: 1,
+    },
+    {
+      img: "/assets/images/galeries/galeria-boulevard-3-min.jpg",
+      title: "Restaurante",
+    },
+    {
+      img: "/assets/images/galeries/galeria-boulevard-4-min.jpg",
+      title: "Cocina",
+    },
+    {
+      img: "/assets/images/galeries/galeria-boulevard-2-min.jpg",
+      title: "Restaurante",
+      rows: 1,
+      cols: 2,
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -28,6 +52,7 @@ const Local3 = ({ selectedTheme, toggleTheme }) => {
             title={"SOL Y LUNA BOULEVARD"}
             longLat={[-92.64092288220887, 16.73076706016034]}
           />
+          <GalleryContainer itemData={itemData} />
         </main>
       </Layout>
     </>
