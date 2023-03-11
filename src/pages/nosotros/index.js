@@ -20,8 +20,11 @@ const About = ({ selectedTheme, toggleTheme }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
-        <main style={{ minHeight: "100vh", maxWidth: "1440px", width: "100%" }}>
-          <Hero title="NOSOTROS" image="/assets/images/imagen-nosotros-min.jpg"/>
+        <main>
+          <Hero
+            title="NOSOTROS"
+            image="/assets/images/imagen-nosotros-min.jpg"
+          />
           {/* <EmployeeCard />
           <ReviewCard />
           <ServiceCard /> */}
