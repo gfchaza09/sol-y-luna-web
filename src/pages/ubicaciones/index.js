@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 // Components
 import Layout from "@/components/Layout/Layout";
 import LocalCard from "@/components/Cards/LocalCard/LocalCard";
@@ -47,13 +47,19 @@ const Location = ({ selectedTheme, toggleTheme }) => {
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
         <main>
           <Hero title="UBICACIONES" image="/assets/images/ubicaciones.jpg" />
-          <div>
+          <Container
+            component="section"
+            sx={{
+              padding: { mobile: "20px", tablet: "40px" },
+              maxWidth: "1440px",
+            }}
+          >
             <Typography
-              variant={width > 420 ? (width > 640 ? "h2" : "h4") : "h5"}
+              variant={width > 420 ? (width > 820 ? "h2" : "h3") : "h5"}
               component="h2"
               sx={{
-                margin: { mobile: "77px 0px 32px", tablet: "142px 50px 64px" },
-                textAlign: "center",
+                margin: { mobile: "77px 0px 32px", tablet: "142px 20px 64px" },
+                textAlign: { mobile: "center", tablet: "left" },
               }}
             >
               NUESTRAS UBICACIONES
@@ -70,8 +76,7 @@ const Location = ({ selectedTheme, toggleTheme }) => {
                   mobile2: "300px",
                   tablet: "400px",
                 },
-                marginLeft: { mobile: "20px", tablet: "auto" },
-                marginRight: { mobile: "20px", tablet: "auto" },
+                padding: "0px",
               }}
             >
               {locations.map((location, index) => (
@@ -82,7 +87,7 @@ const Location = ({ selectedTheme, toggleTheme }) => {
                 />
               ))}
             </Grid>
-          </div>
+          </Container>
         </main>
       </Layout>
     </>

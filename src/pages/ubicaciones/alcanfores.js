@@ -4,8 +4,32 @@ import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
 import Hero from "@/components/Hero/Hero";
 import MapContainer from "@/components/MapContainer/MapContainer";
+import GalleryContainer from "@/components/GalleryContainer/GalleryContainer";
 
 const Local1 = ({ selectedTheme, toggleTheme }) => {
+  const itemData = [
+    {
+      img: "/assets/images/galeries/galeria-alcanfores-1-min.png",
+      title: "Jaguar",
+      rows: 2,
+      cols: 1,
+    },
+    {
+      img: "/assets/images/galeries/galeria-alcanfores-3-min.jpg",
+      title: "Restaurante",
+    },
+    {
+      img: "/assets/images/galeries/galeria-alcanfores-4-min.jpg",
+      title: "Salón",
+    },
+    {
+      img: "/assets/images/galeries/galeria-alcanfores-2-min.jpg",
+      title: "Restaurante",
+      rows: 1,
+      cols: 2,
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -29,6 +53,7 @@ const Local1 = ({ selectedTheme, toggleTheme }) => {
             title={"SOL Y LUNA ALCANFORES"}
             longLat={[-92.6616916687117, 16.739256938965195]}
           />
+          <GalleryContainer itemData={itemData} />
         </main>
       </Layout>
     </>
