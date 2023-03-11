@@ -22,7 +22,7 @@ const GalleryContainer = ({itemData}) => {
           >
             <Typography
               component="h2"
-              variant={width < 420 ? "h5" : width <= 640 ? "h3" : "h1"}
+              variant={width < 420 ? "h4" : width <= 820 ? "h2" : "h1"}
               sx={{
                 textAlign: {mobile: "center", tablet: "left"},
                 marginBottom: "40px",

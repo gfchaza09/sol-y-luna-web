@@ -33,30 +33,33 @@ const LocalCard = ({data, selectedTheme}) => {
 
   return (
     <Grid item mobile={12} tablet={6} laptop={4}>
-      <Card variant="cardBackground" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`${card__container} ${showButton ? `${showcard}` : ''}`} sx={{borderRadius: "12px", transition: "all .6s ease-in-out", margin: "0px auto", position: "relative"}}>
-        <div className={img__container}>
-          <Image src={data.image} fill sizes="100vh" alt="local" />
-        </div>
-        <Typography variant="h5" component='h5' sx={{marginTop: "24px", textAlign: "center"}}>{data?.name}</Typography>
-        <Typography sx={{
-          marginTop: "8px",
-          fontFamily: '"Lato", sans-serif',
-          fontSize: {mobile: 16, mobile2: 17},
-          fontWeight: {mobile: 400, mobile2: 500},
-          lineHeight: {mobile: "19px", mobile2: "25px"},
-        }}>
-          {data.description}
-        </Typography>
-        <div className={`${link__container} ${showButton ? link__animation : ""}`}>
-          {
-            showButton && (
-              <Link href={data.href} className={link}>
-                <Typography variant='linkCard'>Cómo llegar</Typography> <ChevronRightIcon color={selectedTheme === "light" ? '#6B7280' : '#F1DA9E'} width={20} height={20} />
-              </Link>
-            )
-          }
-        </div>
-      </Card>
+      <Link href={data.href}>
+        <Card variant="cardBackground" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`${card__container} ${showButton ? `${showcard}` : ''}`} sx={{borderRadius: "12px", transition: "all .6s ease-in-out", margin: "0px auto", position: "relative"}}>
+          <div className={img__container}>
+            <Image src={data.image} fill sizes="100vh" alt="local" />
+          </div>
+          <Typography variant="h5" component='h5' sx={{marginTop: "24px", textAlign: "center"}}>{data?.name}</Typography>
+          <Typography sx={{
+            marginTop: "8px",
+            fontFamily: '"Lato", sans-serif',
+            fontSize: {mobile: 16, mobile2: 17},
+            fontWeight: {mobile: 400, mobile2: 500},
+            lineHeight: {mobile: "19px", mobile2: "25px"},
+          }}>
+            {data.description}
+          </Typography>
+          <div className={`${link__container} ${showButton ? link__animation : ""}`}>
+            {
+              showButton && (
+                <Link href={data.href} className={link}>
+                  <Typography variant='linkCard'>Cómo llegar</Typography> <ChevronRightIcon color={selectedTheme === "light" ? '#6B7280' : '#F1DA9E'} width={20} height={20} />
+                </Link>
+              )
+            }
+          </div>
+        </Card>
+      
+      </Link>
     </Grid>
   )
 }

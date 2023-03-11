@@ -51,14 +51,18 @@ const Location = ({ selectedTheme, toggleTheme }) => {
             component="section"
             sx={{
               padding: { mobile: "20px", tablet: "40px" },
-              maxWidth: "1440px",
+              maxWidth: "1640px",
             }}
           >
             <Typography
               variant={width > 420 ? (width > 820 ? "h2" : "h3") : "h5"}
               component="h2"
               sx={{
-                margin: { mobile: "77px 0px 32px", tablet: "142px 20px 64px" },
+                margin: {
+                  mobile: "77px 0px 32px",
+                  tablet: "142px 0px 64px",
+                  desktop: "142px 20px 64px",
+                },
                 textAlign: { mobile: "center", tablet: "left" },
               }}
             >
@@ -69,7 +73,7 @@ const Location = ({ selectedTheme, toggleTheme }) => {
               spacing={2}
               justifyContent="center"
               sx={{
-                maxWidth: "1440px",
+                maxWidth: "1640px",
                 width: "auto",
                 marginBottom: {
                   mobile: "214px",

@@ -10,7 +10,7 @@ const MapContainer = ({ selectedTheme, title, longLat }) => {
 
   return (
     <Container component="section" sx={{padding: "0px", maxWidth: "1440px", margin: "0px auto"}}>
-        <Typography component="h2" variant={width < 480 ? "h5" : "h3"} sx={{display: {mobile: "block", tablet2: "none"}, textAlign: "center", width: "100%", marginTop: "34px", marginBottom: "36px"}}>{title}</Typography>
+        <Typography component="h2" variant={width < 480 ? "h5" : "h3"} sx={{display: {mobile: "block", tablet2: "none"}, textAlign: "center", width: "100%", marginTop: {mobile: "34px", mobile2: "54px"}, marginBottom: {mobile: "36px", mobile2: "24px"}}}>{title}</Typography>
       <Container sx={{ display: "flex", flexDirection: {mobile: "column-reverse", tablet:"row"}, padding: {mobile: "20px", tablet: "30px 50px", tablet2: "100px"}, margin: "0px auto", gap: {mobile: "0px", tablet: "20px"} }}>
         <Container
           sx={{

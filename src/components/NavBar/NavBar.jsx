@@ -173,7 +173,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
     window !== undefined ? () => window.document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex"}}>
+    <Box component="header" sx={{ display: "flex"}}>
       <AppBar
         component="nav"
         sx={{
