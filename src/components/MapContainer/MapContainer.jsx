@@ -4,7 +4,7 @@ import ButtonComponent from "../Button/ButtonComponent";
 import MapboxMap from "../MapboxMap/MapboxMap";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-const MapContainer = ({ selectedTheme, title, longLat }) => {
+const MapContainer = ({ selectedTheme, title, longLat, linkLocation }) => {
 
   const [width, setWidth] = useWindowWidth();
 
@@ -46,7 +46,7 @@ const MapContainer = ({ selectedTheme, title, longLat }) => {
           </Container>
         </Container>
         <Container sx={{ height: {mobile: "400px", tablet: "auto"}, width:{ mobile: "100%", tablet:"55%"}, padding: "0px", borderRadius: "12px", overflow: "hidden" }}>
-          <MapboxMap selectedTheme={selectedTheme} longLat={longLat} />
+          <MapboxMap selectedTheme={selectedTheme} longLat={longLat} linkLocation={linkLocation}/>
         </Container>
       </Container>
     </Container>

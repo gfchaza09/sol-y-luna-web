@@ -274,6 +274,51 @@ button{
 
 }
 
+/* Marker from mapbox */
+
+.mapbox-container {
+  border-radius: 12px;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.mapbox-container-dark {
+  background: #F4F6F8;
+  border-color: #D0A554;
+  color: #D0A554;
+}
+
+.mapbox-container-light {
+  background: #111111;
+  border-color: #9CA3AF;
+  color: #9CA3AF;
+}
+
+.mapboxgl-popup-content {
+  padding: 11px 34px !important;
+  border-radius: 12px !important;
+  background: inherit !important;
+}
+
+.mapboxgl-popup-tip {
+  display: none;
+}
+
+.mapbox-text {
+  font-family: var(--font-Lato);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.mapbox-text-dark {
+  color: #D0A554;
+}
+
+.mapbox-text-light {
+  color: #9CA3AF;
+}
+
 /* Responsive styles */
 @media (prefers-color-scheme: dark) {
   html {
