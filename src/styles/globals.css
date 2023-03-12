@@ -280,18 +280,40 @@ button{
   border-radius: 12px;
   border-width: 3px;
   border-style: solid;
+  top: -5px !important;
+}
+
+.mapbox-container::before {
+  content: '';
+  position: absolute; 
+  z-index: -1;
+  width: 11px;
+  height: 11px;
+  left: 40px;
+  top: 40px;
+  transform: skewX(50deg) skewY(40deg);
 }
 
 .mapbox-container-dark {
   background: #F4F6F8;
   border-color: #D0A554;
   color: #D0A554;
+  filter: drop-shadow(0px 0px 1px #D0A554);
+}
+
+.mapbox-container-dark::before {
+  background-color: #D0A554;
 }
 
 .mapbox-container-light {
   background: #111111;
   border-color: #9CA3AF;
   color: #9CA3AF;
+  filter: drop-shadow(0px 0px 1px #9CA3AF);
+}
+
+.mapbox-container-light::before {
+  background-color: #9CA3AF;
 }
 
 .mapboxgl-popup-content {
