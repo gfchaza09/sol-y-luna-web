@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
+import {Slider} from 'react-slick'
 
 const mockImagenes = [
     "https://picsum.photos/id/980/1000",
