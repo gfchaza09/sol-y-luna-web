@@ -68,18 +68,6 @@ export const darkTheme = createTheme({
       fontWeight: 500,
       lineHeight: "22px",
     },
-    variants: [
-      {
-        props: { variant: "textLogo" },
-        style: {
-          fontFamily: '"Lato", sans-serif',
-          fontSize: "17px",
-          lineHeight: "25px",
-          fontWeight: 600,
-          textDecoration: "none",
-        },
-      },
-    ],
   },
   components: {
     MuiTypography: {
@@ -139,6 +127,16 @@ export const darkTheme = createTheme({
           props: { variant: "modalWhatsappColor" },
           style: {
             color: "#ffffff",
+          },
+        },
+        {
+          props: { variant: "caption2Card" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "12px",
+            lineHeight: "18px",
+            fontWeight: 500,
+            color: "#F1DA9E",
           },
         },
       ],
@@ -332,6 +330,16 @@ export const lightTheme = createTheme({
           props: { variant: "modalWhatsappColor" },
           style: {
             color: "#000000",
+          },
+        },
+        {
+          props: { variant: "caption2Card" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "12px",
+            lineHeight: "18px",
+            fontWeight: 500,
+            color: "#6B7280",
           },
         },
       ],

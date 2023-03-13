@@ -9,13 +9,6 @@
     gap: 16px;
 }
 
-.text__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
 .img__container {
     width: 100%; 
     min-height: 300px;
@@ -26,13 +19,9 @@
     border-radius: 6px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 639px) {
     .card__container {
         flex-direction: column;
         padding: 30px;
-    }
-
-    .text__container > h5 {
-        text-align: center;
     }
 }
