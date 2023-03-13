@@ -68,18 +68,6 @@ export const darkTheme = createTheme({
       fontWeight: 500,
       lineHeight: "22px",
     },
-    variants: [
-      {
-        props: { variant: "textLogo" },
-        style: {
-          fontFamily: '"Lato", sans-serif',
-          fontSize: "17px",
-          lineHeight: "25px",
-          fontWeight: 600,
-          textDecoration: "none",
-        },
-      },
-    ],
   },
   components: {
     MuiTypography: {
@@ -141,6 +129,16 @@ export const darkTheme = createTheme({
             color: "#ffffff",
           },
         },
+        {
+          props: { variant: "caption2Card" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "12px",
+            lineHeight: "18px",
+            fontWeight: 500,
+            color: "#F1DA9E",
+          },
+        },
       ],
     },
     MuiCard: {
@@ -200,6 +198,14 @@ export const darkTheme = createTheme({
             fontWeight: 500,
             fontSize: 16,
             lineHeight: "20px",
+          },
+        },
+        {
+          props: { variant: "carouselButton" },
+          style: {
+            borderRadius: "50%",
+            border: "2px solid #FFFFFF",
+            color: "#FFFFFF",
           },
         },
       ],
@@ -326,6 +332,16 @@ export const lightTheme = createTheme({
             color: "#000000",
           },
         },
+        {
+          props: { variant: "caption2Card" },
+          style: {
+            fontFamily: '"Lato", sans-serif',
+            fontSize: "12px",
+            lineHeight: "18px",
+            fontWeight: 500,
+            color: "#6B7280",
+          },
+        },
       ],
     },
     MuiCard: {
@@ -369,6 +385,14 @@ export const lightTheme = createTheme({
             fontWeight: 500,
             fontSize: 16,
             lineHeight: "20px",
+          },
+        },
+        {
+          props: { variant: "carouselButton" },
+          style: {
+            borderRadius: "50%",
+            border: "2px solid #000000",
+            color: "#000000",
           },
         },
       ],

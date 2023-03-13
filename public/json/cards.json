@@ -69,40 +69,44 @@
   ],
   "servicios": [
     {
-      "servicio": "Area de juegos",
-      "descripcion": "Tenemos un salón apto para los más pequeños.El área cuenta con varias actividades y juegos de entretenimiento para que los niños se diviertan mientras aguardan por su comida.",
-      "detalle": "Disponible en sucursales: Alacanfores y Centro.",
-      "imagen":"/assets/images/area-de-juegos-min.jpg"
+      "servicio": "Área de juegos",
+      "descripcion1": "Tenemos un salón apto para los más pequeños.",
+      "descripcion2": "El área cuenta con varias actividades y juegos de entretenimiento para que los niños se diviertan mientras aguardan por su comida.",
+      "detalle": "Disponible en sucursales: Alcanfores y Centro.",
+      "imagen": "/assets/images/area-de-juegos-min.jpg"
     },
     {
       "servicio": "Estacionamiento",
-      "descripcion": "Contamos con un amplio estacionamiento en la sucursal Sol y Luna Alcanfores para mayor comodidad de nuestros clientes.",
-      "detalle": "Disponible en sucursales: Alacanfores.",
-      "imagen":"/assets/images/estacionamiento-min.jpg"
+      "descripcion1": "Contamos con un amplio estacionamiento en la sucursal Sol y Luna Alcanfores para mayor comodidad de nuestros clientes.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/estacionamiento-min.jpg"
     },
     {
-      "servicio": "Salon de eventos",
-      "descripcion": "También queremos ser parte de los momentos más importantes, así que contamos con un salón para eventos.¿Lo mejor de todo? Si consumes los alimentos con nosotros, no tiene un costo extra la renta del espacio.",
-      "detalle": "Disponible en sucursales: Alacanfores.",
-      "imagen":"/assets/images/salon-de-eventos-min.jpg"
+      "servicio": "Salón de eventos",
+      "descripcion1": "También queremos ser parte de los momentos más importantes, así que contamos con un salón para eventos.",
+      "descripcion2": "¿Lo mejor de todo? Si consumes los alimentos con nosotros, no tiene un costo extra la renta del espacio.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/galeries/galeria-alcanfores-4-min.jpg"
     },
     {
       "servicio": "Delivery",
-      "descripcion": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.Contamos con delivery en nuestra principal sucursal. Solo tienes que contactarte a través de nuestro Whatsapp.",
-      "detalle": "Disponible en sucursal",
-      "imagen":"/assets/images/delivery.jpg"
+      "descripcion1": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.",
+      "descripcion2": "Contamos con delivery en nuestra principal sucursal. Solo tienes que contactarte a través de nuestro Whatsapp.",
+      "detalle": "Disponible en todas las sucursales",
+      "imagen": "/assets/images/delivery.jpg"
     },
     {
       "servicio": "Take Away",
-      "descripcion": "Sabemos lo valioso que es tu tiempo, por eso es que intentamos estar listos para brindar el servicio más rápido con nuestra comida para llevar.",
+      "descripcion1": "Sabemos lo valioso que es tu tiempo, por eso es que intentamos estar listos para brindar el servicio más rápido con nuestra comida para llevar.",
       "detalle": "Disponible en todas las sucursales.",
-      "imagen":"/assets/images/delivery.jpg"
+      "imagen": "/assets/images/galeries/galeria-centro-3-min.jpg"
     },
     {
       "servicio": "Promociones",
-      "descripcion": "En Sol y Luna tenemos promociones igual de especiales y únicos como nuestros clientes.Contamos con promociones y descuentos de cumpleaños, el menú del día y más.",
+      "descripcion1": "En Sol y Luna tenemos promociones igual de especiales y únicos como nuestros clientes.",
+      "descripcion2": "Contamos con promociones y descuentos de cumpleaños, el menú del día y más.",
       "detalle": "Disponible en todas las sucursales.",
-      "imagen":""
+      "imagen": "/assets/images/galeries/galeria-centro-2-min.jpg"
     }
   ],
   "platos_principales": [
