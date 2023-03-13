@@ -9,6 +9,8 @@ import ServiceCard from "@/components/Cards/ServiceCard/ServiceCard";
 import ButtonComponent from "@/components/Button/ButtonComponent";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
+import data from "../../../public/json/cards.json";
+
 const Services = ({ selectedTheme, toggleTheme }) => {
   const sliderRef = useRef();
 
@@ -17,7 +19,7 @@ const Services = ({ selectedTheme, toggleTheme }) => {
     infinite: true,
     speed: 500,
     arrows: false,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "60px",
@@ -25,8 +27,17 @@ const Services = ({ selectedTheme, toggleTheme }) => {
       {
         breakpoint: 820,
         settings: {
+          slidesToShow: 1,
           centerMode: false,
           centerPadding: "0px",
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "60px",
         },
       },
     ],
@@ -70,22 +81,19 @@ const Services = ({ selectedTheme, toggleTheme }) => {
             <Container
               sx={{
                 padding: { mobile: "20px", tablet2: "0px" },
-                marginBottom: "165px",
+                marginBottom: { mobile: "132px", tablet: "165px" },
               }}
             >
               <Slider {...settings} ref={sliderRef}>
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
-                <ServiceCard />
+                {data.servicios.map((servicio, index) => (
+                  <ServiceCard key={index} data={servicio} />
+                ))}
               </Slider>
               <Container
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  marginTop: "60px",
+                  marginTop: { mobile: "20px", tablet: "60px" },
                   padding: { mobile: "0px 30px", tablet2: "0px 100px" },
                 }}
               >
