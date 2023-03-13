@@ -202,6 +202,14 @@ export const darkTheme = createTheme({
             lineHeight: "20px",
           },
         },
+        {
+          props: { variant: "carouselButton" },
+          style: {
+            borderRadius: "50%",
+            border: "2px solid #FFFFFF",
+            color: "#FFFFFF",
+          },
+        },
       ],
     },
   },
@@ -369,6 +377,14 @@ export const lightTheme = createTheme({
             fontWeight: 500,
             fontSize: 16,
             lineHeight: "20px",
+          },
+        },
+        {
+          props: { variant: "carouselButton" },
+          style: {
+            borderRadius: "50%",
+            border: "2px solid #000000",
+            color: "#000000",
           },
         },
       ],
