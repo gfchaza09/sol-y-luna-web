@@ -1,9 +1,7 @@
 .card__container {
-    max-width: 1029px;
+    max-width: 1100px;
     width: 100%;
     min-height: 388px;
-    height: auto;
-    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,14 +16,18 @@
     height: 100%;
 }
 
-.card__container > img {
+.img__container {
+    width: 100%; 
+    min-height: 300px;
+    height: auto;
+    max-height: 500px;
+    position: relative;
+    overflow: hidden; 
     border-radius: 6px;
 }
 
 @media screen and (max-width: 375px) {
     .card__container {
-        max-width: 335px;
-        min-height: 505px;
         flex-direction: column;
         padding: 30px;
     }
