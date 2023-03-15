@@ -26,6 +26,7 @@ export const darkTheme = createTheme({
     },
     background: {
       default: "#111111",
+      btnMenu: "#1C1C1C",
     },
     custom: {
       light: "#ffa726",
@@ -208,6 +209,13 @@ export const darkTheme = createTheme({
             color: "#FFFFFF",
           },
         },
+        {
+          props: { variant: "menuButton" },
+          style: {
+            backgroundColor: "#F1DA9E",
+            color: "#000000",
+          },
+        },
       ],
     },
   },
@@ -237,6 +245,7 @@ export const lightTheme = createTheme({
     },
     background: {
       default: "#F4F6F8",
+      btnMenu: "#FFFFFF",
     },
   },
   typography: {
@@ -393,6 +402,13 @@ export const lightTheme = createTheme({
             borderRadius: "50%",
             border: "2px solid #000000",
             color: "#000000",
+          },
+        },
+        {
+          props: { variant: "menuButton" },
+          style: {
+            backgroundColor: "#9CA3AF",
+            color: "#FFFFFF",
           },
         },
       ],

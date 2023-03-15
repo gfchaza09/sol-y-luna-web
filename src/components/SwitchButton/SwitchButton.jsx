@@ -1,13 +1,17 @@
-import { Box, Button, ButtonGroup } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
+import { ButtonBase, Container, Typography } from "@mui/material";
 
 const SwitchButton = () => {
-    const {isActive, setIsActive} = useState()
+  const [menuLocation, setMenuLocation] = useState("alca-blvd");
   return (
-    <Box display="flex" justifyContent="center" alignItems="center" m={4}>
-      <button className="button-beige">Alcanfores y Boulevard</button>
-      <button className="button-black">Centro</button>
-    </Box>
+    <Container sx={{bgcolor: "background.btnMenu" ,width: "100%", padding: "6px", display: "flex", justifyContent: "space-between", alignItems: "center", borderRadius: "20px"}}>
+      <ButtonBase onClick={()=>setMenuLocation("alca-blvd")} variant={menuLocation === "alca-blvd" ? "menuButton" : ""} sx={{width: "50%", padding: "15px", borderRadius: "14px"}}>
+        <Typography variant="h3">Alcanfores y Boulevard</Typography>
+      </ButtonBase>
+      <ButtonBase onClick={()=>setMenuLocation("centro")}  variant={menuLocation === "centro" ? "menuButton" : ""} sx={{width: "50%", padding: "15px", borderRadius: "14px"}}>
+      <Typography variant="h3">Centro</Typography>
+      </ButtonBase>
+    </Container>
   );
 };
 
