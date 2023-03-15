@@ -1,28 +1,19 @@
 .card__container {
     max-width: 400px;
     width: 100%;
-    min-height: 711px;
+    min-height: 700px;
     height: auto;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: stretch;
     align-items: center;
     padding: 30px;
-}
-
-.card__container > img {
-    border-radius: 6px;
-    margin-bottom: 24px;
-}
-
-.card__container > h3, .card__container > h4 {
-    margin-bottom: 8px;
 }
 
 @media screen and (max-width: 375px) {
     .card__container {
         max-width: 335px;
-        min-height: 573px;
+        min-height: 613px;
     }
 }

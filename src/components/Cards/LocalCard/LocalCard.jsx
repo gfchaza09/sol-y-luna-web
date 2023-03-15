@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
-import { Card, Container, Grid, Typography } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
 
 import styles from './LocalCard.module.css';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
