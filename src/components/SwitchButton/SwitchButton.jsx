@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { ButtonBase, Container, Typography } from "@mui/material";
 
-const SwitchButton = () => {
-  const [menuLocation, setMenuLocation] = useState("alca-blvd");
+const SwitchButton = ({menuLocation, setMenuLocation}) => {
   return (
     <Container sx={{bgcolor: "background.btnMenu" ,width: "100%", padding: "6px", display: "flex", justifyContent: "space-between", alignItems: "center", borderRadius: "20px"}}>
       <ButtonBase onClick={()=>setMenuLocation("alca-blvd")} variant={menuLocation === "alca-blvd" ? "menuButton" : ""} sx={{width: "50%", padding: "15px", borderRadius: "14px"}}>
