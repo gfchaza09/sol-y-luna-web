@@ -8,6 +8,7 @@ export const darkTheme = createTheme({
       mobile2: 420,
       tablet: 640,
       tablet2: 820,
+      tablet3: 950,
       laptop: 1024,
       desktop: 1200,
     },
@@ -18,6 +19,7 @@ export const darkTheme = createTheme({
       main: "#111111",
       navbar: "#1c1c1c",
       footer: "#1c1c1c",
+      border: "#F1DA9E",
     },
     secondary: {
       light: "#0066ff",
@@ -229,6 +231,7 @@ export const lightTheme = createTheme({
       mobile2: 420,
       tablet: 640,
       tablet2: 820,
+      tablet3: 950,
       laptop: 1024,
       desktop: 1200,
     },
@@ -239,6 +242,7 @@ export const lightTheme = createTheme({
       main: "#D0A554", // Define el color principal para el tema
       navbar: "#ffffff",
       footer: "#ffffff",
+      border: "#9CA3AF",
     },
     secondary: {
       main: "#F4F6F8", // Define el color secundario para el tema
