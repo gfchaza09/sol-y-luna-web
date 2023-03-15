@@ -341,6 +341,10 @@ button{
   color: #9CA3AF;
 }
 
+.slick-slide:not(.slick-active) {
+  opacity: 0.5;
+}
+
 /* Responsive styles */
 @media (prefers-color-scheme: dark) {
   html {

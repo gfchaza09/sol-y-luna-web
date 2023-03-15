@@ -10,7 +10,7 @@
 }
 
 .img__container {
-    width: 100%; 
+    width: 70%; 
     min-height: 300px;
     height: auto;
     max-height: 500px;
@@ -22,6 +22,11 @@
 @media screen and (max-width: 639px) {
     .card__container {
         flex-direction: column;
+        justify-content: flex-start;
         padding: 30px;
+    }
+
+    .img__container {
+        width: 100%;
     }
 }

@@ -12,7 +12,7 @@ const ServiceCard = ({data}) => {
 
   return (
     <Card variant="cardBackground" className={card__container} sx={{borderRadius: "12px"}}>
-      <Container sx={{padding: "0px", display: "flex", flexDirection: {mobile: "column"}, gap: "30px"}}>
+      <Container sx={{padding: "0px", display: "flex", flexDirection: "column", justifyContent: {mobile: "center"}, gap: "30px"}}>
         <Typography variant={width < 420 ? 'h5' : 'h3'} sx={{textAlign: {mobile: "center", tablet: "left"}}}>{data.servicio.toUpperCase()}</Typography>
         <Container sx={{padding: "0px", display: "flex", flexDirection: "column", gap: "20px", marginBottom: "30px"}}>
           <Typography sx={{fontWeight: 400, fontSize: 16, lineHeight: "20px"}}>{data.descripcion1}</Typography>

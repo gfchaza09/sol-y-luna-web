@@ -1,21 +1,23 @@
 import Image from 'next/image';
-import { Card, Typography } from '@mui/material';
+import { Card, Container, Typography } from '@mui/material';
 
 import styles from './EmployeeCard.module.css';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 
 const {card__container} = styles;
 
-const EmployeeCard = () => {
+const EmployeeCard = ({data}) => {
 
   const [width, setWidth] = useWindowWidth();
 
   return (
     <Card variant="cardBackground" className={card__container}>
-      <Image src="https://upload.wikimedia.org/wikipedia/commons/9/90/El_empleado_del_mes.jpg" width={width < 375 ? 275 : 340} height={width < 375 ? 275: 340} alt="employee"/>
-      <Typography variant='h3' className="h3">Dahiana Meza</Typography>
-      <h4><Typography variant='subtitleCard' className='h4'>Chef - Sucursal Centro</Typography></h4>
-      <Typography className={width < 375 ? 'caption1' : 'body'}>Dahiana es una talentosa y experimentada  chef, es conocida por su creatividad y pasión por la comida. Con cuatro años de experiencia como chef profesional, su conocimiento de los ingredientes y la cocina es profundo y multifacético. El trabajo de Dahiana se caracteriza por su frescura y originalidad. Nos enorgullece que se parte de la familia Sol y Luna.</Typography>
+      <Container sx={{padding: "0px", position: "relative", height: "320px", overflow: "hidden", borderRadius: "6px"}}>
+        <Image src={data.img} fill sizes="100vh" alt="employee" style={{objectFit: "cover"}}/>
+      </Container>
+      <Typography component="h3" variant='h3' className="h3" sx={{marginTop: "24px"}}>{data.nombre}</Typography>
+      <Typography component="h4" variant='subtitleCard' className='h4' sx={{marginTop: "8px", textAlign: "center"}}>{data.cargo} - {data.sucursal}</Typography>
+      <Typography sx={{marginTop: "8px", fontWeight: {moible: 400, tablet: 500}, fontSize: {mobile: 14, tablet: 17}, lineHeight: {mobile: "20px",tablet: "25px"}}}>{data.descripcion}</Typography>
     </Card>
   )
 }
