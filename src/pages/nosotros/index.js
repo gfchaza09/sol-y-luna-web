@@ -29,7 +29,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
     centerMode: true,
     responsive: [
       {
-        breakpoint: 1600,
+        breakpoint: 1750,
         settings: {
           slidesToShow: 3,
           centerMode: true,
@@ -37,7 +37,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
         },
       },
       {
-        breakpoint: 1000,
+        breakpoint: 1240,
         settings: {
           slidesToShow: 2,
           centerMode: true,
@@ -75,20 +75,20 @@ const About = ({ selectedTheme, toggleTheme }) => {
         <Container
           component="section"
           sx={{
-            padding: { mobile: "0px 20px", tablet: "140px 80px" },
+            padding: { mobile: "0px 20px", tablet2: "140px 80px" },
             marginBottom: "122px",
-            marginTop: { mobile: "0px", tablet: "10px" },
+            marginTop: { mobile: "0px", tablet2: "10px" },
             maxWidth: "1640px",
           }}
         >
           <Typography
             component="h2"
-            variant="h5"
+            variant={width > 640 ? "h4" : "h5"}
             sx={{
               textAlign: "center",
               marginTop: "50px",
               marginBottom: "24px",
-              display: { mobile: "block", tablet: "none" },
+              display: { mobile: "block", tablet2: "none" },
             }}
           >
             SOBRE NOSOTROS
@@ -96,7 +96,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
           <Container
             sx={{
               padding: "0px",
-              display: { mobile: "block", tablet: "flex" },
+              display: { mobile: "block", tablet2: "flex" },
               justifyContent: "center",
               alignItems: "center",
               gap: "95px",
@@ -106,7 +106,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
               sx={{
                 padding: "0px",
                 width: "100%",
-                height: { mobile: "250px", tablet: "500px" },
+                height: { mobile: "250px", tablet: "400px", tablet2: "500px" },
                 position: "relative",
                 overflow: "hidden",
                 borderRadius: "6px",
@@ -123,18 +123,18 @@ const About = ({ selectedTheme, toggleTheme }) => {
 
             <Container
               sx={{
-                width: { mobile: "100%", tablet: "50%" },
+                width: { mobile: "100%", tablet2: "50%" },
                 padding: "0px",
                 display: "flex",
                 flexDirection: "column",
                 gap: "20px",
-                marginTop: { mobile: "24px", tablet: "0px" },
+                marginTop: { mobile: "24px", tablet2: "0px" },
               }}
             >
               <Typography
                 component="h2"
                 variant="h2"
-                sx={{ display: { mobile: "none", tablet: "block" } }}
+                sx={{ display: { mobile: "none", tablet2: "block" } }}
               >
                 SOBRE NOSOTROS
               </Typography>
@@ -181,11 +181,11 @@ const About = ({ selectedTheme, toggleTheme }) => {
         >
           <Typography
             component="h2"
-            variant={width > 640 ? "h2" : "h5"}
+            variant={width > 820 ? "h2" : width > 640 ? "h4" : "h5"}
             sx={{
               paddingLeft: { mobile: "0px", tablet: "100px" },
               marginBottom: "32px",
-              textAlign: { mobile: "center", tablet: "left" },
+              textAlign: { mobile: "center", tablet2: "left" },
             }}
           >
             NUESTROS COLABORADORES
