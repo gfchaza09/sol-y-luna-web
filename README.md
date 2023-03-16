@@ -1,5 +1,7 @@
 # <center> SOL Y LUNA RESTAURANT</center>
+
 ----
+
 ## Este proyecto es una aplicación web para el restaurante **SOL Y LUNA**. La aplicación está desarrollada en **React** bajo el framework **NextJS**. El mismo es el producto de un solido grupo de trabajo compuesto por diseñadores UX/UI, desarrolladores FrontEnd y un community manager. El sitio cuenta con los mas altos standares  y esta construido bajo los paradigmas de escalabilidad y correcta funcionalidad a largo plazo
 
 ---
@@ -64,6 +66,14 @@ Si desea contribuir a este proyecto, por favor abra un nuevo issue o envíe una 
 #### A continuacion podras ver el equipo de trabajo
 
 >#### Agostina Di Giuseppe - UX/UI Desginer
+>
+> [Linkedin](https://www.linkedin.com/in/agostinadigiuseppe/)
+
+>#### Rocio Farias - Community Manager
+
+>#### Samuel Cardenas - UX/UI Designer
+>
+> [Linkedin](https://www.linkedin.com/in/samuel-c%C3%A1rdenas-ux-ui/)
 
 >#### Gabriel Chazarreta - FrontEnd Developer
 >
