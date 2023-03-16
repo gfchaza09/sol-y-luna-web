@@ -44,16 +44,18 @@ const MenuButton = ({ title, section, menuSection, setMenuSection }) => {
       <Typography
         variant="h3"
         sx={{
-          marginLeft: { mobile: "-20px",mobile2: "-24px", tablet: "-30px" ,tablet2: "-40px", tablet3: "20px" },
-          fontSize: { mobile: 12, mobile2: 16, tablet: 20, tablet2: 28 },
+          marginLeft: { mobile: "-20px",mobile2: "-24px", tablet: "-30px" ,tablet2: "-40px", tablet3: "5px", laptop: "10px",desktop: "20px" },
+          fontSize: { mobile: 12, mobile2: 16, tablet: 20, tablet2: 22, tablet3: 20, laptop: 22, desktop: 28 },
           lineHeight: {
             mobile: "18px",
             mobile2: "20px",
             tablet: "25px",
             tablet2: "30px",
           },
-          fontFamily: {mobile: '"Lato", sans-serif', mobile2: '"Josefin Sans", sans-serif'}
+          fontFamily: {mobile: '"Lato", sans-serif', mobile2: '"Josefin Sans", sans-serif'},
+          cursor: "pointer"
         }}
+        onClick={() => setMenuSection(section)}
       >
         {title}
       </Typography>
