@@ -357,11 +357,18 @@ button{
   opacity: 0.5;
 }
 
-/* Images */
+
+
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+  width: 100% !important;
+}
+
 .img{
   width: 100%;
   height: 100%;
 }
+
 
 /* Responsive styles */
 @media (prefers-color-scheme: dark) {

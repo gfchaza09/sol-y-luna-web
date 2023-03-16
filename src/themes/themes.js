@@ -8,6 +8,7 @@ export const darkTheme = createTheme({
       mobile2: 420,
       tablet: 640,
       tablet2: 820,
+      tablet3: 950,
       laptop: 1024,
       desktop: 1200,
     },
@@ -18,6 +19,8 @@ export const darkTheme = createTheme({
       main: "#111111",
       navbar: "#1c1c1c",
       footer: "#1c1c1c",
+      border: "#F1DA9E66",
+      borderActive: "#F1DA9E",
     },
     secondary: {
       light: "#0066ff",
@@ -218,6 +221,37 @@ export const darkTheme = createTheme({
         },
       ],
     },
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          scrollbarColor: "#6b6b6b #2b2b2b",
+          "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
+            backgroundColor: "#2b2b2b",
+          },
+          "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
+            borderRadius: 8,
+            backgroundColor: "#6b6b6b",
+            minHeight: 24,
+            border: "3px solid #2b2b2b",
+          },
+          "&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus":
+            {
+              backgroundColor: "#959595",
+            },
+          "&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active":
+            {
+              backgroundColor: "#959595",
+            },
+          "&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover":
+            {
+              backgroundColor: "#959595",
+            },
+          "&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner": {
+            backgroundColor: "#2b2b2b",
+          },
+        },
+      },
+    },
   },
 });
 
@@ -229,6 +263,7 @@ export const lightTheme = createTheme({
       mobile2: 420,
       tablet: 640,
       tablet2: 820,
+      tablet3: 950,
       laptop: 1024,
       desktop: 1200,
     },
@@ -239,6 +274,8 @@ export const lightTheme = createTheme({
       main: "#D0A554", // Define el color principal para el tema
       navbar: "#ffffff",
       footer: "#ffffff",
+      border: "#9CA3AF80",
+      borderActive: "#9CA3AF",
     },
     secondary: {
       main: "#F4F6F8", // Define el color secundario para el tema
@@ -412,6 +449,37 @@ export const lightTheme = createTheme({
           },
         },
       ],
+    },
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          scrollbarColor: "#6b6b6b #2b2b2b",
+          "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
+            backgroundColor: "#2b2b2b",
+          },
+          "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
+            borderRadius: 8,
+            backgroundColor: "#6b6b6b",
+            minHeight: 24,
+            border: "3px solid #2b2b2b",
+          },
+          "&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus":
+            {
+              backgroundColor: "#959595",
+            },
+          "&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active":
+            {
+              backgroundColor: "#959595",
+            },
+          "&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover":
+            {
+              backgroundColor: "#959595",
+            },
+          "&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner": {
+            backgroundColor: "#2b2b2b",
+          },
+        },
+      },
     },
   },
 });
