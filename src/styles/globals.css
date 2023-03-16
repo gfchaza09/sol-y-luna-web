@@ -126,6 +126,8 @@ button{
   background: var(--green-wsp);
 }
 
+
+
 /* Heading styles */
 .h1{
   font-family: var(--font-Josefin);
@@ -271,6 +273,16 @@ button{
   text-transform:capitalize;
   color: var(--white);
   background-color: var(--black);
+}
+
+.button-standard{
+  font-family: var(--font-Lato);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  border: none;
 
 }
 
@@ -343,6 +355,12 @@ button{
 
 .slick-slide:not(.slick-active) {
   opacity: 0.5;
+}
+
+/* Images */
+.img{
+  width: 100%;
+  height: 100%;
 }
 
 /* Responsive styles */
