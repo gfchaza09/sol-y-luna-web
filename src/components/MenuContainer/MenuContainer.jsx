@@ -52,13 +52,14 @@ const MenuContainer = () => {
       component="section"
       sx={{
         padding: {
+          mobile: "60px 20px",
           tablet2: "100px 30px",
           laptop: "100px 70px",
           desktop: "100px",
         },
       }}
     >
-      <Container sx={{ padding: "0px", marginBottom: "156px" }}>
+      <Container sx={{ padding: "0px", marginBottom: {mobile: "70px",tablet: "156px"} }}>
         <Typography
           sx={{
             fontWeight: 500,
@@ -98,24 +99,27 @@ const MenuContainer = () => {
           maxWidth: "1640px",
         }}
       >
-        <Container sx={{ padding: "0px", width: {mobile: "80%",tablet3: "30%"} }}>
+        <Container sx={{ padding: "0px", width: {mobile: "100%",mobile2: "300px",tablet: "80%",tablet3: "0%"} }}>
           <Container
             sx={{
               padding: "0px",
               position: "relative",
-              width: {mobile: "100%",tablet3: "0px"},
-              height: {mobile: "0px",tablet3: "540px"},
+              width: {mobile: "240px",mobile2: "270px",tablet: "420px",tablet2: "560px",tablet3: "0px"},
+              height: {mobile: "0px",tablet3: "500px"},
               border: "1.5px solid",
               borderColor: "primary.border",
             }}
           >
             <Container
               sx={{
-                height: {mobile: "0px", tablet3: "550px"},
-                width: {mobile: "100%", tablet3:"0px"},
+                height: {mobile: "0px", tablet3: "540px"},
+                width: {mobile: "320px",mobile2: "360px",tablet: "550px" , tablet2: "700px", tablet3:"0px"},
                 display: "flex",
-                flexDirection:{ mobile: "row",tablet3: "column"},
+                flexDirection:{ mobile: "row", tablet3: "column"},
                 justifyContent: "space-between",
+                position: {mobile: "absolute", tablet3: "static"},
+                top: {mobile: "-15px",tablet:"-30px"},
+                left: "-30px"
               }}
             >
               {buttons.map((button, index) => (
@@ -137,13 +141,13 @@ const MenuContainer = () => {
             overflow: "hidden",
             overflowY: "scroll",
             maxHeight: "850px",
-            minWidth: "580px",
-            maxWidth: "600px",
-            width: "60%",
+            minWidth: {mobile: "280px", mobile2: "360px",tablet: "590px"},
+            maxWidth: {mobile: "500px",tablet: "700px"},
+            width: {mobile: "100%", mobile2: "80%",tablet3: "60%"},
           }}
         >
           <Document
-            file={`/assets/pdf/${menuLocation}/${menuSection}-${width > 640 ? "desktop" : "mobile"}.pdf`}
+            file={`/assets/pdf/${menuLocation}/${menuSection}-${width >= 640 ? "desktop" : "mobile"}.pdf`}
             onLoadSuccess={onDocumentLoadSuccess}
           >
             <Page pageNumber={pageNumber} renderTextLayer={false} />

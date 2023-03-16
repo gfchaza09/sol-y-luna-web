@@ -54,6 +54,7 @@ const Local3 = ({ selectedTheme, toggleTheme }) => {
             linkLocation={
               "https://maps.google.com/maps/dir//Sol+Y+Luna+Boulevard+29250,+de+las+Americas+5+San+Antonio+29250+San+Crist%C3%B3bal+de+las+Casas,+Chis.,+M%C3%A9xico/@16.7307433,-92.6409202,20z/data=!4m5!4m4!1m0!1m2!1m1!1s0x85ed4515295d2a9b:0x9fbba272896e9985"
             }
+            tel={"+529671291668"}
           />
           <GalleryContainer itemData={itemData} />
         </main>

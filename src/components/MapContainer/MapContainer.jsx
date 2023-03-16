@@ -4,7 +4,7 @@ import ButtonComponent from "../Button/ButtonComponent";
 import MapboxMap from "../MapboxMap/MapboxMap";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-const MapContainer = ({ selectedTheme, title, longLat, linkLocation }) => {
+const MapContainer = ({ selectedTheme, title, longLat, linkLocation, tel }) => {
 
   const [width, setWidth] = useWindowWidth();
 
@@ -40,7 +40,7 @@ const MapContainer = ({ selectedTheme, title, longLat, linkLocation }) => {
             </Typography>
           </Container>
           <Container sx={{display: "flex", justifyContent: "center", alignItems: "center", padding: "0px", marginTop: "50px"}}>
-            <ButtonComponent href="https://wa.me/123456789" target="_blank">
+            <ButtonComponent href={`https://wa.me/${tel}`} target="_blank">
                 Contactar
             </ButtonComponent>
           </Container>

@@ -55,6 +55,7 @@ const Local1 = ({ selectedTheme, toggleTheme }) => {
             linkLocation={
               "https://maps.google.com/maps/dir//Restaurante+Sol+y+Luna+Perif.+Nte.+Pte.+40+Los+Alcanfores+29246+San+Crist%C3%B3bal+de+las+Casas,+Chis.,+M%C3%A9xico/@16.7392455,-92.6616912,21z/data=!4m5!4m4!1m0!1m2!1m1!1s0x85ed45a659eb7955:0x9b3202f796b09ad7"
             }
+            tel={"+529671467419"}
           />
           <GalleryContainer itemData={itemData} />
         </main>

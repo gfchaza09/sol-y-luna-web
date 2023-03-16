@@ -51,9 +51,9 @@ const LocalCard = ({data, selectedTheme}) => {
           <div className={`${link__container} ${showButton ? link__animation : ""}`}>
             {
               showButton && (
-                <Link href={data.href} className={link}>
+                <div className={link}>
                   <Typography variant='linkCard'>Cómo llegar</Typography> <ChevronRightIcon color={selectedTheme === "light" ? '#6B7280' : '#F1DA9E'} width={20} height={20} />
-                </Link>
+                </div>
               )
             }
           </div>
