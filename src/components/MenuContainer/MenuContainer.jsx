@@ -54,7 +54,7 @@ const MenuContainer = () => {
         padding: {
           mobile: "60px 20px",
           tablet2: "100px 30px",
-          laptop: "100px 70px",
+          laptop: "100px 50px",
           desktop: "100px",
         },
       }}
@@ -140,10 +140,10 @@ const MenuContainer = () => {
             borderRadius: "12px",
             overflow: "hidden",
             overflowY: "scroll",
-            maxHeight: "850px",
-            minWidth: {mobile: "280px", mobile2: "360px",tablet: "590px"},
-            maxWidth: {mobile: "500px",tablet: "700px"},
-            width: {mobile: "100%", mobile2: "80%",tablet3: "60%"},
+            maxHeight:{mobile: "600px", tablet: "700px", tablet3: "800px"},
+            minWidth: {mobile: "300px", mobile2: "360px", tablet: "600px",tablet2: "700px"},
+            maxWidth: {mobile: "300px",tablet: "700px"},
+            width: {mobile: "100%",tablet3: "60%"},
           }}
         >
           <Document
