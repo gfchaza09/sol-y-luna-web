@@ -11,7 +11,7 @@ const EmployeeCard = ({data}) => {
   const [width, setWidth] = useWindowWidth();
 
   return (
-    <Card variant="cardBackground" className={card__container}>
+    <Card variant="cardBackground" className={card__container} sx={{borderRadius: "12px"}}>
       <Container sx={{padding: "0px", position: "relative", height: "320px", overflow: "hidden", borderRadius: "6px"}}>
         <Image src={data.img} fill sizes="100vh" alt="employee" style={{objectFit: "cover"}}/>
       </Container>

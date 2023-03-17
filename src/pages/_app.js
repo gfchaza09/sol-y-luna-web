@@ -9,8 +9,7 @@ import HomeContextProvider from "@/context/HomeContext";
 import { useThemeDarkLight } from "@/hooks/useThemeDarkLight.js";
 
 import "mapbox-gl/dist/mapbox-gl.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "swiper/css";
 
 export default function App({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false);
