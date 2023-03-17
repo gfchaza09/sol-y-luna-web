@@ -1,48 +1,19 @@
-import { useRef } from "react";
 import Head from "next/head";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Container, Typography } from "@mui/material";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 // Components
 import Layout from "@/components/Layout/Layout";
 import Hero from "@/components/Hero/Hero";
-import { Container, Typography } from "@mui/material";
-import Slider from "react-slick";
 import ServiceCard from "@/components/Cards/ServiceCard/ServiceCard";
-import ButtonComponent from "@/components/Button/ButtonComponent";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
+import {
+  SwiperButtonNext,
+  SwiperButtonPrev,
+} from "@/components/SwiperButton/SwiperButton";
 
 import data from "../../../public/json/cards.json";
 
 const Services = ({ selectedTheme, toggleTheme }) => {
-  const sliderRef = useRef();
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    arrows: false,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "60px",
-    responsive: [
-      {
-        breakpoint: 820,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false,
-          centerPadding: "0px",
-        },
-      },
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-          centerPadding: "60px",
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <Head>
@@ -80,36 +51,56 @@ const Services = ({ selectedTheme, toggleTheme }) => {
             </Typography>
             <Container
               sx={{
-                padding: { mobile: "20px", tablet2: "0px" },
+                padding: "20px",
                 marginBottom: { mobile: "132px", tablet: "165px" },
               }}
             >
-              <Slider {...settings} ref={sliderRef}>
-                {data.servicios.map((servicio, index) => (
-                  <ServiceCard key={index} data={servicio} />
-                ))}
-              </Slider>
-              <Container
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  marginTop: { mobile: "20px", tablet: "60px" },
-                  padding: { mobile: "0px 30px", tablet2: "0px 100px" },
+              <Swiper
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 200,
+                    centeredSlides: true,
+                    centeredSlidesBounds: true,
+                    loop: true,
+                  },
+                  1400: {
+                    slidesPerView: 2,
+                    spaceBetween: 150,
+                    centeredSlides: true,
+                    centeredSlidesBounds: true,
+                    loop: true,
+                    loopedSlides: 2,
+                  },
                 }}
+                spaceBetween={0}
+                slidesPerView={1}
+                centeredSlides={true}
+                centeredSlidesBounds={true}
+                loop={true}
+                loopedSlides={1}
               >
-                <ButtonComponent
-                  icon
-                  onClick={() => sliderRef.current.slickPrev()}
+                {data.servicios.map((servicio, index) => (
+                  <SwiperSlide key={index}>
+                    <ServiceCard data={servicio} />
+                  </SwiperSlide>
+                ))}
+                <Container
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    marginTop: { mobile: "20px", tablet: "60px" },
+                    padding: { mobile: "0px 30px", tablet2: "0px 100px" },
+                  }}
                 >
-                  <ArrowLeftIcon width={30} />
-                </ButtonComponent>
-                <ButtonComponent
-                  icon
-                  onClick={() => sliderRef.current.slickNext()}
-                >
-                  <ArrowRightIcon width={30} />
-                </ButtonComponent>
-              </Container>
+                  <SwiperButtonPrev>
+                    <ArrowLeftIcon width={30} />
+                  </SwiperButtonPrev>
+                  <SwiperButtonNext>
+                    <ArrowRightIcon width={30} />
+                  </SwiperButtonNext>
+                </Container>
+              </Swiper>
             </Container>
           </Container>
         </main>

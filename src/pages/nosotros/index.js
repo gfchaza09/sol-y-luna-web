@@ -1,59 +1,22 @@
-import { useRef } from "react";
-import Slider from "react-slick";
 import Head from "next/head";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Typography } from "@mui/material";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 // Components
 import Layout from "@/components/Layout/Layout";
 import EmployeeCard from "@/components/Cards/EmployeeCard/EmployeeCard";
 import Hero from "@/components/Hero/Hero";
-import ButtonComponent from "@/components/Button/ButtonComponent";
-import { useWindowWidth } from "@/hooks/useWindowWidth";
+import {
+  SwiperButtonNext,
+  SwiperButtonPrev,
+} from "@/components/SwiperButton/SwiperButton";
 
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 import data from "../../../public/json/cards.json";
 
 const About = ({ selectedTheme, toggleTheme }) => {
   const [width, setWidth] = useWindowWidth();
-
-  const sliderRef = useRef();
-
-  const settings = {
-    className: "center",
-    dots: false,
-    infinite: true,
-    speed: 500,
-    arrows: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    centerMode: true,
-    responsive: [
-      {
-        breakpoint: 1750,
-        settings: {
-          slidesToShow: 3,
-          centerMode: true,
-          centerPadding: "0px",
-        },
-      },
-      {
-        breakpoint: 1240,
-        settings: {
-          slidesToShow: 2,
-          centerMode: true,
-          centerPadding: "0px",
-        },
-      },
-      {
-        breakpoint: 820,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-          centerPadding: "0px",
-        },
-      },
-    ],
-  };
   return (
     <>
       <Head>
@@ -190,25 +153,54 @@ const About = ({ selectedTheme, toggleTheme }) => {
           >
             NUESTROS COLABORADORES
           </Typography>
-          <Slider {...settings} ref={sliderRef}>
-            {data.empleados.map((empleado) => (
-              <EmployeeCard key={empleado.id} data={empleado} />
-            ))}
-          </Slider>
-          <Container
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: { mobile: "20px", tablet: "60px" },
-              padding: { mobile: "0px 30px", tablet2: "0px 100px" },
-            }}
-          >
-            <ButtonComponent icon onClick={() => sliderRef.current.slickPrev()}>
-              <ArrowLeftIcon width={30} />
-            </ButtonComponent>
-            <ButtonComponent icon onClick={() => sliderRef.current.slickNext()}>
-              <ArrowRightIcon width={30} />
-            </ButtonComponent>
+          <Container sx={{ padding: "0px" }}>
+            <Swiper
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 120,
+                  centeredSlides: true,
+                  centeredSlidesBounds: true,
+                  loop: true,
+                  loopedSlides: 1,
+                },
+                950: {
+                  slidesPerView: 2,
+                  spaceBetween: 120,
+                  centeredSlides: true,
+                  centeredSlidesBounds: true,
+                  loop: true,
+                  loopedSlides: 2,
+                },
+              }}
+              spaceBetween={0}
+              slidesPerView={1}
+              centeredSlides={true}
+              centeredSlidesBounds={true}
+              loop={true}
+              loopedSlides={1}
+            >
+              {data.empleados.map((empleado) => (
+                <SwiperSlide key={empleado.id}>
+                  <EmployeeCard data={empleado} />
+                </SwiperSlide>
+              ))}
+              <Container
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginTop: { mobile: "20px", tablet: "60px" },
+                  padding: { mobile: "0px 30px", tablet2: "0px 100px" },
+                }}
+              >
+                <SwiperButtonPrev>
+                  <ArrowLeftIcon width={30} />
+                </SwiperButtonPrev>
+                <SwiperButtonNext>
+                  <ArrowRightIcon width={30} />
+                </SwiperButtonNext>
+              </Container>
+            </Swiper>
           </Container>
         </Container>
       </Layout>

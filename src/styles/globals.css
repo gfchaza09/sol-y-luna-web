@@ -353,8 +353,17 @@ button{
   color: #9CA3AF;
 }
 
-.slick-slide:not(.slick-active) {
-  opacity: 0.5;
+.swiper {
+  width: 100%;
+}
+
+.swiper .swiper-slide {
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+.swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.4;
+  filter: grayscale(0.5);
 }
 
 .react-pdf__Page__canvas {
