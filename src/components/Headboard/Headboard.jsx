@@ -14,8 +14,8 @@ const Headboard = ({ data, isAlined }) => {
         display: "flex",
         flexDirection: "row",
         width: "90vw",
-        height: "80vh",
-        margin: "150px 20px",
+        height: "calc(100vh-75px)",
+        margin: "150px 50px",
         gap: "30px",
       }}
     >
@@ -34,14 +34,14 @@ const Headboard = ({ data, isAlined }) => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              alignItems: "center",
+              alignItems: "flex-start",
               flex: "50%",
               paddingBottom:"50px"
             }}
           >
-            <Typography variant="h2">{data?.servicios?.titulo}</Typography>
-            <Typography variant="p">{data?.servicios?.descripcion}</Typography>
-            <ButtonBase>Conoce más</ButtonBase>
+            <Typography variant="h2">{data?.menu?.titulo}</Typography>
+            <Typography variant="p">{data?.menu?.descripcion}</Typography>
+            <ButtonBase sx={{alignSelf:"center"}}>{data?.menu?.txtBoton}</ButtonBase>
           </Box>
         </>
       ) : (
@@ -51,14 +51,14 @@ const Headboard = ({ data, isAlined }) => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              alignItems: "center",
+              alignItems: "flex-start",
               flex: "50%",
               paddingBottom:"50px"
             }}
           >
-            <Typography variant="h2">{data?.servicios?.titulo}</Typography>
-            <Typography variant="p">{data?.servicios?.descripcion}</Typography>
-            <ButtonBase>Conoce más</ButtonBase>
+            <Typography variant="h2">{data?.sobreNosotros?.titulo}</Typography>
+            <Typography variant="p">{data?.sobreNosotros?.descripcion}</Typography>
+            <ButtonBase sx={{alignSelf:"center"}}>{data?.sobreNosotros?.txtBoton}</ButtonBase>
           </Box>
           <Box sx={{ flex: "50%" }}>
             <Image
