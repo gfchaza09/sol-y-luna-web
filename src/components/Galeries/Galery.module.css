@@ -1,5 +1,50 @@
-.grid_container{
-    display: grid;
 
+.galery_container {
+  margin: 80px 50px 80px 50px;
+  width: 90vw;
+  height:auto;
+  display: grid;
+  /* grid-template-columns: repeat( autofit minmax(250px,1fr)); */
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas:
+    "primera segunda segunda"
+    "primera tercera cuarta";
+  gap: 20px;
 }
 
+.img1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  grid-area: primera;
+}
+.img2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  grid-area: segunda;
+}
+.img3 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  grid-area: tercera;
+}
+.img4 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  grid-area: cuarta;
+}
+
+@media (max-width:750px){
+  .galery_container {
+    grid-template-columns: repeat( autofit minmax(250px,1fr));
+    grid-template-areas:
+      "primera" 
+      "segunda"
+      "tercera" 
+      "cuarta";
+  }
+
+}
