@@ -6,6 +6,7 @@ import Layout from "@/components/Layout/Layout";
 import Hero from "@/components/Hero/Hero";
 import Headboard from "@/components/Headboard/Headboard";
 import data from '../../public/json/textos.json'
+import galery from '../../public/json/galeryHome.json'
 import { Box } from "@mui/system";
 import { Container, Typography } from "@mui/material";
 import CardBoard from "@/components/Headboard/CardBoard";
@@ -34,6 +35,12 @@ const Home = ({ selectedTheme, toggleTheme }) => {
         <Box m="0 50px">
           <Typography variant="h2">¿QUE OFRECEMOS?</Typography>
         </Box>
+        <br />
+        <br />
+
+        <Typography variant="h2" m="0 50px">NUESTROS PLATILLOS</Typography>
+        <Galery data={galery} />
+
       </Layout>
     </>
   );
