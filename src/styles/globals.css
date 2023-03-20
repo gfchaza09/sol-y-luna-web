@@ -254,18 +254,16 @@ button{
   color: var(--white);
 }
 
-.button-beige{
+.button-dark{
   font-family: var(--font-Josefin);
   font-size: 16px;
   line-height: 40px;
   font-weight: 600;
-  text-transform:capitalize;
-  color: var(--black);
-  background-color: var(--beige-dark-mode);
-
+  color: var(--white);
+  border-color: var(--beige-dark-mode);
 }
 
-.button-black{
+.button-light{
   font-family: var(--font-Josefin);
   font-size: 16px;
   line-height: 40px;
