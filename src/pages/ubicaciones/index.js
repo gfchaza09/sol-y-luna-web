@@ -13,6 +13,7 @@ const locations = [
       "Nuestra sucursal principal. Cuenta con estacionamiento, un área de juegos y un salón de eventos para reservar.",
     image: "/assets/images/sol-y-luna-alcanfores-min.jpg",
     href: "/ubicaciones/alcanfores",
+    value: "alcanfores",
   },
   {
     name: "SOL Y LUNA BOULEVARD",
@@ -20,6 +21,7 @@ const locations = [
       "Ideal si estás buscando comida al paso. Aunque también puedes disfrutar de la comida en nuestro agradable ambiente de Sol y Luna Boulevard.",
     image: "/assets/images/sol-y-luna-boulevard-min.jpg",
     href: "/ubicaciones/boulevard",
+    value: "boulevard",
   },
   {
     name: "SOL Y LUNA CENTRO",
@@ -27,6 +29,7 @@ const locations = [
       "Ubicada en el corazón de San Cristóbal de las Casas, esta sucursal es la más frecuentada por nuestros clientes turistas.",
     image: "/assets/images/sol-y-luna-centro-min.jpg",
     href: "/ubicaciones/centro",
+    value: "centro",
   },
 ];
 

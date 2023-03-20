@@ -165,7 +165,23 @@ const About = ({ selectedTheme, toggleTheme }) => {
                   loopedSlides: 1,
                 },
                 950: {
-                  slidesPerView: 2,
+                  slidesPerView: 2.5,
+                  spaceBetween: 120,
+                  centeredSlides: true,
+                  centeredSlidesBounds: true,
+                  loop: true,
+                  loopedSlides: 2,
+                },
+                1440: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 120,
+                  centeredSlides: true,
+                  centeredSlidesBounds: true,
+                  loop: true,
+                  loopedSlides: 2,
+                },
+                1900: {
+                  slidesPerView: 4.5,
                   spaceBetween: 120,
                   centeredSlides: true,
                   centeredSlidesBounds: true,
@@ -174,7 +190,6 @@ const About = ({ selectedTheme, toggleTheme }) => {
                 },
               }}
               spaceBetween={0}
-              slidesPerView={1}
               centeredSlides={true}
               centeredSlidesBounds={true}
               loop={true}
