@@ -34,21 +34,22 @@ const Home = ({ selectedTheme, toggleTheme }) => {
           subtitle="Restaurante de comida mexicana, con ambiente agradable y totalmente familiar"
           buttonText="Conocenos"
         />
-        <Headboard data={data} isAlined={true} />
-        <Headboard data={data} isAlined={false} />
-        {/* <CardBoard /> */}
+        <Headboard data={data} />
         <Box m="0 50px">
           <Typography variant="h2">¿QUE OFRECEMOS?</Typography>
-          {/* <HomeServices /> */}
+          {/* <MenuButton /> */}
         </Box>
-        <br />
-        <br />
-
-        <Typography variant="h2" m="0 50px">
-          NUESTROS PLATILLOS
-        </Typography>
-        <Galery data={galery} />
-        {/* <HomeLocations selectedTheme={selectedTheme} /> */}
+        <Box>
+          <Typography variant="h2" m="0 50px">
+            NUESTROS PLATILLOS
+          </Typography>
+          <Galery data={galery} />
+        </Box>
+        <Box>
+          <Typography variant="h2" m="0 50px">
+            UBICACIONES
+          </Typography>
+        </Box>
       </Layout>
     </>
   );
