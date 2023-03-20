@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
-import { Accordion, AccordionDetails, AccordionSummary, Box, Modal, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Modal, Typography } from "@mui/material";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { borderRadius } from "@mui/system";
 
 const style = {
   height: '600px',
@@ -20,9 +21,9 @@ const style = {
 };
 
 const accordionItems = [
-  { name: "SOL Y LUNA ALCANFORES", tel: "123456789", id: 1 },
-  { name: "SOL Y LUNA BOULEVARD", tel: "123456789", id: 2 },
-  { name: "SOL Y LUNA CENTRO", tel: "123456789", id: 3 },
+  { name: "SOL Y LUNA ALCANFORES", tel: "+529671467419", id: 1 },
+  { name: "SOL Y LUNA BOULEVARD", tel: "+529671291668", id: 2 },
+  { name: "SOL Y LUNA CENTRO", tel: "+529671452802", id: 3 },
 ];
 
 const ModalComponent = ({open, handleClose, selectedTheme}) => {
@@ -50,17 +51,22 @@ const ModalComponent = ({open, handleClose, selectedTheme}) => {
                 expandIcon={<ChevronDownIcon width={25} color={selectedTheme === "dark" ? "#ffffff" : "#000000"} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
+                variant="backgroundAccordionHover"
               >
                 <Typography component="h5" variant="h5">{item.name}</Typography>
               </AccordionSummary>
               <AccordionDetails sx={{display: 'flex', flexDirection:'column', gap: "24px"}}>
-                <Link href={`https://wa.me/${item.tel}`} target="_blank" sx={{display:'flex', flexDirection: 'column', textTransform: 'none', width: '100%'}}>
-                  <Typography className="body2" variant="modalWhatsappColor">Realizar reservación</Typography>
-                  <Typography sx={{fontSize:12, lineHeight: '18px', fontWeight: 500}}>Hacer una reservación en la sucursal</Typography>
-                </Link>
-                <Link href={`https://wa.me/${item.tel}`} target="_blank" sx={{display:'flex', flexDirection: 'column', textTransform: 'none'}}>
-                  <Typography className="body2" variant="modalWhatsappColor">Realizar pedido</Typography>
-                  <Typography sx={{fontSize:12, lineHeight: '18px', fontWeight: 500}}>Hacer un pedido para delivery o take out en la sucursal</Typography>
+                  <Link href={`https://api.whatsapp.com/send?phone=${item.tel}&text=Hola ${item.name}!%20Quisiera%20realizar%20una%20reservación`} target="_blank">
+                    <Container variant="backgroundAccordionHover" sx={{display:'flex', flexDirection: 'column', textTransform: 'none', width: '100%', padding: "15px 10px", borderRadius:"6px"}}>
+                      <Typography className="body2" variant="modalWhatsappColor">Realizar reservación</Typography>
+                      <Typography sx={{fontSize:12, lineHeight: '18px', fontWeight: 500}}>Hacer una reservación en la sucursal</Typography>
+                    </Container>
+                  </Link>                
+                <Link href={`https://api.whatsapp.com/send?phone=${item.tel}&text=Hola ${item.name}!%20Quisiera%20realizar%20un%20pedido`} target="_blank" sx={{display:'flex', flexDirection: 'column', textTransform: 'none'}}>
+                  <Container variant="backgroundAccordionHover" sx={{display:'flex', flexDirection: 'column', textTransform: 'none', width: '100%', padding: "15px 10px", borderRadius:"6px"}}>
+                    <Typography className="body2" variant="modalWhatsappColor">Realizar pedido</Typography>
+                    <Typography sx={{fontSize:12, lineHeight: '18px', fontWeight: 500}}>Hacer un pedido para delivery o take out en la sucursal</Typography>
+                  </Container>
                 </Link>
               </AccordionDetails>
             </Accordion>
