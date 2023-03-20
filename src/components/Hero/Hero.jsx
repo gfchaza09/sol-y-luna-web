@@ -1,5 +1,6 @@
+import Link from "next/link";
 import Image from "next/image";
-import { Button, ButtonBase, Container, Typography } from "@mui/material";
+import { ButtonBase, Container, Typography } from "@mui/material";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { useEffect, useState } from "react";
@@ -64,7 +65,7 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
           flexDirection: "column",
           gap:"20px",
           justifyContent: { mobile: "flex-start", tablet: "center" },
-          alignItems: "center",
+          alignItems: {mobile: "center", tablet: `${buttonText ? "flex-start" : "center"}`},
           color: "#FFFFFF",
           position: "absolute",
           top: "0",
@@ -78,7 +79,7 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
         <Typography
           component="h1"
           variant={width >= 640 ? "h1" : "h2"}
-          sx={{ marginBottom: "12px" }}
+          sx={{ marginBottom: `${buttonText ? "30px" : "12px"}` }}
         >
           {title}
         </Typography>
@@ -86,13 +87,24 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
           <Typography
             component="h4"
             variant="h4"
-            sx={{ display: { mobile: "none", tablet: "block" } }}
+            sx={{ display: { mobile: `${buttonText ? 'block' : 'none'}`, tablet: "block", marginBottom: "30px" } }}
           >
             {subtitle}
           </Typography>
         )}
         {buttonText && (
-          <button >{buttonText}</button>
+          <ButtonBase sx={{maxWidth: "190px", width: "100%", height: "48px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "12px",
+          border: "1px solid #FFF",
+          color: "#FFF",
+          fontWeight: 500,
+          fontSize: 16,
+          lineHeight: "20px",
+          marginTop: {mobile: "80px", tablet: "0px"}
+          }}>
+            <Link href="/nosotros" style={{fontSize: "inherit", fontWeight: "inherit", color: "inherit", lineHeight: "inherit"}}>
+                {buttonText}
+            </Link>
+          </ButtonBase>
         )}
       </Container>
       <Container
