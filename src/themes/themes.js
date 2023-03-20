@@ -191,6 +191,31 @@ export const darkTheme = createTheme({
         },
       ],
     },
+    MuiAccordionSummary: {
+      variants: [
+        {
+          props: { variant: "backgroundAccordionHover" },
+          style: {
+            ":hover": {
+              backgroundColor: "#252525",
+            },
+          },
+        },
+      ],
+    },
+    MuiContainer: {
+      variants: [
+        {
+          props: { variant: "backgroundAccordionHover" },
+          style: {
+            transition: "background .2s linear",
+            ":hover": {
+              backgroundColor: "#252525",
+            },
+          },
+        },
+      ],
+    },
     MuiButtonBase: {
       variants: [
         {
@@ -416,6 +441,42 @@ export const lightTheme = createTheme({
           props: { variant: "backgroundNavbar" },
           style: {
             backgroundColor: "#ffffff",
+          },
+        },
+      ],
+    },
+    MuiAccordion: {
+      variants: [
+        {
+          props: { variant: "backgroundAccordion" },
+          style: {
+            backgroundColor: "#FFFFFF",
+          },
+        },
+      ],
+    },
+    MuiAccordionSummary: {
+      variants: [
+        {
+          props: { variant: "backgroundAccordionHover" },
+          style: {
+            transition: "background .2s linear",
+            ":hover": {
+              backgroundColor: "#F4F6F8",
+            },
+          },
+        },
+      ],
+    },
+    MuiContainer: {
+      variants: [
+        {
+          props: { variant: "backgroundAccordionHover" },
+          style: {
+            transition: "background .2s linear",
+            ":hover": {
+              backgroundColor: "#F4F6F8",
+            },
           },
         },
       ],

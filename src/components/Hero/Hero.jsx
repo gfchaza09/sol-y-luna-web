@@ -94,7 +94,7 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
         )}
         {buttonText && (
           <ButtonBase sx={{maxWidth: "190px", width: "100%", height: "48px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "12px",
-          border: "1px solid #FFF",
+          border: "2px solid #FFF",
           color: "#FFF",
           fontWeight: 500,
           fontSize: 16,
