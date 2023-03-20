@@ -92,7 +92,7 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
           </Typography>
         )}
         {buttonText && (
-          <button >{buttonText}</button>
+          <Button variant="outlined">{buttonText}</Button>
         )}
       </Container>
       <Container

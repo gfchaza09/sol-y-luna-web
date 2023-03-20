@@ -29,17 +29,21 @@ const Home = ({ selectedTheme, toggleTheme }) => {
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
         <Hero title="SOL Y LUNA SAN CRISTOBAL" image="/assets/images/sol-y-luna-centro-min.jpg" subtitle="Restaurante de comida mexicana, con ambiente agradable y totalmente familiar" buttonText="Conocenos" />
-        <Headboard data={data} isAlined={true} />
-        <Headboard data={data} isAlined={false} />
-        {/* <CardBoard /> */}
+        <Headboard data={data} />
         <Box m="0 50px">
           <Typography variant="h2">¿QUE OFRECEMOS?</Typography>
-        </Box>
-        <br />
-        <br />
+          {/* <MenuButton /> */}
 
-        <Typography variant="h2" m="0 50px">NUESTROS PLATILLOS</Typography>
-        <Galery data={galery} />
+        </Box>
+        <Box>
+          <Typography variant="h2" m="0 50px">NUESTROS PLATILLOS</Typography>
+          <Galery data={galery} />
+        </Box>
+        <Box>
+          <Typography variant="h2" m="0 50px">UBICACIONES</Typography>
+
+
+        </Box>
 
       </Layout>
     </>
