@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { ButtonBase, Container, Typography } from "@mui/material";
 import ButtonComponent from "../Button/ButtonComponent";
 import LocalCard from "../Cards/LocalCard/LocalCard";
+import { borderColor } from "@mui/system";
 
 const locations = [
   {
@@ -9,13 +11,7 @@ const locations = [
       "Nuestra sucursal principal. Cuenta con estacionamiento, un área de juegos y un salón de eventos para reservar.",
     image: "/assets/images/sol-y-luna-alcanfores-min.jpg",
     href: "/ubicaciones/alcanfores",
-  },
-  {
-    name: "SOL Y LUNA BOULEVARD",
-    description:
-      "Ideal si estás buscando comida al paso. Aunque también puedes disfrutar de la comida en nuestro agradable ambiente de Sol y Luna Boulevard.",
-    image: "/assets/images/sol-y-luna-boulevard-min.jpg",
-    href: "/ubicaciones/boulevard",
+    value: "alcanfores",
   },
   {
     name: "SOL Y LUNA CENTRO",
@@ -23,10 +19,21 @@ const locations = [
       "Ubicada en el corazón de San Cristóbal de las Casas, esta sucursal es la más frecuentada por nuestros clientes turistas.",
     image: "/assets/images/sol-y-luna-centro-min.jpg",
     href: "/ubicaciones/centro",
+    value: "centro",
+  },
+  {
+    name: "SOL Y LUNA BOULEVARD",
+    description:
+      "Ideal si estás buscando comida al paso. Aunque también puedes disfrutar de la comida en nuestro agradable ambiente de Sol y Luna Boulevard.",
+    image: "/assets/images/sol-y-luna-boulevard-min.jpg",
+    href: "/ubicaciones/boulevard",
+    value: "boulevard",
   },
 ];
 
-const HomeLocations = ({ selectedTheme }) => {
+export const HomeLocationsDesktop = ({ selectedTheme }) => {
+  const [localActive, setLocalActive] = useState("alcanfores");
+
   return (
     <Container
       sx={{
@@ -38,14 +45,18 @@ const HomeLocations = ({ selectedTheme }) => {
         gap: "50px",
       }}
     >
-      <Container sx={{ padding: "0px", textAlign: "center", marginBottom: "50px" }}>
-        <Typography variant="h2" sx={{marginBottom: "50px"}}>UBICACIONES</Typography>
+      <Container
+        sx={{ padding: "0px", textAlign: "center", marginBottom: "50px" }}
+      >
+        <Typography variant="h2" sx={{ marginBottom: "50px" }}>
+          UBICACIONES
+        </Typography>
         <Typography>
           Contamos con 3 sucursales distribuidas por la ciudad
         </Typography>
         <Typography>
-          En todas ellas podrás encontrar un agradable ambiente familiar y disfrutar de nuestra
-          gran variedad de platillos.
+          En todas ellas podrás encontrar un agradable ambiente familiar y
+          disfrutar de nuestra gran variedad de platillos.
         </Typography>
       </Container>
       <Container sx={{ padding: "0px" }}>
@@ -54,11 +65,23 @@ const HomeLocations = ({ selectedTheme }) => {
             display: "flex",
             justifyContent: "space-around",
             alignItems: "center",
+            position: "relative",
           }}
         >
           <Container
             sx={{
               padding: "0px",
+              position: "absolute",
+              top: "26px",
+              width: "65%",
+              height: "2px",
+              border: "2px solid",
+              borderColor: "primary.border",
+            }}
+          ></Container>
+          <Container
+            sx={{
+              padding: "0px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -73,7 +96,7 @@ const HomeLocations = ({ selectedTheme }) => {
                 height: { mobile: "30px", tablet: "58px" },
                 border: "3px solid",
                 borderColor: `${
-                  true
+                  localActive === "alcanfores"
                     ? "primary.borderActive"
                     : "primary.border"
                 }`,
@@ -81,9 +104,9 @@ const HomeLocations = ({ selectedTheme }) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                opacity: `${true ? "1" : "0.9"}`,
+                opacity: `${localActive === "alcanfores" ? "1" : "0.9"}`,
               }}
-              onClick={() => console.log("hola")}
+              onClick={() => setLocalActive("alcanfores")}
             >
               <ButtonBase
                 variant="menuButton"
@@ -95,7 +118,13 @@ const HomeLocations = ({ selectedTheme }) => {
                 }}
               ></ButtonBase>
             </Container>
-            <Typography variant="h3">ALCANFORES</Typography>
+            <Typography
+              variant="h3"
+              onClick={() => setLocalActive("alcanfores")}
+              sx={{ cursor: "pointer" }}
+            >
+              ALCANFORES
+            </Typography>
           </Container>
           <Container
             sx={{
@@ -114,7 +143,7 @@ const HomeLocations = ({ selectedTheme }) => {
                 height: { mobile: "30px", tablet: "58px" },
                 border: "3px solid",
                 borderColor: `${
-                  true
+                  localActive === "centro"
                     ? "primary.borderActive"
                     : "primary.border"
                 }`,
@@ -122,9 +151,9 @@ const HomeLocations = ({ selectedTheme }) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                opacity: `${true ? "1" : "0.9"}`,
+                opacity: `${localActive === "centro" ? "1" : "0.9"}`,
               }}
-              onClick={() => console.log("hola")}
+              onClick={() => setLocalActive("centro")}
             >
               <ButtonBase
                 variant="menuButton"
@@ -136,7 +165,13 @@ const HomeLocations = ({ selectedTheme }) => {
                 }}
               ></ButtonBase>
             </Container>
-            <Typography variant="h3">CENTRO</Typography>
+            <Typography
+              variant="h3"
+              onClick={() => setLocalActive("alcanfores")}
+              sx={{ cursor: "pointer" }}
+            >
+              CENTRO
+            </Typography>
           </Container>
           <Container
             sx={{
@@ -155,7 +190,7 @@ const HomeLocations = ({ selectedTheme }) => {
                 height: { mobile: "30px", tablet: "58px" },
                 border: "3px solid",
                 borderColor: `${
-                  true
+                  localActive === "boulevard"
                     ? "primary.borderActive"
                     : "primary.border"
                 }`,
@@ -163,9 +198,9 @@ const HomeLocations = ({ selectedTheme }) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                opacity: `${true ? "1" : "0.9"}`,
+                opacity: `${localActive === "boulevard" ? "1" : "0.9"}`,
               }}
-              onClick={() => console.log("hola")}
+              onClick={() => setLocalActive("boulevard")}
             >
               <ButtonBase
                 variant="menuButton"
@@ -177,7 +212,13 @@ const HomeLocations = ({ selectedTheme }) => {
                 }}
               ></ButtonBase>
             </Container>
-            <Typography variant="h3">BOULEVARD</Typography>
+            <Typography
+              variant="h3"
+              onClick={() => setLocalActive("alcanfores")}
+              sx={{ cursor: "pointer" }}
+            >
+              BOULEVARD
+            </Typography>
           </Container>
         </Container>
         <Container
@@ -186,6 +227,7 @@ const HomeLocations = ({ selectedTheme }) => {
             justifyContent: "space-around",
             alignItems: "flex-start",
             marginTop: "30px",
+            gap: "20px",
           }}
         >
           {locations.map((location, index) => (
@@ -193,6 +235,7 @@ const HomeLocations = ({ selectedTheme }) => {
               key={index}
               data={location}
               selectedTheme={selectedTheme}
+              localActive={localActive}
             />
           ))}
         </Container>
@@ -202,4 +245,3 @@ const HomeLocations = ({ selectedTheme }) => {
   );
 };
 
-export default HomeLocations;

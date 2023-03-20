@@ -13,7 +13,7 @@ import CardBoard from "@/components/Headboard/CardBoard";
 import MenuButton from "@/components/MenuButton/MenuButton";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
-import HomeLocations from "@/components/HomeLocations/HomeLocations";
+import { HomeLocationsDesktop } from "@/components/HomeLocations/HomeLocations";
 
 const Home = ({ selectedTheme, toggleTheme }) => {
   return (
@@ -45,11 +45,7 @@ const Home = ({ selectedTheme, toggleTheme }) => {
           </Typography>
           <Galery data={galery} />
         </Box>
-        <Box>
-          <Typography variant="h2" m="0 50px">
-            UBICACIONES
-          </Typography>
-        </Box>
+        <HomeLocationsDesktop />
       </Layout>
     </>
   );
