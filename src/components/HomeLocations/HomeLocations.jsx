@@ -44,18 +44,19 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
         justifyContent: "center",
         alignItems: "center",
         gap: "50px",
+        maxWidth: "1640px"
       }}
     >
       <Container
-        sx={{ padding: "0px", textAlign: "center", marginBottom: "50px" }}
+        sx={{ padding: "20px", textAlign: "center", marginBottom: "50px" }}
       >
         <Typography variant="h2" sx={{ marginBottom: "50px" }}>
           UBICACIONES
         </Typography>
-        <Typography>
+        <Typography sx={{fontSize: 18, fontWeight: 500, lineHeight: "25px"}}>
           Contamos con 3 sucursales distribuidas por la ciudad
         </Typography>
-        <Typography>
+        <Typography sx={{fontSize: 18, fontWeight: 500, lineHeight: "25px"}}>
           En todas ellas podrás encontrar un agradable ambiente familiar y
           disfrutar de nuestra gran variedad de platillos.
         </Typography>
@@ -267,10 +268,10 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
         <Typography component="h2" variant="h5" sx={{ marginBottom: "24px", textAlign: "center" }}>
           UBICACIONES
         </Typography>
-        <Typography>
+        <Typography sx={{fontSize: 16, fontWeight: 400, lineHeight: "20px"}}>
           Contamos con 3 sucursales distribuidas por la ciudad
         </Typography>
-        <Typography>
+        <Typography sx={{fontSize: 16, fontWeight: 400, lineHeight: "20px"}}>
           En todas ellas podrás encontrar un agradable ambiente familiar y
           disfrutar de nuestra gran variedad de platillos.
         </Typography>

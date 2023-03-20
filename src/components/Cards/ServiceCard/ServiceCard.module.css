@@ -8,6 +8,7 @@
     padding: 30px;
     gap: 16px;
     margin: 0px auto;
+    user-select: none;
 }
 
 .img__container {
