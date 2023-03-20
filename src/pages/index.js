@@ -13,9 +13,15 @@ import CardBoard from "@/components/Headboard/CardBoard";
 import MenuButton from "@/components/MenuButton/MenuButton";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
-import { HomeLocationsDesktop } from "@/components/HomeLocations/HomeLocations";
+import {
+  HomeLocationsDesktop,
+  HomeLocationsMobile,
+} from "@/components/HomeLocations/HomeLocations";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const Home = ({ selectedTheme, toggleTheme }) => {
+  const [width, setWidth] = useWindowWidth();
+
   return (
     <>
       <Head>
@@ -45,7 +51,11 @@ const Home = ({ selectedTheme, toggleTheme }) => {
           </Typography>
           <Galery data={galery} />
         </Box>
-        <HomeLocationsDesktop />
+        {width > 820 ? (
+          <HomeLocationsDesktop selectedTheme={selectedTheme} />
+        ) : (
+          <HomeLocationsMobile selectedTheme={selectedTheme} />
+        )}
       </Layout>
     </>
   );
