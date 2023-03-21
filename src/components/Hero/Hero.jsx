@@ -60,6 +60,7 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
             : "none",
           transition: "transform 0.2s ease-out",
         }}
+        priority={true}
       />
       <Container
         sx={{
@@ -95,7 +96,7 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
         </Typography>
         {subtitle && (
           <Typography
-            component="h4"
+            component="h2"
             variant="h4"
             sx={{
               display: {
@@ -110,7 +111,7 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
         )}
         {text && (
           <Typography
-            component="h4"
+            component="h2"
             sx={{
               display: {
                 mobile: `${buttonText ? "block" : "none"}`,
@@ -172,6 +173,9 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
         <motion.button
           className="button-standard"
           onClick={() => setParallaxActivado(!parallaxActivado)}
+          title="Scroll"
+          aria-label="Scroll"
+          aria-labelledby="scroll"
         >
           {/* {parallaxActivado ? "Desactivar" : "Activar"} */}
           <ChevronDownIcon width={50} height={50} color="#FFFFFF" />

@@ -216,6 +216,13 @@ export const darkTheme = createTheme({
             },
           },
         },
+        {
+          props: { variant: "menuButton" },
+          style: {
+            backgroundColor: "#F1DA9E",
+            color: "#000000",
+          },
+        },
       ],
     },
     MuiButtonBase: {
@@ -486,6 +493,13 @@ export const lightTheme = createTheme({
             ":hover": {
               backgroundColor: "#F4F6F8",
             },
+          },
+        },
+        {
+          props: { variant: "menuButton" },
+          style: {
+            backgroundColor: "#9CA3AF",
+            color: "#FFFFFF",
           },
         },
       ],

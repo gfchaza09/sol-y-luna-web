@@ -92,7 +92,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 width: { mobile: "30px", tablet: "58px" },
@@ -110,17 +110,21 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
                 opacity: `${localActive === "alcanfores" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("alcanfores")}
+              title="Sol y Luna Alcanfores"
+              aria-label="Sol y Luna Alcanfores"
+              aria-labelledby="sol y luna alcanfores"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
               variant="h3"
               onClick={() => setLocalActive("alcanfores")}
@@ -139,7 +143,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 width: { mobile: "30px", tablet: "58px" },
@@ -157,17 +161,21 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
                 opacity: `${localActive === "centro" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("centro")}
+              title="Sol y Luna Centro"
+              aria-label="Sol y Luna Centro"
+              aria-labelledby="sol y luna centro"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
               variant="h3"
               onClick={() => setLocalActive("centro")}
@@ -186,7 +194,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 width: { mobile: "30px", tablet: "58px" },
@@ -204,17 +212,21 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
                 opacity: `${localActive === "boulevard" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("boulevard")}
+              title="Sol y Luna Boulevard"
+              aria-label="Sol y Luna Boulevard"
+              aria-labelledby="sol y luna boulevard"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
               variant="h3"
               onClick={() => setLocalActive("boulevard")}
@@ -309,7 +321,7 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 margin: "0px",
@@ -328,18 +340,23 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
                 opacity: `${localActive === "alcanfores" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("alcanfores")}
+              title="Sol y Luna Alcanfores"
+              aria-label="Sol y Luna Alcanfores"
+              aria-labelledby="sol y luna alcanfores"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
+              component="h3"
               variant="h5"
               onClick={() => setLocalActive("alcanfores")}
               sx={{ cursor: "pointer" }}
@@ -366,7 +383,7 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 margin: "0px",
@@ -385,18 +402,23 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
                 opacity: `${localActive === "centro" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("centro")}
+              title="Sol y Luna Centro"
+              aria-label="Sol y Luna Centro"
+              aria-labelledby="sol y luna centro"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
+              component="h3"
               variant="h5"
               onClick={() => setLocalActive("centro")}
               sx={{ cursor: "pointer" }}
@@ -421,7 +443,7 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 margin: "0px",
@@ -440,18 +462,23 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
                 opacity: `${localActive === "boulevard" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("boulevard")}
+              title="Sol y Luna Boulevard"
+              aria-label="Sol y Luna Boulevard"
+              aria-labelledby="sol y luna boulevard"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
+              component="h3"
               variant="h5"
               onClick={() => setLocalActive("boulevard")}
               sx={{ cursor: "pointer" }}
