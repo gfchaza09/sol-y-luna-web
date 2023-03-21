@@ -63,7 +63,7 @@ const HomeServices = () => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 margin: "0px",
@@ -82,18 +82,23 @@ const HomeServices = () => {
                 opacity: `${serviceActive === "estacionamiento" ? "1" : "0.9"}`,
               }}
               onClick={() => setServiceActive("estacionamiento")}
+              title="Estacionamiento"
+              aria-label="Estacionamiento"
+              aria-labelledby="estacionamiento"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
+              component="h3"
               variant={width > 640 ? "h3" : "h5"}
               onClick={() => setServiceActive("estacionamiento")}
               sx={{ cursor: "pointer" }}
@@ -119,7 +124,7 @@ const HomeServices = () => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 margin: "0px",
@@ -138,18 +143,23 @@ const HomeServices = () => {
                 opacity: `${serviceActive === "juegos" ? "1" : "0.9"}`,
               }}
               onClick={() => setServiceActive("juegos")}
+              title="Área de juegos"
+              aria-label="Área de juegos"
+              aria-labelledby="área de juegos"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
+              component="h3"
               variant={width > 640 ? "h3" : "h5"}
               onClick={() => setServiceActive("juegos")}
               sx={{ cursor: "pointer" }}
@@ -173,7 +183,7 @@ const HomeServices = () => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 margin: "0px",
@@ -192,18 +202,23 @@ const HomeServices = () => {
                 opacity: `${serviceActive === "eventos" ? "1" : "0.9"}`,
               }}
               onClick={() => setServiceActive("eventos")}
+              title="Salón de eventos"
+              aria-label="Salón de eventos"
+              aria-labelledby="salón de eventos"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
+              component="h3"
               variant={width > 640 ? "h3" : "h5"}
               onClick={() => setServiceActive("eventos")}
               sx={{ cursor: "pointer" }}
@@ -227,7 +242,7 @@ const HomeServices = () => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 margin: "0px",
@@ -246,18 +261,23 @@ const HomeServices = () => {
                 opacity: `${serviceActive === "delivery" ? "1" : "0.9"}`,
               }}
               onClick={() => setServiceActive("delivery")}
+              title="Delivery y take away"
+              aria-label="Delivery y take away"
+              aria-labelledby="delivery y take away"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
+              component="h3"
               variant={width > 640 ? "h3" : "h5"}
               onClick={() => setServiceActive("delivery")}
               sx={{ cursor: "pointer" }}

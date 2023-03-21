@@ -111,6 +111,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
             width={38}
             height={38}
             alt="logo"
+            priority={true}
           />
         </Link>
         <ButtonBase>
@@ -179,9 +180,9 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
         sx={{
           height: "75px",
           justifyContent: "center",
-          bgcolor: `${selectedTheme === "light" ? "#ffffff" : "#1C1C1C"}${width >= 640 ? backgroundTransparacy : ""}`,
+          background: `${selectedTheme === "light" ? "#ffffff" : "#1C1C1C"}${width >= 640 ? backgroundTransparacy : ""}`,
           color: `${width >= 640 ? color : ""}`,
-          transition: "color, background .4s linear"
+          transition: "all .4s linear"
         }}
         variant="backgroundNavbar"
       >
@@ -229,6 +230,7 @@ const NavBar = ({ selectedTheme, toggleTheme }) => {
                 width={38}
                 height={38}
                 alt="logo"
+                priority={true}
               />
               <Typography
                 variant="linkNavbar"

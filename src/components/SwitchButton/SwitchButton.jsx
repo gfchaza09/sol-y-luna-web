@@ -20,6 +20,7 @@ const SwitchButton = ({ menuLocation, setMenuLocation }) => {
         sx={{ width: "50%", padding: {mobile: "6px", mobile2: "15px"}, borderRadius: "14px" }}
       >
         <Typography
+          component="h2"
           variant="h3"
           sx={{ fontFamily: {mobile: '"Lato", sans-serif', mobile2: '"Josefin Sans", sans-serif'} ,fontSize: { mobile: 14, tablet: 20, tablet2: 28 }, lineHeight: {mobile: "20px", tablet: "25px", tablet2: "30px"} }}
         >
@@ -32,6 +33,7 @@ const SwitchButton = ({ menuLocation, setMenuLocation }) => {
         sx={{ width: "50%", padding: {mobile: "6px", mobile2: "15px"}, borderRadius: "14px" }}
       >
         <Typography
+          component="h2"
           variant="h3"
           sx={{fontFamily: {mobile: '"Lato", sans-serif', mobile2: '"Josefin Sans", sans-serif'}, fontSize: { mobile: 14, tablet: 20, tablet2: 28 }, lineHeight: {mobile: "20px", tablet: "25px", tablet2: "30px"} }}
         >

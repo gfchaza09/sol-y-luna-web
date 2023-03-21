@@ -57,7 +57,7 @@ const LocalCard = ({ data, selectedTheme, localActive }) => {
           </div>
           <Typography
             variant="h5"
-            component="h5"
+            component="h3"
             sx={{ marginTop: "24px", textAlign: "center" }}
           >
             {data?.name}
