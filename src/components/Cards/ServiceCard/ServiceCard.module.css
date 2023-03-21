@@ -21,7 +21,7 @@
     border-radius: 6px;
 }
 
-@media screen and (min-width: 639px) {
+@media screen and (min-width: 640px) {
     .card__container {
         flex-direction: row;
         justify-content: center;

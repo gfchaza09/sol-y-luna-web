@@ -11,7 +11,7 @@ import {
   motion,
 } from "framer-motion";
 
-const Hero = ({ title, image, subtitle, buttonText }) => {
+const Hero = ({ title, image, subtitle, text, buttonText }) => {
   const [width, setWidth] = useWindowWidth();
 
   const [parallaxActivado, setParallaxActivado] = useState(false);
@@ -55,7 +55,9 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
           left: 0,
           filter: "brightness(60%)",
           objectFit: "cover",
-          transform: parallaxActivado ? `translateY(${parallaxPosicion}px)` : "none",
+          transform: parallaxActivado
+            ? `translateY(${parallaxPosicion}px)`
+            : "none",
           transition: "transform 0.2s ease-out",
         }}
       />
@@ -63,17 +65,25 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap:"20px",
+          gap: "20px",
           justifyContent: { mobile: "flex-start", tablet: "center" },
-          alignItems: {mobile: "center", tablet: `${buttonText ? "flex-start" : "center"}`},
+          alignItems: {
+            mobile: "center",
+            tablet: `${buttonText ? "flex-start" : "center"}`,
+          },
           color: "#FFFFFF",
           position: "absolute",
           top: "0",
           left: "0",
           bottom: "0",
           right: "0",
-          textAlign: "center",
+          textAlign: `${buttonText ? "left" : "center"}`,
           margin: { mobile: "220px auto", tablet: "0px auto" },
+          padding: {
+            mobile: "20px",
+            tablet: `${buttonText ? "50px" : "16px"}`,
+            tablet2: `${buttonText ? "100px" : "16px"}`,
+          },
         }}
       >
         <Typography
@@ -87,22 +97,63 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
           <Typography
             component="h4"
             variant="h4"
-            sx={{ display: { mobile: `${buttonText ? 'block' : 'none'}`, tablet: "block", marginBottom: "30px" } }}
+            sx={{
+              display: {
+                mobile: `${buttonText ? "block" : "none"}`,
+                tablet: "block",
+              },
+              marginBottom: "30px",
+            }}
           >
             {subtitle}
           </Typography>
         )}
+        {text && (
+          <Typography
+            component="h4"
+            sx={{
+              display: {
+                mobile: `${buttonText ? "block" : "none"}`,
+                tablet: "block",
+              },
+              marginBottom: "30px",
+              fontSize: { mobile: 22, tablet: 25 },
+              fontWeight: 500,
+              lineHeight: { mobile: "25px", tablet: "30px" },
+            }}
+          >
+            {text}
+          </Typography>
+        )}
         {buttonText && (
-          <ButtonBase sx={{maxWidth: "190px", width: "100%", height: "48px", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "12px",
-          border: "2px solid #FFF",
-          color: "#FFF",
-          fontWeight: 500,
-          fontSize: 16,
-          lineHeight: "20px",
-          marginTop: {mobile: "80px", tablet: "0px"}
-          }}>
-            <Link href="/nosotros" style={{fontSize: "inherit", fontWeight: "inherit", color: "inherit", lineHeight: "inherit"}}>
-                {buttonText}
+          <ButtonBase
+            sx={{
+              maxWidth: "190px",
+              width: "100%",
+              height: "48px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: "12px",
+              border: "2px solid #FFF",
+              color: "#FFF",
+              fontWeight: 500,
+              fontSize: 16,
+              lineHeight: "20px",
+              marginTop: { mobile: "70px", tablet: "0px" },
+              padding: "20px 12px",
+            }}
+          >
+            <Link
+              href="/nosotros"
+              style={{
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                color: "inherit",
+                lineHeight: "inherit",
+              }}
+            >
+              {buttonText}
             </Link>
           </ButtonBase>
         )}
@@ -118,7 +169,10 @@ const Hero = ({ title, image, subtitle, buttonText }) => {
           alignItems: "center",
         }}
       >
-        <motion.button className="button-standard" onClick={() => setParallaxActivado(!parallaxActivado)}>
+        <motion.button
+          className="button-standard"
+          onClick={() => setParallaxActivado(!parallaxActivado)}
+        >
           {/* {parallaxActivado ? "Desactivar" : "Activar"} */}
           <ChevronDownIcon width={50} height={50} color="#FFFFFF" />
         </motion.button>

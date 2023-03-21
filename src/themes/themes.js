@@ -425,6 +425,12 @@ export const lightTheme = createTheme({
             backgroundColor: "#FFFFFF",
           },
         },
+        {
+          props: { variant: "cardHomeBackground" },
+          style: {
+            backgroundColor: "#F4F6F8",
+          },
+        },
       ],
     },
     MuiList: {

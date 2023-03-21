@@ -8,9 +8,8 @@ import Headboard from "@/components/Headboard/Headboard";
 import data from "../../public/json/textos.json";
 import galery from "../../public/json/galeryHome.json";
 import { Box } from "@mui/system";
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import CardBoard from "@/components/Headboard/CardBoard";
-import MenuButton from "@/components/MenuButton/MenuButton";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
 import {
@@ -37,8 +36,8 @@ const Home = ({ selectedTheme, toggleTheme }) => {
         <Hero
           title="SOL Y LUNA SAN CRISTOBAL"
           image="/assets/images/sol-y-luna-centro-min.jpg"
-          subtitle="Restaurante de comida mexicana, con ambiente agradable y totalmente familiar"
-          buttonText="Conocenos"
+          text="Restaurante de comida mexicana, con ambiente agradable y totalmente familiar"
+          buttonText="Conócenos"
         />
         <Headboard data={data} />
         <HomeServices />
