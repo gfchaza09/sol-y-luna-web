@@ -47,9 +47,9 @@ const HomeServices = () => {
             sx={{
               padding: "0px",
               position: "absolute",
-              top: "26px",
+              top: {mobile: "22px",tablet:"26px"},
               left: {mobile: "29px", tablet: "43px"},
-              height: {mobile: `${serviceActive === "delivery" ? "27%" :"92%"}`, mobile2: `${serviceActive === "delivery" ? "29%" :"92%"}`, tablet: `${serviceActive === "delivery" ? "40%" :"90%"}`},
+              height: {mobile: `${serviceActive === "delivery" ? "27%" :"92%"}`, mobile2: `${serviceActive === "delivery" ? "29%" :"92%"}`, tablet: `${serviceActive === "delivery" ? "41%" :"90%"}`},
               width: "2px",
               border: "2px solid",
               borderColor: "primary.border",
