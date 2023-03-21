@@ -11,7 +11,7 @@ const ButtonComponent = ({ children, href, icon, target, onClick }) => {
       {children}
     </ButtonBase>
   ) : (
-    <ButtonBase variant="contactButton" sx={{maxWidth: "190px", width: "100%", height: "48px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+    <ButtonBase variant="contactButton" sx={{maxWidth: "227px", width: "100%", height: "48px", display: "flex", justifyContent: "center", alignItems: "center"}}>
       <Link className={btn__link} href={href} target={target ? target : ""}>
           {children}
       </Link>

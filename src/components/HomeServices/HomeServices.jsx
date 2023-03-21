@@ -4,9 +4,12 @@ import ServiceCard from "../Cards/ServiceCard/ServiceCard";
 import ButtonComponent from "../Button/ButtonComponent";
 
 import data from "../../../public/json/cards.json";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const HomeServices = () => {
   const [serviceActive, setServiceActive] = useState("estacionamiento");
+
+  const [width, setWidth] = useWindowWidth();
 
   return (
     <Container
@@ -23,9 +26,9 @@ const HomeServices = () => {
       }}
     >
       <Container
-        sx={{ padding: "0px", marginBottom: "50px" }}
+        sx={{ padding: "0px", marginBottom: {mobile: "24px",tablet: "50px"} }}
       >
-        <Typography component="h2" variant="h2" sx={{ marginBottom: "24px", textAlign: "left" }}>
+        <Typography component="h2" variant={width > 640 ? "h2" : "h5"} sx={{ marginBottom: "24px", textAlign: {mobile: "center", tablet:"left"} }}>
           ¿QUÉ OFRECEMOS?
         </Typography>
       </Container>
@@ -46,7 +49,7 @@ const HomeServices = () => {
               position: "absolute",
               top: "26px",
               left: {mobile: "29px", tablet: "43px"},
-              height: {mobile: `${serviceActive === "delivery" ? "28%" :"92%"}`, mobile2: `${serviceActive === "delivery" ? "27%" :"92%"}`, tablet: `${serviceActive === "delivery" ? "40%" :"90%"}`},
+              height: {mobile: `${serviceActive === "delivery" ? "27%" :"92%"}`, mobile2: `${serviceActive === "delivery" ? "29%" :"92%"}`, tablet: `${serviceActive === "delivery" ? "40%" :"90%"}`},
               width: "2px",
               border: "2px solid",
               borderColor: "primary.border",
@@ -91,7 +94,7 @@ const HomeServices = () => {
               ></ButtonBase>
             </Container>
             <Typography
-              variant="h3"
+              variant={width > 640 ? "h3" : "h5"}
               onClick={() => setServiceActive("estacionamiento")}
               sx={{ cursor: "pointer" }}
             >
@@ -147,7 +150,7 @@ const HomeServices = () => {
               ></ButtonBase>
             </Container>
             <Typography
-              variant="h3"
+              variant={width > 640 ? "h3" : "h5"}
               onClick={() => setServiceActive("juegos")}
               sx={{ cursor: "pointer" }}
             >
@@ -201,7 +204,7 @@ const HomeServices = () => {
               ></ButtonBase>
             </Container>
             <Typography
-              variant="h3"
+              variant={width > 640 ? "h3" : "h5"}
               onClick={() => setServiceActive("eventos")}
               sx={{ cursor: "pointer" }}
             >
@@ -255,7 +258,7 @@ const HomeServices = () => {
               ></ButtonBase>
             </Container>
             <Typography
-              variant="h3"
+              variant={width > 640 ? "h3" : "h5"}
               onClick={() => setServiceActive("delivery")}
               sx={{ cursor: "pointer" }}
             >
