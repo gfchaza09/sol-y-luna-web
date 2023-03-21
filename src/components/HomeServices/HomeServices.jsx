@@ -1,124 +1,278 @@
 import { useState } from "react";
-import Image from "next/image";
 import { ButtonBase, Container, Typography } from "@mui/material";
-import Button from "./Button";
+import ServiceCard from "../Cards/ServiceCard/ServiceCard";
+import ButtonComponent from "../Button/ButtonComponent";
+
+import data from "../../../public/json/cards.json";
 
 const HomeServices = () => {
-  const [show, setShow] = useState("1");
+  const [serviceActive, setServiceActive] = useState("estacionamiento");
 
   return (
-    <Container sx={{ padding: "0px" }}>
+    <Container
+      component="section"
+      sx={{
+        padding: "20px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "50px",
+        maxWidth: "1640px",
+        marginBottom: {mobile: "120px", tablet: "200px"},
+      }}
+    >
       <Container
-        sx={{ padding: "0px", minHeight: "500px", positon: "relative" }}
+        sx={{ padding: "0px", marginBottom: "50px" }}
       >
+        <Typography component="h2" variant="h2" sx={{ marginBottom: "24px", textAlign: "left" }}>
+          ¿QUÉ OFRECEMOS?
+        </Typography>
+      </Container>
+      <Container sx={{ padding: "0px", height: "auto", marginBottom: "50px"}}>
         <Container
           sx={{
-            padding: "0px",
-            border: "1.5px solid",
-            borderColor: "primary.border",
-            height: "500px",
-            width: "0px",
-            position: "absolute",
-          }}
-        ></Container>
-        <Container
-          sx={{
-            height: "100%",
-            padding: "0px",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "flex-start",
+            justifyContent: "space-around",
             alignItems: "center",
-            gap: "20px",
-            width: "100%"
+            position: "relative",
+            gap: "30px"
           }}
         >
-            <Container sx={{padding: "0px"}}>
-              <Button show={show} setShow={setShow} title="Estacionamiento" value="1"/>
-              {show === "1" && <Typography>Texto de prueba</Typography>}
-              {show === "1" && (
-                <Container sx={{width: "100%", 
-                    minHeight: "300px",
-                    height: "auto",
-                    maxHeight: "500px",
-                    position: "relative",
-                    overflow: "hidden",
-                    borderRadius: "6px"}}>
-                  <Image
-                    src="/assets/images/estacionamiento-min.jpg"
-                    alt="photo"
-                    fill
-                    sizes="100vh"
-                    style={{objectFit: "cover"}}
-                  />
-                </Container>
-              )}
+          <Container
+            sx={{
+              padding: "0px",
+              position: "absolute",
+              top: "26px",
+              left: {mobile: "29px", tablet: "43px"},
+              height: {mobile: `${serviceActive === "delivery" ? "28%" :"92%"}`, mobile2: `${serviceActive === "delivery" ? "27%" :"92%"}`, tablet: `${serviceActive === "delivery" ? "40%" :"90%"}`},
+              width: "2px",
+              border: "2px solid",
+              borderColor: "primary.border",
+            }}
+          ></Container>
+          <Container
+            sx={{
+              padding: "0px",
+              display: "flex",
+              alignItems: "center",
+              gap: "25px",
+            }}
+          >
+            <Container
+              sx={{
+                padding: { mobile: "4px", tablet: "8px" },
+                margin: "0px",
+                width: { mobile: "30px", tablet: "58px" },
+                height: { mobile: "30px", tablet: "58px" },
+                border: "3px solid",
+                borderColor: `${
+                  serviceActive === "estacionamiento"
+                    ? "primary.borderActive"
+                    : "primary.border"
+                }`,
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: `${serviceActive === "estacionamiento" ? "1" : "0.9"}`,
+              }}
+              onClick={() => setServiceActive("estacionamiento")}
+            >
+              <ButtonBase
+                variant="menuButton"
+                sx={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                  background: "",
+                }}
+              ></ButtonBase>
             </Container>
-            <Container sx={{padding: "0px"}}>
-                <Button show={show} setShow={setShow} title="Área de juegos" value="2"/>
-              {show === "2" && <Typography>Texto de prueba</Typography>}
-              {show === "2" && (
-                <Container sx={{width: "100%", 
-                    minHeight: "300px",
-                    height: "auto",
-                    maxHeight: "500px",
-                    position: "relative",
-                    overflow: "hidden",
-                    borderRadius: "6px"}}>
-                  <Image
-                    src="/assets/images/estacionamiento-min.jpg"
-                    alt="photo"
-                    fill
-                    sizes="100vh"
-                    style={{objectFit: "cover"}}
-                  />
-                </Container>
-              )}
+            <Typography
+              variant="h3"
+              onClick={() => setServiceActive("estacionamiento")}
+              sx={{ cursor: "pointer" }}
+            >
+              Estacionamiento
+            </Typography>
+            
+          </Container>
+          <Container sx={{paddingLeft: "30px", paddingRight: "0px"}}>
+            {
+                serviceActive === "estacionamiento" && <ServiceCard
+                data={data.servicios_home[0]}
+                disableElement
+              />
+              }
+
+          </Container>
+          <Container
+            sx={{
+              padding: "0px",
+              display: "flex",
+              alignItems: "center",
+              gap: "25px",
+            }}
+          >
+            <Container
+              sx={{
+                padding: { mobile: "4px", tablet: "8px" },
+                margin: "0px",
+                width: { mobile: "30px", tablet: "58px" },
+                height: { mobile: "30px", tablet: "58px" },
+                border: "3px solid",
+                borderColor: `${
+                  serviceActive === "juegos"
+                    ? "primary.borderActive"
+                    : "primary.border"
+                }`,
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: `${serviceActive === "juegos" ? "1" : "0.9"}`,
+              }}
+              onClick={() => setServiceActive("juegos")}
+            >
+              <ButtonBase
+                variant="menuButton"
+                sx={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                  background: "",
+                }}
+              ></ButtonBase>
             </Container>
-            <Container sx={{padding: "0px"}}>
-                <Button show={show} setShow={setShow} title="Salón de eventos" value="3"/>
-              {show === "3" && <Typography>Texto de prueba</Typography>}
-              {show === "3" && (
-                <Container sx={{width: "100%", 
-                    minHeight: "300px",
-                    height: "auto",
-                    maxHeight: "500px",
-                    position: "relative",
-                    overflow: "hidden",
-                    borderRadius: "6px"}}>
-                  <Image
-                    src="/assets/images/estacionamiento-min.jpg"
-                    alt="photo"
-                    fill
-                    sizes="100vh"
-                    style={{objectFit: "cover"}}
-                  />
-                </Container>
-              )}
+            <Typography
+              variant="h3"
+              onClick={() => setServiceActive("juegos")}
+              sx={{ cursor: "pointer" }}
+            >
+              Área de juegos
+            </Typography>
+          </Container>
+          <Container sx={{paddingLeft: "30px", paddingRight: "0px"}}>
+            {
+                serviceActive === "juegos" && <ServiceCard
+                data={data.servicios_home[1]}
+                disableElement
+              />
+              }
+          </Container>
+          <Container
+            sx={{
+              padding: "0px",
+              display: "flex",
+              alignItems: "center",
+              gap: "25px",
+            }}
+          >
+            <Container
+              sx={{
+                padding: { mobile: "4px", tablet: "8px" },
+                margin: "0px",
+                width: { mobile: "30px", tablet: "58px" },
+                height: { mobile: "30px", tablet: "58px" },
+                border: "3px solid",
+                borderColor: `${
+                  serviceActive === "eventos"
+                    ? "primary.borderActive"
+                    : "primary.border"
+                }`,
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: `${serviceActive === "eventos" ? "1" : "0.9"}`,
+              }}
+              onClick={() => setServiceActive("eventos")}
+            >
+              <ButtonBase
+                variant="menuButton"
+                sx={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                  background: "",
+                }}
+              ></ButtonBase>
             </Container>
-            <Container sx={{padding: "0px"}}>
-                <Button show={show} setShow={setShow} title="Delivery y take away" value="4"/>
-              {show === "4" && <Typography>Texto de prueba</Typography>}
-              {show === "4" && (
-                <Container sx={{width: "100%", 
-                    minHeight: "300px",
-                    height: "auto",
-                    maxHeight: "500px",
-                    position: "relative",
-                    overflow: "hidden",
-                    borderRadius: "6px"}}>
-                  <Image
-                    src="/assets/images/estacionamiento-min.jpg"
-                    alt="photo"
-                    fill
-                    sizes="100vh"
-                    style={{objectFit: "cover"}}
-                  />
-                </Container>
-              )}
+            <Typography
+              variant="h3"
+              onClick={() => setServiceActive("eventos")}
+              sx={{ cursor: "pointer" }}
+            >
+              Salón de eventos
+            </Typography>
+          </Container>
+          <Container sx={{paddingLeft: "30px", paddingRight: "0px"}}>
+            {
+                serviceActive === "eventos" && <ServiceCard
+                data={data.servicios_home[2]}
+                disableElement
+              />
+            }
+          </Container>
+          <Container
+            sx={{
+              padding: "0px",
+              display: "flex",
+              alignItems: "center",
+              gap: "25px",
+            }}
+          >
+            <Container
+              sx={{
+                padding: { mobile: "4px", tablet: "8px" },
+                margin: "0px",
+                width: { mobile: "30px", tablet: "58px" },
+                height: { mobile: "30px", tablet: "58px" },
+                border: "3px solid",
+                borderColor: `${
+                  serviceActive === "delivery"
+                    ? "primary.borderActive"
+                    : "primary.border"
+                }`,
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: `${serviceActive === "delivery" ? "1" : "0.9"}`,
+              }}
+              onClick={() => setServiceActive("delivery")}
+            >
+              <ButtonBase
+                variant="menuButton"
+                sx={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                  background: "",
+                }}
+              ></ButtonBase>
             </Container>
+            <Typography
+              variant="h3"
+              onClick={() => setServiceActive("delivery")}
+              sx={{ cursor: "pointer" }}
+            >
+              Delivery y take away
+            </Typography>
+          </Container>
+          <Container sx={{paddingLeft: "30px", paddingRight: "0px"}}>
+            {
+                serviceActive === "delivery" && <ServiceCard
+                data={data.servicios_home[3]}
+                disableElement
+              />
+            }
+          </Container>
         </Container>
       </Container>
+      <ButtonComponent href="/servicios">Ver todos nuestros servicios</ButtonComponent>
     </Container>
   );
 };

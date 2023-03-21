@@ -196,6 +196,8 @@ export const darkTheme = createTheme({
         {
           props: { variant: "backgroundAccordionHover" },
           style: {
+            borderRadius: "6px",
+            transition: "background .2s linear",
             ":hover": {
               backgroundColor: "#252525",
             },
@@ -460,6 +462,7 @@ export const lightTheme = createTheme({
         {
           props: { variant: "backgroundAccordionHover" },
           style: {
+            borderRadius: "6px",
             transition: "background .2s linear",
             ":hover": {
               backgroundColor: "#F4F6F8",
