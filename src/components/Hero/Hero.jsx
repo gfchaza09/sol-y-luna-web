@@ -61,6 +61,7 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
           transition: "transform 0.2s ease-out",
         }}
         priority={true}
+        sizes="100vw"
       />
       <Container
         sx={{
@@ -78,7 +79,7 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
           left: "0",
           bottom: "0",
           right: "0",
-          textAlign: `${buttonText ? "left" : "center"}`,
+          textAlign: {mobile: "center",tablet: `${buttonText ? "left" : "center"}`},
           margin: { mobile: "220px auto", tablet: "0px auto" },
           padding: {
             mobile: "20px",
