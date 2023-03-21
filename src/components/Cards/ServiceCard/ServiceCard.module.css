@@ -3,9 +3,7 @@
     min-height: 388px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    padding: 30px;
     gap: 16px;
     margin: 0px auto;
     user-select: none;
@@ -25,9 +23,20 @@
     .card__container {
         flex-direction: row;
         justify-content: center;
-        padding: 52px;
     }
 
+    .img__container {
+        width: 95%;
+    }
+}
+
+@media  screen and (min-width: 768px) {
+    .img__container {
+        width: 80%;
+    }
+}
+
+@media  screen and (min-width: 950px) {
     .img__container {
         width: 70%;
     }

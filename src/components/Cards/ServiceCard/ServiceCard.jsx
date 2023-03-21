@@ -11,8 +11,8 @@ const ServiceCard = ({data, disableElement}) => {
   const [width, setWidth] = useWindowWidth()
 
   return (
-    <Card variant={`${!disableElement ? "cardBackground" : "cardHomeBackground"}`} className={card__container} sx={{borderRadius: "12px"}}>
-      <Container sx={{padding: "0px", display: "flex", flexDirection: "column", justifyContent: {mobile: "center"}, gap: "30px"}}>
+    <Card variant={`${!disableElement ? "cardBackground" : "cardHomeBackground"}`} className={card__container} sx={{borderRadius: "12px", padding: {mobile: "30px", tablet: `${disableElement ? "0px 52px 52px 52px" : "52px"}`}}}>
+      <Container sx={{padding: "0px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "30px"}}>
         {
           !disableElement && <Typography component="h2" variant={width < 420 ? 'h5' : 'h3'} sx={{textAlign: {mobile: "center", tablet: "left"}}}>{data.servicio.toUpperCase()}</Typography>
         }

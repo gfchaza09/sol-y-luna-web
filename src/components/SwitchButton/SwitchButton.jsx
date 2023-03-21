@@ -17,7 +17,7 @@ const SwitchButton = ({ menuLocation, setMenuLocation }) => {
       <ButtonBase
         onClick={() => setMenuLocation("alca-blvd")}
         variant={menuLocation === "alca-blvd" ? "menuButton" : ""}
-        sx={{ width: "50%", padding: {mobile: "6px", mobile2: "15px"}, borderRadius: "14px" }}
+        sx={{ width: "50%", padding: {mobile: "6px", mobile2: "8px", tablet: "15px"}, borderRadius: "14px" }}
       >
         <Typography
           component="h2"
@@ -30,7 +30,7 @@ const SwitchButton = ({ menuLocation, setMenuLocation }) => {
       <ButtonBase
         onClick={() => setMenuLocation("centro")}
         variant={menuLocation === "centro" ? "menuButton" : ""}
-        sx={{ width: "50%", padding: {mobile: "6px", mobile2: "15px"}, borderRadius: "14px" }}
+        sx={{ width: "50%", padding: {mobile: "6px", mobile2: "8px", tablet: "15px"}, borderRadius: "14px" }}
       >
         <Typography
           component="h2"
