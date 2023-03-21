@@ -41,10 +41,7 @@ const Home = ({ selectedTheme, toggleTheme }) => {
           buttonText="Conocenos"
         />
         <Headboard data={data} />
-        <Box m="0 50px">
-          <Typography variant="h2">¿QUE OFRECEMOS?</Typography>
-          {/* <MenuButton /> */}
-        </Box>
+        <HomeServices />
         <Box>
           <Typography variant="h2" m="0 50px">
             NUESTROS PLATILLOS

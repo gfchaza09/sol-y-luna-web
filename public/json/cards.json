@@ -108,6 +108,34 @@
       "imagen": "/assets/images/galeries/galeria-centro-2-min.jpg"
     }
   ],
+  "servicios_home": [
+    {
+      "servicio": "Estacionamiento",
+      "descripcion1": "Contamos con un amplio estacionamiento en la sucursal Sol y Luna Alcanfores para mayor comodidad de nuestros clientes.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/estacionamiento-min.jpg"
+    },
+    {
+      "servicio": "Área de juegos",
+      "descripcion1": "Tenemos un salón apto para los más pequeños.",
+      "descripcion2": "El área cuenta con varias actividades y juegos de entretenimiento para que los niños se diviertan mientras aguardan por su comida.",
+      "detalle": "Disponible en sucursales: Alcanfores y Centro.",
+      "imagen": "/assets/images/area-de-juegos-min.jpg"
+    },
+    {
+      "servicio": "Salón de eventos",
+      "descripcion1": "También queremos ser parte de los momentos más importantes, así que contamos con un salón para eventos.",
+      "descripcion2": "¿Lo mejor de todo? Si consumes los alimentos con nosotros, no tiene un costo extra la renta del espacio.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/galeries/galeria-alcanfores-4-min.jpg"
+    },
+    {
+      "servicio": "Delivery y Take Away",
+      "descripcion1": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.",
+      "detalle": "Disponible en todas las sucursales",
+      "imagen": "/assets/images/delivery.jpg"
+    }
+  ],
   "platos_principales": [
     {
       "nombre": "Filete de salmón",

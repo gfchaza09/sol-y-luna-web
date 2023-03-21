@@ -44,7 +44,8 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
         justifyContent: "center",
         alignItems: "center",
         gap: "50px",
-        maxWidth: "1640px"
+        maxWidth: "1640px",
+        marginBottom: "200px",
       }}
     >
       <Container
@@ -260,6 +261,7 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
         justifyContent: "center",
         alignItems: "center",
         gap: "50px",
+        marginBottom: "120px",
       }}
     >
       <Container
