@@ -14,24 +14,31 @@ import {
 const Hero = ({ title, image, subtitle, text, buttonText }) => {
   const [width, setWidth] = useWindowWidth();
 
-  const [parallaxActivado, setParallaxActivado] = useState(false);
-  const scrollY = useMotionValue(0);
+  // const [parallaxActivado, setParallaxActivado] = useState(false);
+  // const scrollY = useMotionValue(0);
 
-  useEffect(() => {
-    const actualizarScrollY = () => {
-      scrollY.set(window.scrollY);
-    };
-    window.addEventListener("scroll", actualizarScrollY);
-    return () => {
-      window.removeEventListener("scroll", actualizarScrollY);
-    };
-  }, [scrollY]);
+  // useEffect(() => {
+  //   const actualizarScrollY = () => {
+  //     scrollY.set(window.scrollY);
+  //   };
+  //   window.addEventListener("scroll", actualizarScrollY);
+  //   return () => {
+  //     window.removeEventListener("scroll", actualizarScrollY);
+  //   };
+  // }, [scrollY]);
 
-  const parallaxPosicion = useTransform(
-    scrollY,
-    [0, window.innerHeight],
-    [0, -window.innerHeight * 0.5]
-  );
+  // const parallaxPosicion = useTransform(
+  //   scrollY,
+  //   [0, window.innerHeight],
+  //   [0, -window.innerHeight * 0.5]
+  // );
+
+    const scrollDown = () => {
+      window.scrollTo({
+        top: window.innerHeight - 75,
+        behavior: 'smooth',
+      })
+    }
 
   return (
     <Container
@@ -55,10 +62,10 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
           left: 0,
           filter: "brightness(60%)",
           objectFit: "cover",
-          transform: parallaxActivado
-            ? `translateY(${parallaxPosicion}px)`
-            : "none",
-          transition: "transform 0.2s ease-out",
+          // transform: parallaxActivado
+          //   ? `translateY(${parallaxPosicion}px)`
+          //   : "none",
+          // transition: "transform 0.2s ease-out",
         }}
         priority={true}
         sizes="100vw"
@@ -173,7 +180,7 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
       >
         <motion.button
           className="button-standard"
-          onClick={() => setParallaxActivado(!parallaxActivado)}
+          onClick={scrollDown}
           title="Scroll"
           aria-label="Scroll"
           aria-labelledby="scroll"
