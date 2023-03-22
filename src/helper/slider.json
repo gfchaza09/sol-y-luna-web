@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Imagen 1",
+    "url": "../../public/assets/images/picture1.jpg",
+    "descripcion": "Esta es una imagen de un paisaje",
+    "alt": "Paisaje"
+  },
+  {
+    "id": 2,
+    "title": "Imagen 2",
+    "url": "../../public/assets/images/picture2.jpg",
+    "descripcion": "Esta es una imagen de un animal",
+    "alt": "Animal"
+  },
+  {
+    "id": 3,
+    "title": "Imagen 3",
+    "url": "../../public/assets/images/picture3.jpg",
+    "descripcion": "Esta es una imagen de un edificio",
+    "alt": "Edificio"
+  },
+  {
+    "id": 4,
+    "title": "Imagen 4",
+    "url": "../../public/assets/images/picture4.jpg",
+    "descripcion": "Esta es una imagen de un automóvil",
+    "alt": "Automóvil"
+  },
+  {
+    "id": 5,
+    "title": "Imagen 5",
+    "url": "../../public/assets/images/picture1.jpg",
+    "descripcion": "Esta es una imagen de un monumento",
+    "alt": "Monumento"
+  },
+  {
+    "id": 6,
+    "title": "Imagen 6",
+    "url": "../../public/assets/images/picture2.jpg",
+    "descripcion": "Esta es una imagen de un animal",
+    "alt": "Animal"
+  },
+  {
+    "id": 7,
+    "title": "Imagen 7",
+    "url": "../../public/assets/images/picture3.jpg",
+    "descripcion": "Esta es una imagen de una flor",
+    "alt": "Flor"
+  },
+  {
+    "id": 8,
+    "title": "Imagen 8",
+    "url": "../../public/assets/images/picture4.jpg",
+    "descripcion": "Esta es una imagen de un paisaje urbano",
+    "alt": "Paisaje urbano"
+  }
+]

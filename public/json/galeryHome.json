@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Copa de vino",
+    "description": "Esto es un texto referido a la imagen",
+    "img": "/assets/images/galeries/galeria-inicio-1-min.jpg"
+  },
+  {
+    "title": "Copa de vino",
+    "description": "Esto es un texto referido a la imagen",
+    "img": "/assets/images/menu-header.jpg"
+  },
+  {
+    "title": "Copa de vino",
+    "description": "Esto es un texto referido a la imagen",
+    "img": "/assets/images/mariscos-home.jpg"
+  },
+  {
+    "title": "Copa de vino",
+    "description": "Esto es un texto referido a la imagen",
+    "img": "/assets/images/platillo-home.jpg"
+  }
+]

@@ -1,0 +1,35 @@
+.card__container {
+    max-width: 400px;
+    min-width: 340px;
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 30px;
+    margin: 0px auto;
+    user-select: none;
+}
+
+@media screen and (max-width: 640px) {
+    .card__container {
+        margin: 0px auto;
+        min-height: 613px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card__container {
+        max-width: 335px;
+        min-width: 320px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card__container {
+        max-width: 280px;
+        min-width: 260px;
+    }
+}

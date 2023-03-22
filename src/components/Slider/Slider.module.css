@@ -1,0 +1,46 @@
+.container {
+	width: 100vw ;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.slide {
+	max-width: 100vh;
+	height: auto;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.slide.active {
+	opacity: 1;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+    min-width: 450px;
+}
+
+.button_forward{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	left: 32px;
+    z-index: 1;
+	cursor: pointer;
+}
+
+.button_back{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	right: 32px;
+	font-size: 45px;
+    z-index: 1;
+	cursor: pointer;
+
+}

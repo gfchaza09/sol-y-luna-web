@@ -1,0 +1,204 @@
+{
+  "empleados": [
+    {
+      "id": 1,
+      "nombre": "Arturo",
+      "sucursal": "Sucursal Alcanfores",
+      "cargo": "Mesero",
+      "descripcion": "Arturo es un profesional dedicado y comprometido con su trabajo, siempre atento a las necesidades de nuestros comensales y dispuesto a colaborar para asegurarse de que cada cliente tenga una experiencia excepcional. Su atención al detalle y su habilidad para anticiparse a las necesidades de los clientes hacen que Arturo sea un miembro invaluable de nuestro equipo",
+      "img": "/assets/images/employees/arturo.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Lucy",
+      "sucursal": "Sucursal Centro",
+      "cargo": "Chef",
+      "descripcion": "Lucy es una profesional apasionada y comprometida con su trabajo, siempre enfocada en la calidad y el sabor de los platillos que prepara. Su habilidad y dedicación a cada detalle en la cocina hacen que Lucy sea una pieza clave en nuestra familia de trabajo.",
+      "img": "/assets/images/employees/lucy.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Esperanza",
+      "sucursal": "Sucursal Alcanfores",
+      "cargo": "Lider",
+      "descripcion": "Esperanza es una profesional atenta, amable y comprometida con su trabajo, siempre enfocada en que todas las sucursales de Sol y Luna funcionen de manera impecable. Su habilidad para anticiparse a las necesidades del equipo y su disposición a colaborar hacen que Esperanza sea una líder en nuestro equipo.",
+      "img": "/assets/images/employees/esperanza.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Luis",
+      "sucursal": "Sucursal Boulevard",
+      "cargo": "Mesero",
+      "descripcion": "Luis, uno de nuestros meseros en Sol y Luna Boulevard, es una persona amable, sonriente y siempre de buen ánimo, cuyo servicio se destaca por su calidez y excelencia.",
+      "img": "/assets/images/employees/luis.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Mary",
+      "sucursal": "Sucursal Alcanfores",
+      "cargo": "Chef",
+      "descripcion": "Mary, nuestra encargada del área de cocina en Sol y Luna Alcanfores, es una persona responsable, comprometida y apasionada por su trabajo, siempre dando lo mejor de sí en cada preparación.",
+      "img": "/assets/images/employees/mary.jpg"
+    }
+  ],
+  "locaciones": [
+    {
+      "nombre": "Sol y Luna Centro",
+      "direccion": "Calle Belisario Domínguez # 2a, Zona Centro 967.145.2802",
+      "telefono": "+52 967 145 2802",
+      "descripcion": "Sol y Luna restaurante está ubicado en el corazón de la ciudad, lo que lo hace accesible para todos aquellos que buscan una opción de alta calidad a precios accesibles, para disfrutar de la hora del desayuno y la comida. Además de estar ubicado en una zona céntrica, nuestro restaurante cuenta con una decoración única y un ambiente bonito y acogedor que te permitirá relajarte y disfrutar de tu experiencia culinaria al máximo.",
+      "servicios": "Área de juegos, take away y promociones.",
+      "img": "/assets/images/sol-y-luna-centro-min.jpg"
+    },
+    {
+      "nombre": "Sol y Luna Alcanfores",
+      "direccion": "Periférico Norte Poniente #40, Los Alcanfores 967.146.7419",
+      "telefono": "+52 967 106 6309",
+      "descripcion": "En nuestras instalaciones contamos con un amplio salón para eventos, ideal para celebrar ocasiones especiales como cumpleaños, bodas o reuniones empresariales. Además, para tu comodidad, también ofrecemos un amplio estacionamiento para que puedas disfrutar de tu experiencia culinaria sin preocuparte por encontrar un lugar para estacionar tu vehículo.",
+      "servicios": "Salón de eventos, área de juegos, delivery, take away, estacionamiento y promociones.",
+      "img": "/assets/images/sol-y-luna-alcanfores-min.jpg"
+    },
+    {
+      "nombre": "Sol Y Luna Boulevard",
+      "direccion": "Carretera Panamericana #1118, Boulevard 967.129.1668",
+      "telefono": "+52 967 129 1668",
+      "descripcion": "Sol y Luna restaurante se encuentra en pleno boulevard de la ciudad. Además, para tu comodidad, contamos con estacionamiento para que puedas disfrutar de tu experiencia culinaria sin preocupaciones.",
+      "servicios": "Take away y promociones.",
+      "img": "/assets/images/sol-y-luna-boulevard-min.jpg"
+    }
+  ],
+  "servicios": [
+    {
+      "servicio": "Área de juegos",
+      "descripcion1": "Tenemos un salón apto para los más pequeños.",
+      "descripcion2": "El área cuenta con varias actividades y juegos de entretenimiento para que los niños se diviertan mientras aguardan por su comida.",
+      "detalle": "Disponible en sucursales: Alcanfores y Centro.",
+      "imagen": "/assets/images/area-de-juegos-min.jpg"
+    },
+    {
+      "servicio": "Estacionamiento",
+      "descripcion1": "Contamos con un amplio estacionamiento en la sucursal Sol y Luna Alcanfores para mayor comodidad de nuestros clientes.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/estacionamiento-min.jpg"
+    },
+    {
+      "servicio": "Salón de eventos",
+      "descripcion1": "También queremos ser parte de los momentos más importantes, así que contamos con un salón para eventos.",
+      "descripcion2": "¿Lo mejor de todo? Si consumes los alimentos con nosotros, no tiene un costo extra la renta del espacio.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/galeries/galeria-alcanfores-4-min.jpg"
+    },
+    {
+      "servicio": "Delivery",
+      "descripcion1": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.",
+      "detalle": "Disponible en todas las sucursales",
+      "imagen": "/assets/images/delivery.jpg"
+    },
+    {
+      "servicio": "Take Away",
+      "descripcion1": "Sabemos lo valioso que es tu tiempo, por eso es que intentamos estar listos para brindar el servicio más rápido con nuestra comida para llevar.",
+      "detalle": "Disponible en todas las sucursales.",
+      "imagen": "/assets/images/galeries/galeria-centro-3-min.jpg"
+    },
+    {
+      "servicio": "Promociones",
+      "descripcion1": "En Sol y Luna tenemos promociones igual de especiales y únicos como nuestros clientes.",
+      "descripcion2": "Contamos con promociones y descuentos de cumpleaños, el menú del día y más.",
+      "detalle": "Disponible en todas las sucursales.",
+      "imagen": "/assets/images/galeries/galeria-centro-2-min.jpg"
+    }
+  ],
+  "servicios_home": [
+    {
+      "servicio": "Estacionamiento",
+      "descripcion1": "Contamos con un amplio estacionamiento en la sucursal Sol y Luna Alcanfores para mayor comodidad de nuestros clientes.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/estacionamiento-min.jpg"
+    },
+    {
+      "servicio": "Área de juegos",
+      "descripcion1": "Tenemos un salón apto para los más pequeños.",
+      "descripcion2": "El área cuenta con varias actividades y juegos de entretenimiento para que los niños se diviertan mientras aguardan por su comida.",
+      "detalle": "Disponible en sucursales: Alcanfores y Centro.",
+      "imagen": "/assets/images/area-de-juegos-min.jpg"
+    },
+    {
+      "servicio": "Salón de eventos",
+      "descripcion1": "También queremos ser parte de los momentos más importantes, así que contamos con un salón para eventos.",
+      "descripcion2": "¿Lo mejor de todo? Si consumes los alimentos con nosotros, no tiene un costo extra la renta del espacio.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/galeries/galeria-alcanfores-4-min.jpg"
+    },
+    {
+      "servicio": "Delivery y Take Away",
+      "descripcion1": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.",
+      "detalle": "Disponible en todas las sucursales",
+      "imagen": "/assets/images/delivery.jpg"
+    }
+  ],
+  "reviews": [
+    {
+      "nombre": "Nikonista-D4",
+      "opinion": "Excelente sitio para comer. Comimos a mediodía, el personal muy atento, camarero muy simpático, mantuvimos una conversación con él, nos preguntó que si éramos Españoles.",
+      "rating": "5.0",
+      "fecha": "23 de enero de 2023",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com.mx/ShowUserReviews-g150802-d11796683-r876210780-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-nikonista-d4.jpg"
+    },
+    {
+      "nombre": "Patricia H.",
+      "opinion": "Sazón delicioso. Meseros movidos y amables. Precios accesibles...Pero el sabor! Excelentes cocineros!",
+      "rating": "5.0",
+      "fecha": "16 de febrero 2023",
+      "social": "/assets/social-networks/google-maps-review.png",
+      "socialLink": "https://www.google.com/maps/contrib/108204386089219388461/photos/@18.1600493,-95.7371743,7z/data=!4m3!8m2!3m1!1e1?hl=es-419",
+      "avatar": "/assets/images/reviews/opinion-patricia.jpg"
+    },
+    {
+      "nombre": "Victor Walden",
+      "opinion": "Located on a quiet street in the center of San Cristobal ! The staff is really nice and the breakfast was really amazing and tasty all for a really decent price !",
+      "rating": "5.0",
+      "fecha": "17 de septiembre 2021",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r810414046-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-victor-walden.jpg"
+    },
+    {
+      "nombre": "Hubegner Cerón",
+      "opinion": "Deliciosos desayunos!!! Y los postres muy buenos (cheesecake de Zarzamora), atención increíble 😊 Seguro regresamos.",
+      "rating": "5.0",
+      "fecha": "7 de enero 2022",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r824256077-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-hubenger.jpg"
+    },
+    {
+      "nombre": "Omar Palatto",
+      "opinion": "Decoración muy bonita, ya adentro desde la llegada una excelente atención, los platillos en muy buena porción y delicioso.Será un placer regresar!",
+      "rating": "5.0",
+      "fecha": "21 de marzo de 2021",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r784970450-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-omar.jpg"
+    },
+    {
+      "nombre": "Gaby R",
+      "opinion": "El buffet dominical está muy completo, muy rico y a buen precio! También he pedido horchata y chocolate, ambos deliciosos😋",
+      "rating": "5.0",
+      "fecha": "27 de diciembre 2017",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r549574602-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-gaby.jpg"
+    },
+    {
+      "nombre": "Jorge Gonzalez",
+      "opinion": "Sol y Luna is great for breakfast. The atmosphere is really nice and quiet. The coffee is amazing too!",
+      "rating": "5.0",
+      "fecha": "19 de febrero 2021",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r783203750-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-jorge.jpg"
+    }
+  ]
+}

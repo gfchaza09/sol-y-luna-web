@@ -1,0 +1,16 @@
+{
+  "servicios": {
+    "titulo": "SERVICIOS",
+    "descripcion": "Sol y Luna ofrece varios servicios que nos ayudan a adaptarnos a nuestros clientes. Algunos de ellos se encuentran disponibles en todas nuestras sucursales, mientras que otros solo se pueden encontrar en la sucursal de Alcanfores."
+  },
+  "menu": {
+    "titulo": "MENU DEL DIA",
+    "descripcion": "Variamos nuestros servicios y comidas dependiendo del público de nuestras sucursales. Actualmente contamos con 2 menús ¿Cuál quieres mirar?",
+    "txtBoton":"Ver menu completo"
+  },
+  "sobreNosotros": {
+    "titulo": "SOBRE NOSOTROS",
+    "descripcion": "Creemos que la hora de la comida es sagrada, ya que es cuando nutres lo más importante que tienes: a ti mismo. Además, nutres el alma cuando compartes estos alimentos con tus seres queridos.Es por ello que en Sol y Luna restaurante buscamos crear un ambiente cómodo para ti, tu familia y amigos, además de crear alimentos con un increíble sabor y mucha variedad.Contamos no sólo con una cocina de alimentos salados, sino también con un área de repostería, para poder brindarte pan fresco y postres deliciosos, asegurándonos que están hechos con la mejor calidad.",
+    "txtBoton":"Mas sobre nosotros"
+  }
+}

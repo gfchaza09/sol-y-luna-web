@@ -1,38 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# <center> SOL Y LUNA RESTAURANT</center>
 
-## Getting Started
+----
 
-First, run the development server:
+## Este proyecto es una aplicación web para el restaurante **SOL Y LUNA**. La aplicación está desarrollada en **React** bajo el framework **NextJS**. El mismo es el producto de un solido grupo de trabajo compuesto por diseñadores UX/UI, desarrolladores FrontEnd y un community manager. El sitio cuenta con los mas altos standares  y esta construido bajo los paradigmas de escalabilidad y correcta funcionalidad a largo plazo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## INSTALACION
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+#### Para ejecutar la aplicación en su máquina local, siga estos pasos
+ >
+ >#### Clonar el repositorio
+ >
+ >`git clone https://github.com/gfchaza09/sol-y-luna-web.git`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+>#### Instalar las dependencias
+>
+>`npm install`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+>#### Ejecutar la aplicación  
+>
+>`npm run dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+>#### Visite la aplicación en su navegador
+>
+>`http://localhost:3000`
 
-## Learn More
+## FUNCIONALIDADES
 
-To learn more about Next.js, take a look at the following resources:
+#### La aplicación tiene las siguientes funcionalidades
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> * #### SSR (Server Side Rendering), metodologia que agiliza notablemente la velocidad y calidad del renderizado del sitio
+>
+>* #### Dark/Light Mode
+>
+> * #### Full Responsive, se ajusta correctamente a cualquier dispositivo/resolucion requerida
+>
+> * #### Menu hamburguesa, en modalidad mobile
+>
+> * #### Mapa de ubicación del restaurante utilizando Mapbox GL
+>
+> * #### Animaciones suaves utilizando Framer Motion
+>
+> * #### Iconos elegantes utilizando Heroicons
+>
+> * #### Carrusel de imágenes utilizando React Slick
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## TECNOLOGIAS
 
-## Deploy on Vercel
+#### Las principales tecnologías utilizadas en este proyecto son
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Next-JS
+* React
+* Material-UI
+* Framer Motion
+* Mapbox GL
+* Heroicons
+* React-Slick
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contribuir
+Si desea contribuir a este proyecto, por favor abra un nuevo issue o envíe una solicitud de extracción. Agradecemos cualquier ayuda que pueda ofrecer.
+
+## AUTORES
+
+#### A continuacion podras ver el equipo de trabajo
+
+>#### Agostina Di Giuseppe - UX/UI Desginer
+>
+> [Linkedin](https://www.linkedin.com/in/agostinadigiuseppe/)
+
+>#### Rocio Farias - Community Manager
+
+>#### Samuel Cardenas - UX/UI Designer
+>
+> [Linkedin](https://www.linkedin.com/in/samuel-c%C3%A1rdenas-ux-ui/)
+
+>#### Gabriel Chazarreta - FrontEnd Developer
+>
+> [Github](https://https://github.com/gfchaza09)
+> [Linkedin](https://www.linkedin.com/in/gabriel-chazarreta/)
+
+>#### Matias Paredes - FullStack MERN Developer
+>
+> [Github](https://github.com/mjParedes)
+> [Linkedin](https://www.linkedin.com/in/matias-paredes-m8j5)
+
+## LICENCIA
+
+#### Este proyecto está bajo la Licencia MIT. Consulte el archivo LICENSE.md para obtener más detalles
+
+## DEPLOY

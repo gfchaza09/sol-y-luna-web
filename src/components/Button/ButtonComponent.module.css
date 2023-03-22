@@ -1,0 +1,29 @@
+.btn__carrousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 56px;
+    width: 100%;
+    height: 56px;
+}
+
+.btn__link {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    width: 100%;
+    padding: 17px 14px;
+}
+
+@media screen and (max-width: 375px) {
+
+    .btn {
+        max-width: 159px;
+    }
+
+    .btn__carrousel {
+        max-width: 44px;
+        height: 44px;
+    }
+}
