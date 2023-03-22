@@ -4,7 +4,7 @@ import ButtonComponent from "../Button/ButtonComponent";
 import MapboxMap from "../MapboxMap/MapboxMap";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 
-const MapContainer = ({ selectedTheme, title, longLat, linkLocation, tel }) => {
+const MapContainer = ({ selectedTheme, title, longLat, linkLocation, tel, text1, text2, text3 }) => {
 
   const [width, setWidth] = useWindowWidth();
 
@@ -23,20 +23,13 @@ const MapContainer = ({ selectedTheme, title, longLat, linkLocation, tel }) => {
             <Typography component="h2" variant="h2" sx={{display: {mobile: "none", tablet2: "block"}, width: "100%"}}>{title}</Typography>
           <Container sx={{display:"flex", flexDirection: "column", gap:"24px", padding: "0px", marginTop:{mobile:"36px"}}}>
             <Typography variant={width > 820 ? "body1" :"body2"}>
-                Creemos que la hora de la comida es sagrada, ya que es cuando nutres
-                lo más importante que tienes: a ti mismo. Además, nutres el alma
-                cuando compartes estos alimentos con tus seres queridos
+                {text1}
             </Typography>
             <Typography variant={width > 820 ? "body1" :"body2"}>
-                Es por ello que en Sol y Luna restaurante buscamos crear un ambiente
-                cómodo para ti, tu familia y amigos, además de crear alimentos con
-                un increíble sabor y mucha variedad.
+                {text2}
             </Typography>
             <Typography variant={width > 820 ? "body1" :"body2"}>
-                Contamos no sólo con una cocina de alimentos salados, sino también
-                con un área de respostería, para poder brindarte pan fresco y
-                postres deliciosos, asegurándonos que están hechos con la mejor
-                calidad.
+                {text3}
             </Typography>
           </Container>
           <Container sx={{display: "flex", justifyContent: "center", alignItems: "center", padding: "0px", marginTop: "50px"}}>
