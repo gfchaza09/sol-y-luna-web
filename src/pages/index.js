@@ -14,8 +14,10 @@ import MenuButton from "@/components/MenuButton/MenuButton";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
 import { HomeLocationsDesktop } from "@/components/HomeLocations/HomeLocations";
+import Dropdown from "@/components/Dropdown/Dropdown";
 
 const Home = ({ selectedTheme, toggleTheme }) => {
+
   return (
     <>
       <Head>
@@ -37,8 +39,9 @@ const Home = ({ selectedTheme, toggleTheme }) => {
         <Headboard data={data} />
         <Box m="0 50px">
           <Typography variant="h2">¿QUE OFRECEMOS?</Typography>
-          {/* <MenuButton /> */}
         </Box>
+        <Dropdown />
+
         <Box>
           <Typography variant="h2" m="0 50px">
             NUESTROS PLATILLOS

@@ -3,11 +3,11 @@ import { Box, Container } from "@mui/system";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import fotoMenu from "../../../public/assets/images/galeries/galeria-alcanfores-2-min.jpg";
+import fotoMenu from "../../../public/assets/images/menu-del-dia.png";
 import fotoAbout from "../../../public/assets/images/sol-y-luna-alcanfores-min.jpg";
 import Styles from "./Headboard.module.css";
 
-const Headboard = ({ data, isAlined }) => {
+const Headboard = ({ data }) => {
  
   return (
     <>
