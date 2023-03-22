@@ -11,7 +11,7 @@ const MenuButton = ({ title, section, menuSection, setMenuSection }) => {
         gap: "20px",
       }}
     >
-      <Container
+      <ButtonBase
         sx={{
           position: "absolute",
           left: { mobile: "0px", tablet3: "-45px" },
@@ -30,17 +30,21 @@ const MenuButton = ({ title, section, menuSection, setMenuSection }) => {
           opacity: `${menuSection === section ? "1" : "0.9"}`,
         }}
         onClick={() => setMenuSection(section)}
+        title={title}
+        aria-label={title}
+        aria-labelledby={title.toLowerCase()}
       >
-        <ButtonBase
+        <Container
           variant="menuButton"
           sx={{
             borderRadius: "50%",
             width: "100%",
             height: "100%",
             background: "",
+            padding: "0px"
           }}
-        ></ButtonBase>
-      </Container>
+        ></Container>
+      </ButtonBase>
       <Typography
         variant="h3"
         sx={{

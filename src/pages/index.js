@@ -8,15 +8,25 @@ import Headboard from "@/components/Headboard/Headboard";
 import data from "../../public/json/textos.json";
 import galery from "../../public/json/galeryHome.json";
 import { Box } from "@mui/system";
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import CardBoard from "@/components/Headboard/CardBoard";
-import MenuButton from "@/components/MenuButton/MenuButton";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
+
 import { HomeLocationsDesktop } from "@/components/HomeLocations/HomeLocations";
-import Dropdown from "@/components/Dropdown/Dropdown";
 
 const Home = ({ selectedTheme, toggleTheme }) => {
+
+import {
+  HomeLocationsDesktop,
+  HomeLocationsMobile,
+} from "@/components/HomeLocations/HomeLocations";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
+import HomeReviews from "@/components/HomeReviews/HomeReviews";
+
+const Home = ({ selectedTheme, toggleTheme }) => {
+  const [width, setWidth] = useWindowWidth();
+
 
   return (
     <>
@@ -31,27 +41,29 @@ const Home = ({ selectedTheme, toggleTheme }) => {
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
         <Hero
-          title="SOL Y LUNA SAN CRISTOBAL"
+          title="SOL Y LUNA SAN CRISTÓBAL"
           image="/assets/images/sol-y-luna-centro-min.jpg"
-          subtitle="Restaurante de comida mexicana, con ambiente agradable y totalmente familiar"
-          buttonText="Conocenos"
+          text="Restaurante de comida mexicana, con ambiente agradable y totalmente familiar"
+          buttonText="Conócenos"
         />
         <Headboard data={data} />
-        <Box m="0 50px">
-          <Typography variant="h2">¿QUE OFRECEMOS?</Typography>
-        </Box>
-        <Dropdown />
-
+        <HomeServices />
         <Box>
           <Typography variant="h2" m="0 50px">
             NUESTROS PLATILLOS
           </Typography>
           <Galery data={galery} />
         </Box>
-        <HomeLocationsDesktop />
+        {width > 820 ? (
+          <HomeLocationsDesktop selectedTheme={selectedTheme} />
+        ) : (
+          <HomeLocationsMobile selectedTheme={selectedTheme} />
+        )}
+        <HomeReviews />
       </Layout>
     </>
   );
 };
 
 export default Home;
+

@@ -56,6 +56,9 @@ const Local1 = ({ selectedTheme, toggleTheme }) => {
               "https://maps.google.com/maps/dir//Restaurante+Sol+y+Luna+Perif.+Nte.+Pte.+40+Los+Alcanfores+29246+San+Crist%C3%B3bal+de+las+Casas,+Chis.,+M%C3%A9xico/@16.7392455,-92.6616912,21z/data=!4m5!4m4!1m0!1m2!1m1!1s0x85ed45a659eb7955:0x9b3202f796b09ad7"
             }
             tel={"+529671467419"}
+            text1="La casa matriz de Sol y Luna en Alcanfores es un lugar elegante y sofisticado que combina elementos tradicionales mexicanos con un toque moderno."
+            text2="El personal es amable y profesional, siempre dispuesto a ofrecer recomendaciones para garantizar que los clientes disfruten de una experiencia culinaria excepcional."
+            text3="Con una variedad de espacios privados, desde cenas íntimas hasta grandes eventos corporativos, la casa matriz es el lugar perfecto para celebraciones y eventos especiales."
           />
           <GalleryContainer itemData={itemData} />
         </main>

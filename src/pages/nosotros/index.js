@@ -146,7 +146,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
             component="h2"
             variant={width > 820 ? "h2" : width > 640 ? "h4" : "h5"}
             sx={{
-              paddingLeft: { mobile: "0px", tablet: "100px" },
+              paddingLeft: { mobile: "0px", tablet2: "100px" },
               marginBottom: "32px",
               textAlign: { mobile: "center", tablet2: "left" },
             }}
@@ -165,7 +165,23 @@ const About = ({ selectedTheme, toggleTheme }) => {
                   loopedSlides: 1,
                 },
                 950: {
-                  slidesPerView: 2,
+                  slidesPerView: 2.5,
+                  spaceBetween: 120,
+                  centeredSlides: true,
+                  centeredSlidesBounds: true,
+                  loop: true,
+                  loopedSlides: 2,
+                },
+                1440: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 120,
+                  centeredSlides: true,
+                  centeredSlidesBounds: true,
+                  loop: true,
+                  loopedSlides: 2,
+                },
+                1900: {
+                  slidesPerView: 4.5,
                   spaceBetween: 120,
                   centeredSlides: true,
                   centeredSlidesBounds: true,
@@ -174,7 +190,6 @@ const About = ({ selectedTheme, toggleTheme }) => {
                 },
               }}
               spaceBetween={0}
-              slidesPerView={1}
               centeredSlides={true}
               centeredSlidesBounds={true}
               loop={true}

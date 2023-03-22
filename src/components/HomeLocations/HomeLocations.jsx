@@ -36,6 +36,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
 
   return (
     <Container
+      component="section"
       sx={{
         padding: "0px",
         display: "flex",
@@ -43,18 +44,20 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
         justifyContent: "center",
         alignItems: "center",
         gap: "50px",
+        maxWidth: "1640px",
+        marginBottom: "200px",
       }}
     >
       <Container
-        sx={{ padding: "0px", textAlign: "center", marginBottom: "50px" }}
+        sx={{ padding: "20px", textAlign: "center", marginBottom: "50px" }}
       >
         <Typography variant="h2" sx={{ marginBottom: "50px" }}>
           UBICACIONES
         </Typography>
-        <Typography>
+        <Typography sx={{fontSize: 18, fontWeight: 500, lineHeight: "25px"}}>
           Contamos con 3 sucursales distribuidas por la ciudad
         </Typography>
-        <Typography>
+        <Typography sx={{fontSize: 18, fontWeight: 500, lineHeight: "25px"}}>
           En todas ellas podrás encontrar un agradable ambiente familiar y
           disfrutar de nuestra gran variedad de platillos.
         </Typography>
@@ -89,7 +92,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 width: { mobile: "30px", tablet: "58px" },
@@ -107,17 +110,21 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
                 opacity: `${localActive === "alcanfores" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("alcanfores")}
+              title="Sol y Luna Alcanfores"
+              aria-label="Sol y Luna Alcanfores"
+              aria-labelledby="sol y luna alcanfores"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
               variant="h3"
               onClick={() => setLocalActive("alcanfores")}
@@ -136,7 +143,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 width: { mobile: "30px", tablet: "58px" },
@@ -154,20 +161,24 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
                 opacity: `${localActive === "centro" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("centro")}
+              title="Sol y Luna Centro"
+              aria-label="Sol y Luna Centro"
+              aria-labelledby="sol y luna centro"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
               variant="h3"
-              onClick={() => setLocalActive("alcanfores")}
+              onClick={() => setLocalActive("centro")}
               sx={{ cursor: "pointer" }}
             >
               CENTRO
@@ -183,7 +194,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
               gap: "25px",
             }}
           >
-            <Container
+            <ButtonBase
               sx={{
                 padding: { mobile: "4px", tablet: "8px" },
                 width: { mobile: "30px", tablet: "58px" },
@@ -201,20 +212,24 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
                 opacity: `${localActive === "boulevard" ? "1" : "0.9"}`,
               }}
               onClick={() => setLocalActive("boulevard")}
+              title="Sol y Luna Boulevard"
+              aria-label="Sol y Luna Boulevard"
+              aria-labelledby="sol y luna boulevard"
             >
-              <ButtonBase
+              <Container
                 variant="menuButton"
                 sx={{
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
                   background: "",
+                  padding: "0px"
                 }}
-              ></ButtonBase>
-            </Container>
+              ></Container>
+            </ButtonBase>
             <Typography
               variant="h3"
-              onClick={() => setLocalActive("alcanfores")}
+              onClick={() => setLocalActive("boulevard")}
               sx={{ cursor: "pointer" }}
             >
               BOULEVARD
@@ -245,3 +260,244 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
   );
 };
 
+export const HomeLocationsMobile = ({selectedTheme}) => {
+  const [localActive, setLocalActive] = useState("alcanfores");
+
+  return (
+    <Container
+      component="section"
+      sx={{
+        padding: "20px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "50px",
+        marginBottom: "120px",
+      }}
+    >
+      <Container
+        sx={{ padding: "0px", marginBottom: "50px" }}
+      >
+        <Typography component="h2" variant="h5" sx={{ marginBottom: "24px", textAlign: "center" }}>
+          UBICACIONES
+        </Typography>
+        <Typography sx={{fontSize: 16, fontWeight: 400, lineHeight: "20px"}}>
+          Contamos con 3 sucursales distribuidas por la ciudad
+        </Typography>
+        <Typography sx={{fontSize: 16, fontWeight: 400, lineHeight: "20px"}}>
+          En todas ellas podrás encontrar un agradable ambiente familiar y
+          disfrutar de nuestra gran variedad de platillos.
+        </Typography>
+      </Container>
+      <Container sx={{ padding: "0px", height: "auto", marginBottom: "50px" }}>
+        <Container
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+            alignItems: "center",
+            position: "relative",
+            gap: "30px"
+          }}
+        >
+          <Container
+            sx={{
+              padding: "0px",
+              position: "absolute",
+              top: "26px",
+              left: {mobile: "29px", tablet: "43px"},
+              height: {mobile: `${localActive === "boulevard" ? "27%" :"90%"}`, mobile2: `${localActive === "boulevard" ? "24%" :"90%"}`, tablet: `${localActive === "boulevard" ? "30%" :"90%"}`},
+              width: "2px",
+              border: "2px solid",
+              borderColor: "primary.border",
+            }}
+          ></Container>
+          <Container
+            sx={{
+              padding: "0px",
+              display: "flex",
+              alignItems: "center",
+              gap: "25px",
+            }}
+          >
+            <ButtonBase
+              sx={{
+                padding: { mobile: "4px", tablet: "8px" },
+                margin: "0px",
+                width: { mobile: "30px", tablet: "58px" },
+                height: { mobile: "30px", tablet: "58px" },
+                border: "3px solid",
+                borderColor: `${
+                  localActive === "alcanfores"
+                    ? "primary.borderActive"
+                    : "primary.border"
+                }`,
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: `${localActive === "alcanfores" ? "1" : "0.9"}`,
+              }}
+              onClick={() => setLocalActive("alcanfores")}
+              title="Sol y Luna Alcanfores"
+              aria-label="Sol y Luna Alcanfores"
+              aria-labelledby="sol y luna alcanfores"
+            >
+              <Container
+                variant="menuButton"
+                sx={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                  background: "",
+                  padding: "0px"
+                }}
+              ></Container>
+            </ButtonBase>
+            <Typography
+              component="h3"
+              variant="h5"
+              onClick={() => setLocalActive("alcanfores")}
+              sx={{ cursor: "pointer" }}
+            >
+              ALCANFORES
+            </Typography>
+            
+          </Container>
+          <Container sx={{paddingLeft: "30px", paddingRight: "0px"}}>
+            {
+                localActive === "alcanfores" && <LocalCard
+                data={locations[0]}
+                selectedTheme={selectedTheme}
+                localActive={localActive}
+              />
+              }
+
+          </Container>
+          <Container
+            sx={{
+              padding: "0px",
+              display: "flex",
+              alignItems: "center",
+              gap: "25px",
+            }}
+          >
+            <ButtonBase
+              sx={{
+                padding: { mobile: "4px", tablet: "8px" },
+                margin: "0px",
+                width: { mobile: "30px", tablet: "58px" },
+                height: { mobile: "30px", tablet: "58px" },
+                border: "3px solid",
+                borderColor: `${
+                  localActive === "centro"
+                    ? "primary.borderActive"
+                    : "primary.border"
+                }`,
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: `${localActive === "centro" ? "1" : "0.9"}`,
+              }}
+              onClick={() => setLocalActive("centro")}
+              title="Sol y Luna Centro"
+              aria-label="Sol y Luna Centro"
+              aria-labelledby="sol y luna centro"
+            >
+              <Container
+                variant="menuButton"
+                sx={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                  background: "",
+                  padding: "0px"
+                }}
+              ></Container>
+            </ButtonBase>
+            <Typography
+              component="h3"
+              variant="h5"
+              onClick={() => setLocalActive("centro")}
+              sx={{ cursor: "pointer" }}
+            >
+              CENTRO
+            </Typography>
+          </Container>
+          <Container sx={{paddingLeft: "30px", paddingRight: "0px"}}>
+            {
+                localActive === "centro" && <LocalCard
+                data={locations[1]}
+                selectedTheme={selectedTheme}
+                localActive={localActive}
+              />
+              }
+          </Container>
+          <Container
+            sx={{
+              padding: "0px",
+              display: "flex",
+              alignItems: "center",
+              gap: "25px",
+            }}
+          >
+            <ButtonBase
+              sx={{
+                padding: { mobile: "4px", tablet: "8px" },
+                margin: "0px",
+                width: { mobile: "30px", tablet: "58px" },
+                height: { mobile: "30px", tablet: "58px" },
+                border: "3px solid",
+                borderColor: `${
+                  localActive === "boulevard"
+                    ? "primary.borderActive"
+                    : "primary.border"
+                }`,
+                borderRadius: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: `${localActive === "boulevard" ? "1" : "0.9"}`,
+              }}
+              onClick={() => setLocalActive("boulevard")}
+              title="Sol y Luna Boulevard"
+              aria-label="Sol y Luna Boulevard"
+              aria-labelledby="sol y luna boulevard"
+            >
+              <Container
+                variant="menuButton"
+                sx={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                  background: "",
+                  padding: "0px"
+                }}
+              ></Container>
+            </ButtonBase>
+            <Typography
+              component="h3"
+              variant="h5"
+              onClick={() => setLocalActive("boulevard")}
+              sx={{ cursor: "pointer" }}
+            >
+              BOULEVARD
+            </Typography>
+          </Container>
+          <Container sx={{paddingLeft: "30px", paddingRight: "0px"}}>
+            {
+                localActive === "boulevard" && <LocalCard
+                data={locations[2]}
+                selectedTheme={selectedTheme}
+                localActive={localActive}
+              />
+            }
+          </Container>
+        </Container>
+      </Container>
+      <ButtonComponent href="/ubicaciones">Ver ubicaciones</ButtonComponent>
+    </Container>
+  );
+}

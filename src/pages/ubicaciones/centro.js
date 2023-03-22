@@ -56,6 +56,9 @@ const Local2 = ({ selectedTheme, toggleTheme }) => {
             "https://maps.google.com/maps/dir//Sol+y+Luna+Centro+Francisco+I.+Madero+6+Zona+Centro+29200+San+Crist%C3%B3bal+de+las+Casas,+Chis.,+M%C3%A9xico/@16.7368929,-92.6356795,19z/data=!4m5!4m4!1m0!1m2!1m1!1s0x85ed453e6fca5f99:0x3aad373d953831f1"
           }
           tel={"+529671452802"}
+          text1="La sucursal Centro de Sol y Luna es un restaurante que ofrece una experiencia culinaria única y memorable para todos sus visitantes."
+          text2="Ubicado en el centro de la ciudad, el restaurante cuenta con un ambiente moderno y acogedor, decorado con detalles naturales y elegantes."
+          text3="La cocina es una fusión de sabores, con una variedad de platos inspirados en la cocina mexicana y latinoamericana. Desde tacos y quesadillas hasta ceviches y platos de carne y pescado, el menú ofrece una amplia gama de opciones para satisfacer cualquier paladar."
         />
         <GalleryContainer itemData={itemData} />
       </Layout>

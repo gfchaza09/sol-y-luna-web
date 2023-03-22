@@ -22,7 +22,7 @@ const LocalCard = ({ data, selectedTheme, localActive }) => {
   const [width, setWidth] = useWindowWidth();
 
   useEffect(() => {
-    if (width < 640) {
+    if (width < 768) {
       setShowButton(true);
     } else {
       setShowButton(false);
@@ -30,11 +30,11 @@ const LocalCard = ({ data, selectedTheme, localActive }) => {
   }, [width]);
 
   const handleMouseEnter = () => {
-    if (width >= 640) setShowButton(true);
+    if (width >= 768) setShowButton(true);
   };
 
   const handleMouseLeave = () => {
-    if (width >= 640) setShowButton(false);
+    if (width >= 768) setShowButton(false);
   };
 
   return (
@@ -53,11 +53,11 @@ const LocalCard = ({ data, selectedTheme, localActive }) => {
           }}
         >
           <div className={img__container}>
-            <Image src={data.image} fill sizes="100vh" alt="local" />
+            <Image src={data.image} fill sizes="(max-width: 640px) 90vw, 33vw" alt="local" loading="lazy"/>
           </div>
           <Typography
             variant="h5"
-            component="h5"
+            component="h3"
             sx={{ marginTop: "24px", textAlign: "center" }}
           >
             {data?.name}

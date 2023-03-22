@@ -7,6 +7,7 @@
     align-items: center;
     padding: 30px;
     filter: opacity(35%);
+    user-select: none;
 }
 
 .showcard {
@@ -36,7 +37,7 @@
 
 .link__container {
     height: 0px;
-    transition: height .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .link__animation {

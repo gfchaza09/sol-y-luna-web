@@ -108,60 +108,97 @@
       "imagen": "/assets/images/galeries/galeria-centro-2-min.jpg"
     }
   ],
-  "platos_principales": [
+  "servicios_home": [
     {
-      "nombre": "Filete de salmón",
-      "descripcion": "Delicioso filete de salmón fresco a la plancha con una salsa de limón y hierbas.",
-      "tipo": "Pescados",
-      "img": "https://example.com/filete_salmon.jpg"
+      "servicio": "Estacionamiento",
+      "descripcion1": "Contamos con un amplio estacionamiento en la sucursal Sol y Luna Alcanfores para mayor comodidad de nuestros clientes.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/estacionamiento-min.jpg"
     },
     {
-      "nombre": "Hamburguesa gourmet",
-      "descripcion": "Carne de res de alta calidad con queso cheddar derretido, tocino y vegetales frescos.",
-      "tipo": "Carnes",
-      "img": "https://example.com/hamburguesa_gourmet.jpg"
+      "servicio": "Área de juegos",
+      "descripcion1": "Tenemos un salón apto para los más pequeños.",
+      "descripcion2": "El área cuenta con varias actividades y juegos de entretenimiento para que los niños se diviertan mientras aguardan por su comida.",
+      "detalle": "Disponible en sucursales: Alcanfores y Centro.",
+      "imagen": "/assets/images/area-de-juegos-min.jpg"
     },
     {
-      "nombre": "Lasagna de vegetales",
-      "descripcion": "Capas de pasta con relleno de espinacas, champiñones y una deliciosa salsa de tomate y queso gratinado.",
-      "tipo": "Vegetales",
-      "img": "https://example.com/filete_salmon.jpg"
+      "servicio": "Salón de eventos",
+      "descripcion1": "También queremos ser parte de los momentos más importantes, así que contamos con un salón para eventos.",
+      "descripcion2": "¿Lo mejor de todo? Si consumes los alimentos con nosotros, no tiene un costo extra la renta del espacio.",
+      "detalle": "Disponible en sucursales: Alcanfores.",
+      "imagen": "/assets/images/galeries/galeria-alcanfores-4-min.jpg"
     },
     {
-      "nombre": "Filete de salmón",
-      "descripcion": "Delicioso filete de salmón fresco a la plancha con una salsa de limón y hierbas.",
-      "tipo": "Pescados",
-      "img": "https://example.com/filete_salmon.jpg"
+      "servicio": "Delivery y Take Away",
+      "descripcion1": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.",
+      "detalle": "Disponible en todas las sucursales",
+      "imagen": "/assets/images/delivery.jpg"
+    }
+  ],
+  "reviews": [
+    {
+      "nombre": "Nikonista-D4",
+      "opinion": "Excelente sitio para comer. Comimos a mediodía, el personal muy atento, camarero muy simpático, mantuvimos una conversación con él, nos preguntó que si éramos Españoles.",
+      "rating": "5.0",
+      "fecha": "23 de enero de 2023",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com.mx/ShowUserReviews-g150802-d11796683-r876210780-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-nikonista-d4.jpg"
     },
     {
-      "nombre": "Hamburguesa gourmet",
-      "descripcion": "Carne de res de alta calidad con queso cheddar derretido, tocino y vegetales frescos.",
-      "tipo": "Carnes",
-      "img": "https://example.com/hamburguesa_gourmet.jpg"
+      "nombre": "Patricia H.",
+      "opinion": "Sazón delicioso. Meseros movidos y amables. Precios accesibles...Pero el sabor! Excelentes cocineros!",
+      "rating": "5.0",
+      "fecha": "16 de febrero 2023",
+      "social": "/assets/social-networks/google-maps-review.png",
+      "socialLink": "https://www.google.com/maps/contrib/108204386089219388461/photos/@18.1600493,-95.7371743,7z/data=!4m3!8m2!3m1!1e1?hl=es-419",
+      "avatar": "/assets/images/reviews/opinion-patricia.jpg"
     },
     {
-      "nombre": "Lasagna de vegetales",
-      "descripcion": "Capas de pasta con relleno de espinacas, champiñones y una deliciosa salsa de tomate y queso gratinado.",
-      "tipo": "Vegetales",
-      "img": "https://example.com/filete_salmon.jpg"
+      "nombre": "Victor Walden",
+      "opinion": "Located on a quiet street in the center of San Cristobal ! The staff is really nice and the breakfast was really amazing and tasty all for a really decent price !",
+      "rating": "5.0",
+      "fecha": "17 de septiembre 2021",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r810414046-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-victor-walden.jpg"
     },
     {
-      "nombre": "Filete de salmón",
-      "descripcion": "Delicioso filete de salmón fresco a la plancha con una salsa de limón y hierbas.",
-      "tipo": "Pescados",
-      "img": "https://example.com/filete_salmon.jpg"
+      "nombre": "Hubegner Cerón",
+      "opinion": "Deliciosos desayunos!!! Y los postres muy buenos (cheesecake de Zarzamora), atención increíble 😊 Seguro regresamos.",
+      "rating": "5.0",
+      "fecha": "7 de enero 2022",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r824256077-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-hubenger.jpg"
     },
     {
-      "nombre": "Hamburguesa gourmet",
-      "descripcion": "Carne de res de alta calidad con queso cheddar derretido, tocino y vegetales frescos.",
-      "tipo": "Carnes",
-      "img": "https://example.com/hamburguesa_gourmet.jpg"
+      "nombre": "Omar Palatto",
+      "opinion": "Decoración muy bonita, ya adentro desde la llegada una excelente atención, los platillos en muy buena porción y delicioso.Será un placer regresar!",
+      "rating": "5.0",
+      "fecha": "21 de marzo de 2021",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r784970450-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-omar.jpg"
     },
     {
-      "nombre": "Lasagna de vegetales",
-      "descripcion": "Capas de pasta con relleno de espinacas, champiñones y una deliciosa salsa de tomate y queso gratinado.",
-      "tipo": "Vegetales",
-      "img": "https://example.com/filete_salmon.jpg"
+      "nombre": "Gaby R",
+      "opinion": "El buffet dominical está muy completo, muy rico y a buen precio! También he pedido horchata y chocolate, ambos deliciosos😋",
+      "rating": "5.0",
+      "fecha": "27 de diciembre 2017",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r549574602-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-gaby.jpg"
+    },
+    {
+      "nombre": "Jorge Gonzalez",
+      "opinion": "Sol y Luna is great for breakfast. The atmosphere is really nice and quiet. The coffee is amazing too!",
+      "rating": "5.0",
+      "fecha": "19 de febrero 2021",
+      "social": "/assets/social-networks/tripadvisor-review.png",
+      "socialLink": "https://www.tripadvisor.com/ShowUserReviews-g150802-d11796683-r783203750-Restaurante_Sol_y_Luna-San_Cristobal_de_las_Casas_Southern_Mexico.html",
+      "avatar": "/assets/images/reviews/opinion-jorge.jpg"
     }
   ]
 }

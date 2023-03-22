@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import "@/styles/globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 // Customs themes
 import { darkTheme, lightTheme } from "../themes/themes.js";
 // Context
-import HomeContextProvider from "@/context/HomeContext";
 import { useThemeDarkLight } from "@/hooks/useThemeDarkLight.js";
 
+import "@/styles/globals.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "swiper/css";
 
@@ -33,15 +32,13 @@ export default function App({ Component, pageProps }) {
   }
 
   return (
-    <HomeContextProvider>
-      <ThemeProvider theme={activeTheme}>
-        <CssBaseline />
-        <Component
-          {...pageProps}
-          toggleTheme={toggleTheme}
-          selectedTheme={selectedTheme}
-        />
-      </ThemeProvider>
-    </HomeContextProvider>
+    <ThemeProvider theme={activeTheme}>
+      <CssBaseline />
+      <Component
+        {...pageProps}
+        toggleTheme={toggleTheme}
+        selectedTheme={selectedTheme}
+      />
+    </ThemeProvider>
   );
 }

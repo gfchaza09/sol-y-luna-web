@@ -196,6 +196,8 @@ export const darkTheme = createTheme({
         {
           props: { variant: "backgroundAccordionHover" },
           style: {
+            borderRadius: "6px",
+            transition: "background .2s linear",
             ":hover": {
               backgroundColor: "#252525",
             },
@@ -212,6 +214,13 @@ export const darkTheme = createTheme({
             ":hover": {
               backgroundColor: "#252525",
             },
+          },
+        },
+        {
+          props: { variant: "menuButton" },
+          style: {
+            backgroundColor: "#F1DA9E",
+            color: "#000000",
           },
         },
       ],
@@ -423,6 +432,12 @@ export const lightTheme = createTheme({
             backgroundColor: "#FFFFFF",
           },
         },
+        {
+          props: { variant: "cardHomeBackground" },
+          style: {
+            backgroundColor: "#F4F6F8",
+          },
+        },
       ],
     },
     MuiList: {
@@ -460,6 +475,7 @@ export const lightTheme = createTheme({
         {
           props: { variant: "backgroundAccordionHover" },
           style: {
+            borderRadius: "6px",
             transition: "background .2s linear",
             ":hover": {
               backgroundColor: "#F4F6F8",
@@ -477,6 +493,13 @@ export const lightTheme = createTheme({
             ":hover": {
               backgroundColor: "#F4F6F8",
             },
+          },
+        },
+        {
+          props: { variant: "menuButton" },
+          style: {
+            backgroundColor: "#9CA3AF",
+            color: "#FFFFFF",
           },
         },
       ],
