@@ -35,7 +35,7 @@ const Home = ({ selectedTheme, toggleTheme }) => {
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
         <Hero
-          title="SOL Y LUNA SAN CRISTOBAL"
+          title="SOL Y LUNA SAN CRISTÓBAL"
           image="/assets/images/sol-y-luna-centro-min.jpg"
           text="Restaurante de comida mexicana, con ambiente agradable y totalmente familiar"
           buttonText="Conócenos"
