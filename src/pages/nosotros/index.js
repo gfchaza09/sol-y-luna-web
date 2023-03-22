@@ -146,7 +146,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
             component="h2"
             variant={width > 820 ? "h2" : width > 640 ? "h4" : "h5"}
             sx={{
-              paddingLeft: { mobile: "0px", tablet: "100px" },
+              paddingLeft: { mobile: "0px", tablet2: "100px" },
               marginBottom: "32px",
               textAlign: { mobile: "center", tablet2: "left" },
             }}
