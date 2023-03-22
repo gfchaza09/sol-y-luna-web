@@ -7,6 +7,7 @@
     align-items: center;
     padding: 30px;
     filter: opacity(35%);
+    user-select: none;
 }
 
 .showcard {
