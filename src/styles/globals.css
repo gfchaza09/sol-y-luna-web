@@ -351,6 +351,8 @@ button{
   color: #9CA3AF;
 }
 
+/* swiper styles */
+
 .swiper {
   width: 100%;
 }
@@ -363,6 +365,8 @@ button{
   opacity: 0.4;
   filter: grayscale(0.5);
 }
+
+/* react-pdf styles */
 
 .react-pdf__Page__canvas {
   margin: 0 auto;

@@ -17,6 +17,7 @@ import {
   HomeLocationsMobile,
 } from "@/components/HomeLocations/HomeLocations";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
+import HomeReviews from "@/components/HomeReviews/HomeReviews";
 
 const Home = ({ selectedTheme, toggleTheme }) => {
   const [width, setWidth] = useWindowWidth();
@@ -52,6 +53,7 @@ const Home = ({ selectedTheme, toggleTheme }) => {
         ) : (
           <HomeLocationsMobile selectedTheme={selectedTheme} />
         )}
+        <HomeReviews />
       </Layout>
     </>
   );

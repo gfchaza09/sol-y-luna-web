@@ -63,7 +63,7 @@ const MenuContainer = () => {
         <Typography
           sx={{
             fontWeight: 500,
-            fontSize: 18,
+            fontSize: {mobile: 17, tablet: 18},
             lineHeight: "25px",
             marginBottom: "24px",
             textAlign: "center",
@@ -75,7 +75,7 @@ const MenuContainer = () => {
         <Typography
           sx={{
             fontWeight: 500,
-            fontSize: 18,
+            fontSize: {mobile: 17, tablet: 18},
             lineHeight: "25px",
             marginBottom: "80px",
             textAlign: "center",
@@ -150,7 +150,7 @@ const MenuContainer = () => {
             file={`/assets/pdf/${menuLocation}/${menuSection}-${width >= 640 ? "desktop" : "mobile"}.pdf`}
             onLoadSuccess={onDocumentLoadSuccess}
           >
-            <Page pageNumber={pageNumber} renderTextLayer={false} />
+            <Page pageNumber={pageNumber} renderTextLayer={false} width={width < 420 ? 360 : width < 640 ? 400 : 700}/>
           </Document>
         </Container>
       </Container>
