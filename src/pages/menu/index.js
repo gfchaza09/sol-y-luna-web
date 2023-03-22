@@ -8,7 +8,7 @@ const Menu = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Menu</title>
+        <title>Sol y Luna - Menú</title>
         <meta
           name="description"
           content="Sitio web del restaurant Sol y Luna"
@@ -18,7 +18,7 @@ const Menu = ({ selectedTheme, toggleTheme }) => {
       </Head>
       <Layout selectedTheme={selectedTheme} toggleTheme={toggleTheme}>
         <main>
-          <Hero title="NUESTRO MENU" image="/assets/images/menu-header.jpg" />
+          <Hero title="NUESTRO MENÚ" image="/assets/images/menu-header.jpg" />
           <MenuContainer />
         </main>
       </Layout>
