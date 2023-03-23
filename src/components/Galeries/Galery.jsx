@@ -1,12 +1,6 @@
-import {
-  Button,
-  ButtonBase,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-} from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import ButtonComponent from "../Button/ButtonComponent";
 import Styles from "./Galery.module.css";
 
 const Galery = ({ data }) => {
@@ -53,14 +47,9 @@ const Galery = ({ data }) => {
           marginBottom: "40px",
         }}
       >
-        <Button
-        // className={Styles.buttonDark}
-        variant="a"
-        
-
-        >
-          Ver Menu
-        </Button>
+        <ButtonComponent href="/servicios">
+          Ver menú
+        </ButtonComponent>
       </div>
     </>
   );

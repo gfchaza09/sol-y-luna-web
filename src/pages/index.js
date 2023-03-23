@@ -12,6 +12,7 @@ import { Typography } from "@mui/material";
 import CardBoard from "@/components/Headboard/CardBoard";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
+
 import {
   HomeLocationsDesktop,
   HomeLocationsMobile,
@@ -19,8 +20,12 @@ import {
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 import HomeReviews from "@/components/HomeReviews/HomeReviews";
 
+
+
+
 const Home = ({ selectedTheme, toggleTheme }) => {
   const [width, setWidth] = useWindowWidth();
+
 
   return (
     <>
@@ -65,3 +70,4 @@ const Home = ({ selectedTheme, toggleTheme }) => {
 };
 
 export default Home;
+

@@ -4,11 +4,11 @@
 
 ## Este proyecto es una aplicación web para el restaurante **SOL Y LUNA**. La aplicación está desarrollada en **React** bajo el framework **NextJS**. El mismo es el producto de un solido grupo de trabajo compuesto por diseñadores UX/UI, desarrolladores FrontEnd y un community manager. El sitio cuenta con los mas altos standares  y esta construido bajo los paradigmas de escalabilidad y correcta funcionalidad a largo plazo
 
----
+----
 
 ## INSTALACION
 
-#### Para ejecutar la aplicación en su máquina local, siga estos pasos
+### Para ejecutar la aplicación en su máquina local, siga estos pasos
  >
  >#### Clonar el repositorio
  >
@@ -26,9 +26,11 @@
 >
 >`http://localhost:3000`
 
+----
+
 ## FUNCIONALIDADES
 
-#### La aplicación tiene las siguientes funcionalidades
+### La aplicación tiene las siguientes funcionalidades
 
 > * #### SSR (Server Side Rendering), metodologia que agiliza notablemente la velocidad y calidad del renderizado del sitio
 >
@@ -44,11 +46,13 @@
 >
 > * #### Iconos elegantes utilizando Heroicons
 >
-> * #### Carrusel de imágenes utilizando React Slick
+> * #### Carrusel de imágenes utilizando Swiper
+
+----
 
 ## TECNOLOGIAS
 
-#### Las principales tecnologías utilizadas en este proyecto son
+### Las principales tecnologías utilizadas en este proyecto son
 
 * Next-JS
 * React
@@ -56,20 +60,22 @@
 * Framer Motion
 * Mapbox GL
 * Heroicons
-* React-Slick
+* Swiper
+* React-pdf
 
-Contribuir
-Si desea contribuir a este proyecto, por favor abra un nuevo issue o envíe una solicitud de extracción. Agradecemos cualquier ayuda que pueda ofrecer.
+
+----
 
 ## AUTORES
 
-#### A continuacion podras ver el equipo de trabajo
+### A continuacion podras ver el equipo de trabajo
 
 >#### Agostina Di Giuseppe - UX/UI Desginer
 >
 > [Linkedin](https://www.linkedin.com/in/agostinadigiuseppe/)
 
 >#### Rocio Farias - Community Manager
+>
 
 >#### Samuel Cardenas - UX/UI Designer
 >
@@ -85,8 +91,11 @@ Si desea contribuir a este proyecto, por favor abra un nuevo issue o envíe una 
 > [Github](https://github.com/mjParedes)
 > [Linkedin](https://www.linkedin.com/in/matias-paredes-m8j5)
 
-## LICENCIA
+----
 
-#### Este proyecto está bajo la Licencia MIT. Consulte el archivo LICENSE.md para obtener más detalles
+## DEPLOY & HOSTING
 
-## DEPLOY
+### Proceso de subida a produccion de proyecto y eventual host en la red
+
+* Deploy efectuado en VERCEL
+* Servicio de host utilizado HOSTINGER. 
