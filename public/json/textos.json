@@ -6,7 +6,7 @@
   "menu": {
     "titulo": "MENU DEL DIA",
     "descripcion": "Nuestras sucursales cuentan con promociones para que disfrutes cada dia de la semana.Estas promos incluyen entrada, plato fuerte, bebida (agua) y postre del dia. Tambien cuentan con opciones de upgrade para personalizarlo. Las propuestas van cambiando cada 15 dias. ",
-    "txtBoton":"Ver menu completo"
+    "txtBoton":"Consultar promos vigentes"
   },
   "sobreNosotros": {
     "titulo": "SOBRE NOSOTROS",

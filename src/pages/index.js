@@ -13,16 +13,15 @@ import CardBoard from "@/components/Headboard/CardBoard";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
 
-import { HomeLocationsDesktop } from "@/components/HomeLocations/HomeLocations";
-
-const Home = ({ selectedTheme, toggleTheme }) => {
-
 import {
   HomeLocationsDesktop,
   HomeLocationsMobile,
 } from "@/components/HomeLocations/HomeLocations";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
 import HomeReviews from "@/components/HomeReviews/HomeReviews";
+
+
+
 
 const Home = ({ selectedTheme, toggleTheme }) => {
   const [width, setWidth] = useWindowWidth();
