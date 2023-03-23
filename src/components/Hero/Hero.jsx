@@ -151,6 +151,10 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
               lineHeight: "20px",
               marginTop: { mobile: "40px", tablet: "0px" },
               padding: "20px 12px",
+              transition: "all .2s linear",
+              ":hover": {
+                backgroundColor: "#FFFFFF22",
+              },
             }}
           >
             <Link
