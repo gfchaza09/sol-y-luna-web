@@ -236,6 +236,10 @@ export const darkTheme = createTheme({
             fontWeight: 500,
             fontSize: 16,
             lineHeight: "20px",
+            transition: "all .2s linear",
+            ":hover": {
+              backgroundColor: "#F1DA9E22",
+            },
           },
         },
         {
@@ -515,6 +519,10 @@ export const lightTheme = createTheme({
             fontWeight: 500,
             fontSize: 16,
             lineHeight: "20px",
+            transition: "all .2s linear",
+            ":hover": {
+              backgroundColor: "#6B728033",
+            },
           },
         },
         {

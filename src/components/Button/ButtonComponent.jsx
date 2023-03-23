@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import classes from "./ButtonComponent.module.css";
 
-const { btn__link, btn__carrousel, onClick } = classes;
+const { btn__link, btn__carrousel } = classes;
 
 const ButtonComponent = ({ children, href, icon, target, onClick }) => {
   return icon ? (
