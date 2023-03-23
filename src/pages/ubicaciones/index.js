@@ -39,10 +39,15 @@ const Location = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Ubicaciones</title>
+        <title>Sol y Luna Restaurante - Ubicaciones</title>
         <meta
           name="description"
-          content="Sitio web del restaurant Sol y Luna"
+          content="Sol y Luna cuenta con 3 sucursales distribuidas por la ciudad. En todas ellas podrás encontrar un agradable ambiente familiar y disfrutar de nuestra gran variedad de platillos."
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="RESTAURANTE, COMIDA, MÉXICO, SAN, CRISTÓBAL, CASAS SOL, LUNA, MENÚ, COMER, ALCANFORES, CENTRO, BOULEVARD, ESTACIONAMIENTO, JUEGOS, EVENTOS, TURISTAS, COMIDA"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

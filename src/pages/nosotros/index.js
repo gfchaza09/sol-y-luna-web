@@ -20,10 +20,15 @@ const About = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Nosotros</title>
+        <title>Sol y Luna Restaurante - Nosotros</title>
         <meta
           name="description"
-          content="Sitio web del restaurant Sol y Luna"
+          content="En Sol y Luna creemos que la hora de la comida es sagrada, ya que es cuando nutres lo más importante que tienes: a ti mismo. Es por ello que en Sol y Luna restaurante buscamos crear un ambiente cómodo para ti, tu familia y amigos, además de crear alimentos con un increíble sabor y mucha variedad."
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="RESTAURANTE, COMIDA, MÉXICO, SOL, LUNA, MENÚ, COMER, NOSOTROS, FAMILIA, AMIGOS, CHEF, COCINA, PROFESIONAL, RESPONSABLE"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

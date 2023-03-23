@@ -32,10 +32,15 @@ const Local2 = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Centro</title>
+        <title>Sol y Luna Restaurante - Centro</title>
         <meta
           name="description"
-          content="Sitio web del restaurant Sol y Luna"
+          content="La sucursal Centro de Sol y Luna es un restaurante que ofrece una experiencia culinaria única y memorable para todos sus visitantes."
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="RESTAURANTE, COMIDA, MÉXICO, SOL, LUNA, MENÚ, COMER, CENTRO, MAPA, EXPERIENCIA, MODERNO, ACOGEDOR, ELEGANTE, FUSIÓN, COMIDA, COCINA, TACOS, QUESADILLAS, CEVICHES, CARNE, PESCADO, MENÚ, MEXICANA, LATINOAMERICANA"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

@@ -70,7 +70,7 @@ const MenuContainer = () => {
           }}
         >
           Variamos nuestros servicios y comidas dependiendo del público de
-          nuestras sucursales. Actualmente contamos con 2 menús
+          nuestras sucursales. Actualmente contamos con 2 menús.
         </Typography>
         <Typography
           sx={{
