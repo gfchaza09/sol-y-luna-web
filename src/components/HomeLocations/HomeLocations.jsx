@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ButtonBase, Container, Typography } from "@mui/material";
 import ButtonComponent from "../Button/ButtonComponent";
 import LocalCard from "../Cards/LocalCard/LocalCard";
-import { borderColor } from "@mui/system";
 
 const locations = [
   {

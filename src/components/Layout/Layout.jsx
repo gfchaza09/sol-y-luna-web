@@ -1,12 +1,9 @@
-import { useState, useRef } from "react";
-import Carrusel from "../Slider/Slider";
+import { useState } from "react";
 import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
 import NavBar from "../NavBar/NavBar";
 import WhatsappButton from "../WhatsappButton/WhatsappButton";
 import ModalComponent from "../Modal/ModalComponent";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
-import { motion, useScroll, useTransform } from "framer-motion";
 import AnimateRender from "../AnimateRender/AnimateRender";
 
 const Layout = ({ children, selectedTheme, toggleTheme }) => {
