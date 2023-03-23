@@ -17,10 +17,15 @@ const Services = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Servicios</title>
+        <title>Sol y Luna Restaurante - Servicios</title>
         <meta
           name="description"
-          content="Sitio web del restaurant Sol y Luna"
+          content="Sol y Luna ofrece varios servicios que nos ayudan a adaptarnos a nuestros clientes. Algunos de ellos se encuentran disponibles en todas nuestras sucursales, mientras que otros solo se pueden encontrar en la sucursal de Alcanfores."
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="RESTAURANTE, COMIDA, MÉXICO, SAN, CRISTOBAL, CASAS, SOL, LUNA, SERVICIOS, MENÚ, COMER, JUEGOS, INFANTIL, COMIDA, ENTRETENIMIENTO, ALCANFORES, CENTRO, BOULEVARD, ESTACIONAMIENTO, SALON, EVENTOS, DELIVERY, TAKE, AWAY, PROMOCIONES, DESCUENTOS, CUMPLEAÑOS"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

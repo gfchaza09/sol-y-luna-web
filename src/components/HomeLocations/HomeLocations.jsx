@@ -55,7 +55,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
           UBICACIONES
         </Typography>
         <Typography sx={{fontSize: 18, fontWeight: 500, lineHeight: "25px"}}>
-          Contamos con 3 sucursales distribuidas por la ciudad
+          Contamos con 3 sucursales distribuidas por la ciudad.
         </Typography>
         <Typography sx={{fontSize: 18, fontWeight: 500, lineHeight: "25px"}}>
           En todas ellas podrás encontrar un agradable ambiente familiar y
@@ -283,7 +283,7 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
           UBICACIONES
         </Typography>
         <Typography sx={{fontSize: 16, fontWeight: 400, lineHeight: "20px"}}>
-          Contamos con 3 sucursales distribuidas por la ciudad
+          Contamos con 3 sucursales distribuidas por la ciudad.
         </Typography>
         <Typography sx={{fontSize: 16, fontWeight: 400, lineHeight: "20px"}}>
           En todas ellas podrás encontrar un agradable ambiente familiar y

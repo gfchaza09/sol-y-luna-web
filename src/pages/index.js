@@ -25,10 +25,15 @@ const Home = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Home</title>
+        <title>Sol y Luna Restaurante - Inicio</title>
         <meta
           name="description"
-          content="Sitio web del restaurant Sol y Luna"
+          content="Sitio web del restaurante Sol y Luna que ofrece comida mexicana, con ambiente agradable y totalmente familar."
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="RESTAURANTE, COMIDA, MÉXICO, SAN, CRISTÓBAL, CASAS, SOL, LUNA, MENÚ, COMER, AGUACHILE, CLERICOT, CHILE"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
