@@ -9,7 +9,6 @@ import data from "../../public/json/textos.json";
 import galery from "../../public/json/galeryHome.json";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import CardBoard from "@/components/Headboard/CardBoard";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
 
