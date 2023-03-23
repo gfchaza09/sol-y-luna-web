@@ -32,10 +32,15 @@ const Local3 = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Boulevard</title>
+        <title>Sol y Luna Restaurante - Boulevard</title>
         <meta
           name="description"
-          content="Sitio web del restaurant Sol y Luna"
+          content="Ubicado en las afueras de San Cristóbal de las Casas, Sol y Luna Boulevard ofrece un ambiente acogedor y relajado para disfrutar de la auténtica cocina mexicana."
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="RESTAURANTE, COMIDA, MÉXICO, SOL, LUNA, MENÚ, COMER, BOULEVARD, COCINA, MEXICANA, AUTÉNTICA, PLATOS, INGREDIENTES, TRADICIONALES, FRESCOS, CALIDAD, ALTA, FAVORITOS, ZONA"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

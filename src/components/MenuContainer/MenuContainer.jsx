@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Typography } from "@mui/material";
+import { Container, Skeleton, Typography } from "@mui/material";
 import SwitchButton from "../SwitchButton/SwitchButton";
 import { Document, Page, pdfjs } from "react-pdf";
 
@@ -70,7 +70,7 @@ const MenuContainer = () => {
           }}
         >
           Variamos nuestros servicios y comidas dependiendo del público de
-          nuestras sucursales. Actualmente contamos con 2 menús
+          nuestras sucursales. Actualmente contamos con 2 menús.
         </Typography>
         <Typography
           sx={{
@@ -149,6 +149,7 @@ const MenuContainer = () => {
           <Document
             file={`/assets/pdf/${menuLocation}/${menuSection}-${width >= 640 ? "desktop" : "mobile"}.pdf`}
             onLoadSuccess={onDocumentLoadSuccess}
+            loading={<Skeleton variant="rounded" width="100%" height={width >= 640 ? "700px" :"600px"} animation="wave"/>}        
           >
             <Page pageNumber={pageNumber} renderTextLayer={false} width={width < 420 ? 360 : width < 640 ? 400 : 700}/>
           </Document>
