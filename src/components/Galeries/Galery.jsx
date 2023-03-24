@@ -1,11 +1,22 @@
+import { useWindowWidth } from "@/hooks/useWindowWidth";
+import { Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import ButtonComponent from "../Button/ButtonComponent";
 import Styles from "./Galery.module.css";
 
 const Galery = ({ data }) => {
+  
+  const [width, setWidth] = useWindowWidth();
   return (
-    <>
+    <section className={Styles.section}>
+      <Typography component="h2" variant={width > 768 ? "h2" :  width > 480 ? "h3" : "h5"} sx={{
+          marginLeft: { mobile: "0px", tablet2: "50px" },
+          marginBottom: { mobile: "40px", tablet: "70px" },
+          textAlign: { mobile: "center", tablet2: "left" },
+        }}>
+        NUESTROS PLATILLOS
+      </Typography>
       <div className={Styles.galery_container}>
         <Image
           className={`${Styles.galery_img} ${Styles.galery_img1}`}
@@ -40,7 +51,7 @@ const Galery = ({ data }) => {
         />
       </div>
       <ButtonComponent href="/menu">Ver menú</ButtonComponent>
-    </>
+    </section>
   );
 };
 
