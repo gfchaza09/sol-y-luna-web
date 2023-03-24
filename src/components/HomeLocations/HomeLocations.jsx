@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ButtonBase, Container, Typography } from "@mui/material";
 import ButtonComponent from "../Button/ButtonComponent";
 import LocalCard from "../Cards/LocalCard/LocalCard";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const locations = [
   {
@@ -262,6 +263,8 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
 export const HomeLocationsMobile = ({selectedTheme}) => {
   const [localActive, setLocalActive] = useState("alcanfores");
 
+  const [width, setWidth] = useWindowWidth();
+
   return (
     <Container
       component="section"
@@ -272,13 +275,13 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
         justifyContent: "center",
         alignItems: "center",
         gap: "50px",
-        marginBottom: "120px",
+        marginBottom: "80px",
       }}
     >
       <Container
         sx={{ padding: "0px", marginBottom: "50px" }}
       >
-        <Typography component="h2" variant="h5" sx={{ marginBottom: "24px", textAlign: "center" }}>
+        <Typography component="h2" variant={width > 768 ? "h2" :  width > 480 ? "h3" : "h5"} sx={{ marginBottom: "24px", textAlign: "center" }}>
           UBICACIONES
         </Typography>
         <Typography sx={{fontSize: 16, fontWeight: 400, lineHeight: "20px"}}>

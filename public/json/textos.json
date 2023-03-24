@@ -4,13 +4,13 @@
     "descripcion": "Sol y Luna ofrece varios servicios que nos ayudan a adaptarnos a nuestros clientes. Algunos de ellos se encuentran disponibles en todas nuestras sucursales, mientras que otros solo se pueden encontrar en la sucursal de Alcanfores."
   },
   "menu": {
-    "titulo": "MENU DEL DIA",
-    "descripcion": "Nuestras sucursales cuentan con promociones para que disfrutes cada dia de la semana.Estas promos incluyen entrada, plato fuerte, bebida (agua) y postre del dia. Tambien cuentan con opciones de upgrade para personalizarlo. Las propuestas van cambiando cada 15 dias. ",
-    "txtBoton":"Consultar promos vigentes"
+    "titulo": "MENÚ DEL DIA",
+    "descripcion": "Nuestras sucursales cuentan con promociones para que disfrutes cada dia de la semana.Estas promos incluyen entrada, plato fuerte, bebida (agua) y postre del día. Tambien cuentan con opciones de upgrade para personalizarlo. Las propuestas van cambiando cada 15 días. ",
+    "txtBoton": "Consultar promos vigentes"
   },
   "sobreNosotros": {
     "titulo": "SOBRE NOSOTROS",
     "descripcion": "Creemos que la hora de la comida es sagrada, ya que es cuando nutres lo más importante que tienes: a ti mismo. Además, nutres el alma cuando compartes estos alimentos con tus seres queridos.Es por ello que en Sol y Luna restaurante buscamos crear un ambiente cómodo para ti, tu familia y amigos, además de crear alimentos con un increíble sabor y mucha variedad.Contamos no sólo con una cocina de alimentos salados, sino también con un área de repostería, para poder brindarte pan fresco y postres deliciosos, asegurándonos que están hechos con la mejor calidad.",
-    "txtBoton":"Mas sobre nosotros"
+    "txtBoton": "Más sobre nosotros"
   }
 }
