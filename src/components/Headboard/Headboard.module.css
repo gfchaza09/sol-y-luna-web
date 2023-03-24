@@ -1,3 +1,8 @@
+.section {
+    max-width: 1640px;
+    margin: 0px auto;
+}
+
 .container{
     width: 100vw;
     max-width: 100%;
@@ -34,6 +39,8 @@
 .img{
     min-width: 200px;
     width: 100%;
+    min-height: 300px;
+    max-height: 480px;
     height: auto;
     border-radius: 10px;
 }
@@ -50,7 +57,14 @@
     }
     .text{
         justify-content: center;
-        align-items: center;
+    }
+
+    .picture {
+        margin: 0px auto;
+    }
+
+    .img {
+        max-width: 480px;
     }
 }
 

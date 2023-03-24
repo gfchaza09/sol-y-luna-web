@@ -8,7 +8,6 @@ import Headboard from "@/components/Headboard/Headboard";
 import data from "../../public/json/textos.json";
 import galery from "../../public/json/galeryHome.json";
 import { Box } from "@mui/system";
-import { Typography } from "@mui/material";
 import Galery from "@/components/Galeries/Galery";
 import HomeServices from "@/components/HomeServices/HomeServices";
 
@@ -47,12 +46,7 @@ const Home = ({ selectedTheme, toggleTheme }) => {
         />
         <Headboard data={data} />
         <HomeServices />
-        <Box>
-          <Typography variant="h2" m="0 50px">
-            NUESTROS PLATILLOS
-          </Typography>
-          <Galery data={galery} />
-        </Box>
+        <Galery data={galery} />
         {width > 820 ? (
           <HomeLocationsDesktop selectedTheme={selectedTheme} />
         ) : (
