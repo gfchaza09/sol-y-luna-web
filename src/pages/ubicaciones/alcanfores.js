@@ -33,10 +33,15 @@ const Local1 = ({ selectedTheme, toggleTheme }) => {
   return (
     <>
       <Head>
-        <title>Sol y Luna - Alcanfores</title>
+        <title>Sol y Luna Restaurante - Alcanfores</title>
         <meta
           name="description"
-          content="Sitio web del restaurant Sol y Luna"
+          content="La casa matriz de Sol y Luna en Alcanfores es un lugar elegante y sofisticado que combina elementos tradicionales mexicanos con un toque moderno."
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="RESTAURANTE, COMIDA, MÉXICO, SOL, LUNA, MENÚ, COMER, ALCANFORES, TRADICIÓN, AMABLE, PROFESIONAL, CLIENTE, EXPERIENCIA, CENAS, EVENTOS, CELEBRACIÓN, ESPECIAL"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

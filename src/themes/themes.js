@@ -7,6 +7,7 @@ export const darkTheme = createTheme({
       mobile: 0,
       mobile2: 420,
       tablet: 640,
+      tablet1: 768,
       tablet2: 820,
       tablet3: 950,
       laptop: 1024,
@@ -236,6 +237,10 @@ export const darkTheme = createTheme({
             fontWeight: 500,
             fontSize: 16,
             lineHeight: "20px",
+            transition: "all .2s linear",
+            ":hover": {
+              backgroundColor: "#F1DA9E22",
+            },
           },
         },
         {
@@ -296,6 +301,7 @@ export const lightTheme = createTheme({
       mobile: 0,
       mobile2: 420,
       tablet: 640,
+      tablet1: 768,
       tablet2: 820,
       tablet3: 950,
       laptop: 1024,
@@ -515,6 +521,10 @@ export const lightTheme = createTheme({
             fontWeight: 500,
             fontSize: 16,
             lineHeight: "20px",
+            transition: "all .2s linear",
+            ":hover": {
+              backgroundColor: "#6B728033",
+            },
           },
         },
         {

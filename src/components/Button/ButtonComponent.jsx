@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import classes from "./ButtonComponent.module.css";
 
-const { btn__link, btn__carrousel, onClick } = classes;
+const { btn__link, btn__carrousel } = classes;
 
 const ButtonComponent = ({ children, href, icon, target, onClick }) => {
   return icon ? (
@@ -23,6 +23,7 @@ const ButtonComponent = ({ children, href, icon, target, onClick }) => {
       sx={{
         maxWidth: "227px",
         width: "100%",
+        margin: "0px auto",
         height: "48px",
         display: "flex",
         justifyContent: "center",

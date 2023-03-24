@@ -12,8 +12,7 @@ const MapboxMap = ({ selectedTheme, longLat, linkLocation }) => {
 
     const mapboxMap = new mapboxgl.Map({
       container: node,
-      accessToken:
-        "pk.eyJ1IjoiZ2ZjaGF6YTA5IiwiYSI6ImNsZjIxaXI5ZDAzMzkzeG1veDZsNTMzbG8ifQ.JFi25asPOPU568PgXB6tZw",
+      accessToken: process.env.NEXT_PUBLIC_MAPBOX_TOKEN,
       style: `${
         selectedTheme === "light"
           ? "mapbox://styles/mapbox/light-v11"

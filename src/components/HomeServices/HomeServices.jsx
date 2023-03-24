@@ -20,15 +20,15 @@ const HomeServices = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        gap: "50px",
+        gap: {mobile: "20px", tablet: "40px"},
         maxWidth: "1640px",
         marginBottom: {mobile: "120px", tablet: "200px"},
       }}
     >
       <Container
-        sx={{ padding: "0px", marginBottom: {mobile: "24px",tablet: "50px"} }}
+        sx={{ padding: {mobile: "0px",tablet: "0px 20px"}, marginBottom: {mobile: "24px",tablet: "50px"} }}
       >
-        <Typography component="h2" variant={width > 640 ? "h2" : "h5"} sx={{ marginBottom: "24px", textAlign: {mobile: "center", tablet:"left"} }}>
+        <Typography component="h2" variant={width > 768 ? "h2" :  width > 480 ? "h3" : "h5"} sx={{ marginBottom: "24px", textAlign: {mobile: "center", tablet:"left"} }}>
           ¿QUÉ OFRECEMOS?
         </Typography>
       </Container>
@@ -40,7 +40,7 @@ const HomeServices = () => {
             justifyContent: "space-around",
             alignItems: "center",
             position: "relative",
-            gap: "30px"
+            gap: {mobile: "20px",tablet: "30px"}
           }}
         >
           <Container
@@ -49,7 +49,7 @@ const HomeServices = () => {
               position: "absolute",
               top: {mobile: "22px",tablet:"26px"},
               left: {mobile: "29px", tablet: "43px"},
-              height: {mobile: `${serviceActive === "delivery" ? "27%" :"92%"}`, mobile2: `${serviceActive === "delivery" ? "29%" :"92%"}`, tablet: `${serviceActive === "delivery" ? "41%" :"90%"}`},
+              height: {mobile: `${serviceActive === "delivery" ? "23%" :"93%"}`, mobile2: `${serviceActive === "delivery" ? "25%" :"93%"}`, tablet: `${serviceActive === "delivery" ? "41%" :"90%"}`},
               width: "2px",
               border: "2px solid",
               borderColor: "primary.border",

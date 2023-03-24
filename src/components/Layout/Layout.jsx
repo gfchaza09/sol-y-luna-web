@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
 import WhatsappButton from "../WhatsappButton/WhatsappButton";

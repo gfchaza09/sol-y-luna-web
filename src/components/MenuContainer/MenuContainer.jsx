@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Typography } from "@mui/material";
+import { Container, Skeleton, Typography } from "@mui/material";
 import SwitchButton from "../SwitchButton/SwitchButton";
 import { Document, Page, pdfjs } from "react-pdf";
 
@@ -37,7 +37,6 @@ const MenuContainer = () => {
   const [width, setWidth] = useWindowWidth();
   
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
@@ -70,7 +69,7 @@ const MenuContainer = () => {
           }}
         >
           Variamos nuestros servicios y comidas dependiendo del público de
-          nuestras sucursales. Actualmente contamos con 2 menús
+          nuestras sucursales. Actualmente contamos con 2 menús.
         </Typography>
         <Typography
           sx={{
@@ -149,8 +148,14 @@ const MenuContainer = () => {
           <Document
             file={`/assets/pdf/${menuLocation}/${menuSection}-${width >= 640 ? "desktop" : "mobile"}.pdf`}
             onLoadSuccess={onDocumentLoadSuccess}
+            loading={<Skeleton variant="rounded" width="100%" height={width >= 640 ? "700px" :"600px"} animation="wave"/>}        
           >
-            <Page pageNumber={pageNumber} renderTextLayer={false} width={width < 420 ? 360 : width < 640 ? 400 : 700}/>
+            {
+              Array.apply(null, Array(numPages))
+                .map((x, i)=>i+1)
+                .map((page, index) => <Page key={index} pageNumber={page} renderTextLayer={false} width={width < 420 ? 360 : width < 640 ? 400 : 700}/>)
+            }
+            
           </Document>
         </Container>
       </Container>
