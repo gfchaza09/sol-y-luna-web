@@ -21,8 +21,11 @@ const Headboard = ({ data }) => {
           <Image className={Styles.img} src={fotoMenu} alt="foto-menu" />
         </div>
         <div className={Styles.text}>
-          <Typography component="h2" variant="h2" sx={{display: {mobile: "none", tablet1: "block"}}}>{data?.menu?.titulo}</Typography>
-          <p>{data?.menu?.descripcion}</p>
+          <Typography component="h2" variant="h2" sx={{display: {mobile: "none", tablet1: "block"},textAlign:"left"}}>{data?.menu?.titulo}</Typography>
+          <p>{data?.menu?.primerParrafo}</p>
+          <p>{data?.menu?.segundoParrafo}</p>
+          <p>{data?.menu?.tercerParrafo}</p>
+          <p>{data?.menu?.cuartoParrafo}</p>
 
           <ButtonComponent href="/menu">
             {data?.menu?.txtBoton}
@@ -37,8 +40,10 @@ const Headboard = ({ data }) => {
           <Image className={Styles.img} src={fotoAbout} alt="foto-menu" />
         </div>
         <div className={Styles.text}>
-          <Typography component="h2" variant="h2" sx={{display: {mobile: "none", tablet1: "block"}}}>{data?.sobreNosotros?.titulo}</Typography>
-          <p>{data?.sobreNosotros?.descripcion}</p>
+          <Typography component="h2" variant="h2" sx={{display: {mobile: "none", tablet1: "block"},textAlign:"left"}}>{data?.sobreNosotros?.titulo}</Typography>
+          <p>{data?.sobreNosotros?.primerParrafo}</p>
+          <p>{data?.sobreNosotros?.segundoParrafo}</p>
+          <p>{data?.sobreNosotros?.tercerParrafo}</p>
 
           <ButtonComponent href="/nosotros">
             {data?.sobreNosotros?.txtBoton}
