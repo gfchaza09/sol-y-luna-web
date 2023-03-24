@@ -46,6 +46,7 @@ export const HomeLocationsDesktop = ({ selectedTheme }) => {
         gap: "50px",
         maxWidth: "1640px",
         marginBottom: "200px",
+        marginTop: {tablet2: "140px", desktop: "180px"}
       }}
     >
       <Container
@@ -276,6 +277,7 @@ export const HomeLocationsMobile = ({selectedTheme}) => {
         alignItems: "center",
         gap: "50px",
         marginBottom: "80px",
+        marginTop: {mobile: "80px", tablet: "100px", tablet2: "120px"}
       }}
     >
       <Container
