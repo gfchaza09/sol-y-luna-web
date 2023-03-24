@@ -33,9 +33,8 @@ const buttons = [
 ];
 
 const MenuContainer = () => {
-  
   const [width, setWidth] = useWindowWidth();
-  
+
   const [numPages, setNumPages] = useState(null);
 
   const onDocumentLoadSuccess = ({ numPages }) => {
@@ -58,11 +57,16 @@ const MenuContainer = () => {
         },
       }}
     >
-      <Container sx={{ padding: "0px", marginBottom: {mobile: "70px",tablet: "156px"} }}>
+      <Container
+        sx={{
+          padding: "0px",
+          marginBottom: { mobile: "70px", tablet: "156px" },
+        }}
+      >
         <Typography
           sx={{
             fontWeight: 500,
-            fontSize: {mobile: 17, tablet: 18},
+            fontSize: { mobile: 17, tablet: 18 },
             lineHeight: "25px",
             marginBottom: "24px",
             textAlign: "center",
@@ -74,7 +78,7 @@ const MenuContainer = () => {
         <Typography
           sx={{
             fontWeight: 500,
-            fontSize: {mobile: 17, tablet: 18},
+            fontSize: { mobile: 17, tablet: 18 },
             lineHeight: "25px",
             marginBottom: "80px",
             textAlign: "center",
@@ -98,27 +102,49 @@ const MenuContainer = () => {
           maxWidth: "1640px",
         }}
       >
-        <Container sx={{ padding: "0px", width: {mobile: "100%",mobile2: "300px",tablet: "80%",tablet3: "0%"} }}>
+        <Container
+          sx={{
+            padding: "0px",
+            width: {
+              mobile: "100%",
+              mobile2: "300px",
+              tablet: "80%",
+              tablet3: "0%",
+            },
+          }}
+        >
           <Container
             sx={{
               padding: "0px",
               position: "relative",
-              width: {mobile: "240px",mobile2: "270px",tablet: "420px",tablet2: "560px",tablet3: "0px"},
-              height: {mobile: "0px",tablet3: "500px"},
+              width: {
+                mobile: "240px",
+                mobile2: "270px",
+                tablet: "420px",
+                tablet2: "560px",
+                tablet3: "0px",
+              },
+              height: { mobile: "0px", tablet3: "500px" },
               border: "1.5px solid",
               borderColor: "primary.border",
             }}
           >
             <Container
               sx={{
-                height: {mobile: "0px", tablet3: "540px"},
-                width: {mobile: "320px",mobile2: "360px",tablet: "550px" , tablet2: "700px", tablet3:"0px"},
+                height: { mobile: "0px", tablet3: "540px" },
+                width: {
+                  mobile: "320px",
+                  mobile2: "360px",
+                  tablet: "550px",
+                  tablet2: "700px",
+                  tablet3: "0px",
+                },
                 display: "flex",
-                flexDirection:{ mobile: "row", tablet3: "column"},
+                flexDirection: { mobile: "row", tablet3: "column" },
                 justifyContent: "space-between",
-                position: {mobile: "absolute", tablet3: "static"},
-                top: {mobile: "-15px",tablet:"-30px"},
-                left: "-30px"
+                position: { mobile: "absolute", tablet3: "static" },
+                top: { mobile: "-15px", tablet: "-30px" },
+                left: "-30px",
               }}
             >
               {buttons.map((button, index) => (
@@ -139,23 +165,56 @@ const MenuContainer = () => {
             borderRadius: "12px",
             overflow: "hidden",
             overflowY: "scroll",
-            maxHeight:{mobile: "600px", tablet: "700px", tablet3: "800px"},
-            minWidth: {mobile: "300px", mobile2: "360px", tablet: "600px",tablet2: "700px"},
-            maxWidth: {mobile: "300px",tablet: "700px"},
-            width: {mobile: "100%",tablet3: "60%"},
+            maxHeight: { mobile: "600px", tablet: "700px", tablet3: "800px" },
+            minWidth: {
+              mobile: "300px",
+              mobile2: "360px",
+              tablet: "600px",
+              tablet2: "700px",
+            },
+            maxWidth: { mobile: "300px", tablet: "700px" },
+            width: { mobile: "100%", tablet3: "60%" },
           }}
         >
           <Document
-            file={`/assets/pdf/${menuLocation}/${menuSection}-${width >= 640 ? "desktop" : "mobile"}.pdf`}
+            file={`/assets/pdf/${menuLocation}/${menuSection}-${
+              width >= 640 ? "desktop" : "mobile"
+            }asd.pdf`}
             onLoadSuccess={onDocumentLoadSuccess}
-            loading={<Skeleton variant="rounded" width="100%" height={width >= 640 ? "700px" :"600px"} animation="wave"/>}        
-          >
-            {
-              Array.apply(null, Array(numPages))
-                .map((x, i)=>i+1)
-                .map((page, index) => <Page key={index} pageNumber={page} renderTextLayer={false} width={width < 420 ? 360 : width < 640 ? 400 : 700}/>)
+            loading={
+              <Skeleton
+                variant="rounded"
+                width="100%"
+                height={width >= 640 ? "700px" : "600px"}
+                animation="wave"
+              />
             }
-            
+            error={
+              <Container sx={{ padding: "0px", height: {mobile: "600px", tablet: "700px"}, display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <Typography sx={{textAlign: "center"}}>
+                  Error al cargar el archivo. Intenta de nuevo.
+                </Typography>
+              </Container>
+            }
+          >
+            {Array.apply(null, Array(numPages))
+              .map((x, i) => i + 1)
+              .map((page, index) => (
+                <Page
+                  key={index}
+                  pageNumber={page}
+                  renderTextLayer={false}
+                  width={width < 420 ? 360 : width < 640 ? 400 : 700}
+                  loading={
+                    <Skeleton
+                      variant="rounded"
+                      width="100%"
+                      height={width >= 640 ? "700px" : "600px"}
+                      animation="wave"
+                    />
+                  }
+                />
+              ))}
           </Document>
         </Container>
       </Container>
