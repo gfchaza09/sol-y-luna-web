@@ -23,6 +23,7 @@ const ButtonComponent = ({ children, href, icon, target, onClick }) => {
       sx={{
         maxWidth: "227px",
         width: "100%",
+        margin: "0px auto",
         height: "48px",
         display: "flex",
         justifyContent: "center",

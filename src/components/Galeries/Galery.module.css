@@ -3,6 +3,7 @@
   margin: 80px 0px 60px 0px;
   padding: 0 50px;
   width: 100vw;
+  max-width: 100%;
   height:auto;
   display: grid;
   grid-template-rows: repeat(2, 300px);

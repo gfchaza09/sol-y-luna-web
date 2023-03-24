@@ -42,12 +42,24 @@
 @media (max-width: 768px){
     .container{
         flex-direction: column;
+        margin: 60px 0;
     }
     .containerReverse{
-        flex-direction:column;   
+        flex-direction:column;
+        margin: 80px 0;
     }
     .text{
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .container{
+        margin: 40px 0;
+    }
+
+    .containerReverse {
+        margin: 60px 0;
     }
 }
