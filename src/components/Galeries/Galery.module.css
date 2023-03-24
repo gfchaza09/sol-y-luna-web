@@ -1,3 +1,8 @@
+.section {
+  max-width: 1640px;
+  margin: 0px auto;
+}
+
 .galery_container {
   margin: 80px 0px 60px 0px;
   padding: 0 50px;
@@ -16,12 +21,7 @@
   width: 100%;
   height: 100%;
   object-fit:cover;
-  opacity: 0.7;
   border-radius: 10px;
-}
-
-.galery_img:hover {
-  opacity: 1;
 }
 
 .galery_img1{
@@ -29,7 +29,6 @@
   width: 100%;
   height: 100%;
   object-fit:cover;
-  opacity: 0.7;
   border-radius: 10px;
 }
 .galery_img2{
@@ -37,7 +36,6 @@
   width: 100%;
   height: 100%;
   object-fit:cover;
-  opacity: 0.7;
   border-radius: 10px;
 }
 .galery_img3{
@@ -45,7 +43,6 @@
   width: 100%;
   height: 100%;
   object-fit:cover;
-  opacity: 0.7;
   border-radius: 10px;
 }
 .galery_img4{
@@ -53,7 +50,6 @@
   width: 100%;
   height: 100%;
   object-fit:cover;
-  opacity: 0.7;
   border-radius: 10px;
 }
 

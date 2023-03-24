@@ -6,6 +6,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import MenuButton from "../MenuButton/MenuButton";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
+import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
@@ -179,7 +180,7 @@ const MenuContainer = () => {
           <Document
             file={`/assets/pdf/${menuLocation}/${menuSection}-${
               width >= 640 ? "desktop" : "mobile"
-            }asd.pdf`}
+            }.pdf`}
             onLoadSuccess={onDocumentLoadSuccess}
             loading={
               <Skeleton
@@ -190,7 +191,8 @@ const MenuContainer = () => {
               />
             }
             error={
-              <Container sx={{ padding: "0px", height: {mobile: "600px", tablet: "700px"}, display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <Container sx={{ padding: "0px", height: {mobile: "600px", tablet: "700px"}, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "20px" }}>
+                <ExclamationCircleIcon width={40} height={40} color="#E91D1D"/>
                 <Typography sx={{textAlign: "center"}}>
                   Error al cargar el archivo. Intenta de nuevo.
                 </Typography>
