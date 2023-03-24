@@ -8,49 +8,38 @@ const Galery = ({ data }) => {
     <>
       <div className={Styles.galery_container}>
         <Image
-          className={`${Styles.img1} ${Styles.img}`}
+          className={`${Styles.galery_img} ${Styles.galery_img1}`}
           src={data?.[0]?.img}
-          alt="picture1"
+          alt="pic1"
           width={3183}
           height={4805}
         />
 
         <Image
-          className={`${Styles.img2} ${Styles.img}`}
+          className={`${Styles.galery_img} ${Styles.galery_img2}`}
           src={data?.[1]?.img}
-          alt="picture2"
+          alt="pic2"
           width={4501}
           height={2981}
         />
 
         <Image
-          className={`${Styles.img3} ${Styles.img}`}
+          className={`${Styles.galery_img} ${Styles.galery_img3}`}
           src={data?.[2]?.img}
-          alt="picture3"
+          alt="pic3"
           width={4694}
           height={3109}
         />
 
         <Image
-          className={`${Styles.img4} ${Styles.img}`}
+          className={`${Styles.galery_img} ${Styles.galery_img4}`}
           src={data?.[3]?.img}
-          alt="picture4"
+          alt="pic4"
           width={4730}
           height={3133}
         />
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          marginBottom: "40px",
-        }}
-      >
-        <ButtonComponent href="/servicios">
-          Ver menú
-        </ButtonComponent>
-      </div>
+      <ButtonComponent href="/menu">Ver menú</ButtonComponent>
     </>
   );
 };
