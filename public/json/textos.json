@@ -5,17 +5,17 @@
   },
   "menu": {
     "titulo": "MENÚ DEL DIA",
-    "primerParrafo": "Nuestras sucursales cuentan con promociones para que disfrutes cada dia de la semana. ",
-    "segundoParrafo":"¿Lo mejor de todo?",
-    "tercerParrafo": "Estas promos incluyen entrada, plato fuerte, bebida (agua) y postre del día.Tambien cuentan con opciones de upgrade para personalizarlo." ,
-    "cuartoParrafo": "Las propuestas van cambiando cada 15 días. " ,
+    "primerParrafo": "Nuestras sucursales cuentan con promociones para que disfrutes cada día de la semana. ",
+    "segundoParrafo": "¿Lo mejor de todo?",
+    "tercerParrafo": "Estas promos incluyen entrada, plato fuerte, bebida (agua) y postre del día. También cuentan con opciones de upgrade para personalizarlo.",
+    "cuartoParrafo": "Las propuestas van cambiando cada 15 días. ",
     "txtBoton": "Consultar promos vigentes"
   },
   "sobreNosotros": {
     "titulo": "SOBRE NOSOTROS",
     "primerParrafo": "Creemos que la hora de la comida es sagrada, ya que es cuando nutres lo más importante que tienes: a ti mismo. Además, nutres el alma cuando compartes estos alimentos con tus seres queridos.",
-    "segundoParrafo":"Es por ello que en Sol y Luna restaurante buscamos crear un ambiente cómodo para ti, tu familia y amigos, además de crear alimentos con un increíble sabor y mucha variedad.",
-    "tercerParrafo":"Contamos no sólo con una cocina de alimentos salados, sino también con un área de repostería, para poder brindarte pan fresco y postres deliciosos, asegurándonos que están hechos con la mejor calidad.",
+    "segundoParrafo": "Es por ello que en Sol y Luna restaurante buscamos crear un ambiente cómodo para ti, tu familia y amigos, además de crear alimentos con un increíble sabor y mucha variedad.",
+    "tercerParrafo": "Contamos no sólo con una cocina de alimentos salados, sino también con un área de repostería, para poder brindarte pan fresco y postres deliciosos, asegurándonos que están hechos con la mejor calidad.",
     "txtBoton": "Más sobre nosotros"
   }
 }
