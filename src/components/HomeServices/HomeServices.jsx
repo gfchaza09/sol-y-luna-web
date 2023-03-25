@@ -282,7 +282,7 @@ const HomeServices = () => {
               onClick={() => setServiceActive("delivery")}
               sx={{ cursor: "pointer" }}
             >
-              Delivery y take away
+              Comida para llevar
             </Typography>
           </Container>
           <Container sx={{paddingLeft: "30px", paddingRight: "0px"}}>

@@ -5,10 +5,10 @@
   },
   "menu": {
     "titulo": "MENÚ DEL DIA",
-    "primerParrafo": "Nuestras sucursales cuentan con promociones para que disfrutes cada día de la semana. ",
-    "segundoParrafo": "¿Lo mejor de todo?",
-    "tercerParrafo": "Estas promos incluyen entrada, plato fuerte, bebida (agua) y postre del día. También cuentan con opciones de upgrade para personalizarlo.",
-    "cuartoParrafo": "Las propuestas van cambiando cada 15 días. ",
+    "primerParrafo": "El restaurante Sol y Luna ofrece una amplia selección de platos deliciosos para su menú del día.",
+    "segundoParrafo": "Nuestro menú del día está cuidadosamente elaborado por nuestros chefs y cambia diariamente, garantizando una experiencia culinaria única cada vez que lo disfrute.",
+    "tercerParrafo": "Además, también ofrecemos opciones de menú infantil para los más pequeños, por lo que toda la familia puede disfrutar de una deliciosa comida en nuestro restaurante.",
+    "cuartoParrafo": "¡Visítenos y pruebe nuestro menú del día!",
     "txtBoton": "Consultar promos vigentes"
   },
   "sobreNosotros": {

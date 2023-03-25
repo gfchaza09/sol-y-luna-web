@@ -5,7 +5,7 @@
       "nombre": "Arturo",
       "sucursal": "Sucursal Alcanfores",
       "cargo": "Mesero",
-      "descripcion": "Arturo es un profesional dedicado y comprometido con su trabajo, siempre atento a las necesidades de nuestros comensales y dispuesto a colaborar para asegurarse de que cada cliente tenga una experiencia excepcional. Su atención al detalle y su habilidad para anticiparse a las necesidades de los clientes hacen que Arturo sea un miembro invaluable de nuestro equipo",
+      "descripcion": "Arturo es un profesional comprometido y atento a las necesidades de los comensales. Colabora para asegurar una experiencia excepcional y es invaluable gracias a su atención al detalle y habilidad para anticiparse a las necesidades de los clientes.",
       "img": "/assets/images/employees/arturo.jpg"
     },
     {
@@ -21,7 +21,7 @@
       "nombre": "Esperanza",
       "sucursal": "Sucursal Alcanfores",
       "cargo": "Lider",
-      "descripcion": "Esperanza es una profesional atenta, amable y comprometida con su trabajo, siempre enfocada en que todas las sucursales de Sol y Luna funcionen de manera impecable. Su habilidad para anticiparse a las necesidades del equipo y su disposición a colaborar hacen que Esperanza sea una líder en nuestro equipo.",
+      "descripcion": "Esperanza es una profesional amable y comprometida, enfocada en el impecable funcionamiento de las sucursales de Sol y Luna. Su habilidad para anticiparse a las necesidades del equipo y disposición para colaborar la convierten en una líder invaluable.",
       "img": "/assets/images/employees/esperanza.jpg"
     },
     {
@@ -89,13 +89,13 @@
       "imagen": "/assets/images/galeries/galeria-alcanfores-4-min.jpg"
     },
     {
-      "servicio": "Delivery",
+      "servicio": "Entrega a domicilio",
       "descripcion1": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.",
       "detalle": "Disponible en todas las sucursales",
       "imagen": "/assets/images/delivery.jpg"
     },
     {
-      "servicio": "Take Away",
+      "servicio": "Comida para llevar",
       "descripcion1": "Sabemos lo valioso que es tu tiempo, por eso es que intentamos estar listos para brindar el servicio más rápido con nuestra comida para llevar.",
       "detalle": "Disponible en todas las sucursales.",
       "imagen": "/assets/images/galeries/galeria-centro-3-min.jpg"
@@ -130,8 +130,9 @@
       "imagen": "/assets/images/galeries/galeria-alcanfores-4-min.jpg"
     },
     {
-      "servicio": "Delivery y Take Away",
+      "servicio": "Comida para llevar",
       "descripcion1": "Nos adaptamos a nuestros diferentes clientes, incluso a los que no tienen tiempo de sentarse y disfrutar de una buena comida. Es por eso que nosotros llevamos la buena comida a ellos.",
+      "descripcion2": "Puedes recogerla o la llevamos hasta donde estés.",
       "detalle": "Disponible en todas las sucursales",
       "imagen": "/assets/images/delivery.jpg"
     }
