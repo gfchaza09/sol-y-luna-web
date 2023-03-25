@@ -65,7 +65,7 @@ const ModalComponent = ({open, handleClose, selectedTheme}) => {
                 <Link href={`https://api.whatsapp.com/send?phone=${item.tel}&text=Hola ${item.name}!%20Quisiera%20realizar%20un%20pedido`} target="_blank" sx={{display:'flex', flexDirection: 'column', textTransform: 'none'}}>
                   <Container variant="backgroundAccordionHover" sx={{display:'flex', flexDirection: 'column', textTransform: 'none', width: '100%', padding: "15px 10px", borderRadius:"6px"}}>
                     <Typography className="body2" variant="modalWhatsappColor">Realizar pedido</Typography>
-                    <Typography sx={{fontSize:12, lineHeight: '18px', fontWeight: 500}}>Hacer un pedido para delivery o take out en la sucursal</Typography>
+                    <Typography sx={{fontSize:12, lineHeight: '18px', fontWeight: 500}}>Hacer un pedido para comida a domicilio</Typography>
                   </Container>
                 </Link>
               </AccordionDetails>
