@@ -43,7 +43,12 @@ const About = ({ selectedTheme, toggleTheme }) => {
         <Container
           component="section"
           sx={{
-            padding: { mobile: "0px 20px", tablet2: "140px 80px" },
+            padding: {
+              mobile: "0px 20px",
+              tablet: "30px 20px 0px",
+              tablet2: "80px 80px",
+              tablet3: "140px 80px",
+            },
             marginBottom: "122px",
             marginTop: { mobile: "0px", tablet2: "10px" },
             maxWidth: "1640px",
@@ -51,12 +56,12 @@ const About = ({ selectedTheme, toggleTheme }) => {
         >
           <Typography
             component="h2"
-            variant={width > 640 ? "h4" : "h5"}
+            variant={width > 768 ? "h2" : width > 640 ? "h3" : "h5"}
             sx={{
               textAlign: "center",
-              marginTop: "50px",
+              marginTop: { mobile: "50px", tablet3: "0px" },
               marginBottom: "24px",
-              display: { mobile: "block", tablet2: "none" },
+              display: { mobile: "block", tablet3: "none" },
             }}
           >
             SOBRE NOSOTROS
@@ -64,7 +69,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
           <Container
             sx={{
               padding: "0px",
-              display: { mobile: "block", tablet2: "flex" },
+              display: { mobile: "block", tablet3: "flex" },
               justifyContent: "center",
               alignItems: "center",
               gap: "95px",
@@ -91,18 +96,18 @@ const About = ({ selectedTheme, toggleTheme }) => {
 
             <Container
               sx={{
-                width: { mobile: "100%", tablet2: "50%" },
+                width: { mobile: "100%", tablet3: "50%" },
                 padding: "0px",
                 display: "flex",
                 flexDirection: "column",
                 gap: "20px",
-                marginTop: { mobile: "24px", tablet2: "0px" },
+                marginTop: { mobile: "24px", tablet3: "0px" },
               }}
             >
               <Typography
                 component="h2"
                 variant="h2"
-                sx={{ display: { mobile: "none", tablet2: "block" } }}
+                sx={{ display: { mobile: "none", tablet3: "block" } }}
               >
                 SOBRE NOSOTROS
               </Typography>
@@ -113,9 +118,9 @@ const About = ({ selectedTheme, toggleTheme }) => {
                   lineHeight: { mobile: "20px", tablet: "25px" },
                 }}
               >
-                Creemos que la hora de la comida es sagrada, ya que es cuando
-                nutres lo más importante que tienes: a ti mismo. Además, nutres
-                el alma cuando compartes estos alimentos con tus seres queridos.
+                Bienvenidos al Restaurante Sol y Luna San Cristóbal, donde la
+                deliciosa comida y el ambiente acogedor se unen para crear una
+                experiencia gastronómica única.
               </Typography>
               <Typography
                 sx={{
@@ -124,9 +129,11 @@ const About = ({ selectedTheme, toggleTheme }) => {
                   lineHeight: { mobile: "20px", tablet: "25px" },
                 }}
               >
-                Es por ello que en Sol y Luna restaurante buscamos crear un
-                ambiente cómodo para ti, tu familia y amigos, además de crear
-                alimentos con un increíble sabor y mucha variedad.
+                Utilizamos ingredientes frescos y de alta calidad para crear
+                sabores auténticos que deleitarán su paladar. Contamos con un
+                equipo de profesionales dedicados para asegurarnos de que cada
+                visita sea memorable, ya sea para una cena romántica, una salida
+                en familia o una reunión de negocios.
               </Typography>
               <Typography
                 sx={{
@@ -135,10 +142,9 @@ const About = ({ selectedTheme, toggleTheme }) => {
                   lineHeight: { mobile: "20px", tablet: "25px" },
                 }}
               >
-                Contamos no sólo con cocina de alimentos salados, sino también
-                con un área de respostería, para poder brindarte pan fresco y
-                postres deliciosos, asegurándonos que están hechos con la mejor
-                calidad.
+                Ofrecemos un ambiente cálido y acogedor que invita a nuestros
+                clientes a relajarse y disfrutar de su comida. Gracias por
+                elegirnos, ¡esperamos servirle pronto en nuestro restaurante!
               </Typography>
             </Container>
           </Container>
@@ -209,7 +215,11 @@ const About = ({ selectedTheme, toggleTheme }) => {
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  marginTop: { mobile: "20px", tablet: "60px" },
+                  marginTop: {
+                    mobile: "20px",
+                    tablet: "30px",
+                    tablet3: "50px",
+                  },
                   padding: { mobile: "0px 30px", tablet2: "0px 100px" },
                 }}
               >

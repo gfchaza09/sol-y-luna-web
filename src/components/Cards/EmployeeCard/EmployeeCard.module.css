@@ -2,7 +2,7 @@
     max-width: 400px;
     min-width: 340px;
     width: 100%;
-    min-height: 600px;
+    min-height: 560px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
 @media screen and (max-width: 640px) {
     .card__container {
         margin: 0px auto;
-        min-height: 613px;
+        min-height: 550px;
     }
 }
 
