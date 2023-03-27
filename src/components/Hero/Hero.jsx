@@ -3,35 +3,12 @@ import Image from "next/image";
 import { ButtonBase, Container, Typography } from "@mui/material";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
-import { useEffect, useState } from "react";
 import {
-  MotionValue,
-  useMotionValue,
-  useTransform,
   motion,
 } from "framer-motion";
 
 const Hero = ({ title, image, subtitle, text, buttonText }) => {
   const [width, setWidth] = useWindowWidth();
-
-  // const [parallaxActivado, setParallaxActivado] = useState(false);
-  // const scrollY = useMotionValue(0);
-
-  // useEffect(() => {
-  //   const actualizarScrollY = () => {
-  //     scrollY.set(window.scrollY);
-  //   };
-  //   window.addEventListener("scroll", actualizarScrollY);
-  //   return () => {
-  //     window.removeEventListener("scroll", actualizarScrollY);
-  //   };
-  // }, [scrollY]);
-
-  // const parallaxPosicion = useTransform(
-  //   scrollY,
-  //   [0, window.innerHeight],
-  //   [0, -window.innerHeight * 0.5]
-  // );
 
     const scrollDown = () => {
       window.scrollTo({
@@ -62,10 +39,6 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
           left: 0,
           filter: "brightness(60%)",
           objectFit: "cover",
-          // transform: parallaxActivado
-          //   ? `translateY(${parallaxPosicion}px)`
-          //   : "none",
-          // transition: "transform 0.2s ease-out",
         }}
         priority={true}
         sizes="100vw"
@@ -135,40 +108,40 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
           </Typography>
         )}
         {buttonText && (
-          <ButtonBase
-            sx={{
-              maxWidth: "190px",
-              width: "100%",
-              height: "48px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "12px",
-              border: "2px solid #FFF",
-              color: "#FFF",
-              fontWeight: 500,
-              fontSize: 16,
-              lineHeight: "20px",
-              marginTop: { mobile: "40px", tablet: "0px" },
-              padding: "20px 12px",
-              transition: "all .2s linear",
-              ":hover": {
-                backgroundColor: "#FFFFFF22",
-              },
-            }}
-          >
-            <Link
-              href="/nosotros"
-              style={{
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                color: "inherit",
-                lineHeight: "inherit",
+          <Link href="/nosotros">
+            <ButtonBase
+              sx={{
+                width: "190px",
+                height: "48px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                borderRadius: "12px",
+                border: "2px solid #FFF",
+                color: "#FFF",
+                fontWeight: 500,
+                fontSize: 16,
+                lineHeight: "20px",
+                marginTop: { mobile: "40px", tablet: "0px" },
+                padding: "20px 12px",
+                transition: "all .2s linear",
+                ":hover": {
+                  backgroundColor: "#FFFFFF22",
+                },
               }}
             >
-              {buttonText}
-            </Link>
-          </ButtonBase>
+              <p
+                style={{
+                  fontSize: "inherit",
+                  fontWeight: "inherit",
+                  color: "inherit",
+                  lineHeight: "inherit",
+                }}
+              >
+                {buttonText}
+              </p>
+            </ButtonBase>
+          </Link>
         )}
       </Container>
       <Container
@@ -189,7 +162,6 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
           aria-label="Scroll"
           aria-labelledby="scroll"
         >
-          {/* {parallaxActivado ? "Desactivar" : "Activar"} */}
           <ChevronDownIcon width={50} height={50} color="#FFFFFF" />
         </motion.button>
       </Container>
