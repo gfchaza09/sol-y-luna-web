@@ -3,12 +3,14 @@ import Image from "next/image";
 import { ButtonBase, Container, Typography } from "@mui/material";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useWindowWidth } from "@/hooks/useWindowWidth";
+import { useWindowHeight } from "@/hooks/useWindowHeight";
 import {
   motion,
 } from "framer-motion";
 
 const Hero = ({ title, image, subtitle, text, buttonText }) => {
   const [width, setWidth] = useWindowWidth();
+  const [height, setHeight] = useWindowHeight();
 
     const scrollDown = () => {
       window.scrollTo({
@@ -107,7 +109,7 @@ const Hero = ({ title, image, subtitle, text, buttonText }) => {
             {text}
           </Typography>
         )}
-        {buttonText && (
+        {buttonText && height > 699 && (
           <Link href="/nosotros">
             <ButtonBase
               sx={{
