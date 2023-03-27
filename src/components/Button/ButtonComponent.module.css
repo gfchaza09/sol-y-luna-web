@@ -8,12 +8,16 @@
 }
 
 .btn__link {
+    width: 100%;
+    padding: 17px 14px;
+    margin: 0px auto;
+}
+
+.btn__text {
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
     color: inherit;
-    width: 100%;
-    padding: 17px 14px;
 }
 
 @media screen and (max-width: 375px) {

@@ -218,7 +218,6 @@ const About = ({ selectedTheme, toggleTheme }) => {
                   marginTop: {
                     mobile: "20px",
                     tablet: "30px",
-                    tablet3: "50px",
                   },
                   padding: { mobile: "0px 30px", tablet2: "0px 100px" },
                 }}
