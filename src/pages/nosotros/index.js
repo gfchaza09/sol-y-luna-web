@@ -215,10 +215,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  marginTop: {
-                    mobile: "20px",
-                    tablet: "30px",
-                  },
+                  marginTop: "20px",
                   padding: { mobile: "0px 30px", tablet2: "0px 100px" },
                 }}
               >
