@@ -155,7 +155,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
         >
           <Typography
             component="h2"
-            variant={width > 820 ? "h2" : width > 640 ? "h4" : "h5"}
+            variant={width > 820 ? "h3" : width > 640 ? "h4" : "h5"}
             sx={{
               paddingLeft: { mobile: "0px", tablet2: "100px" },
               marginBottom: "32px",
@@ -215,7 +215,7 @@ const About = ({ selectedTheme, toggleTheme }) => {
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  marginTop: "20px",
+                  marginTop: "10px",
                   padding: { mobile: "0px 30px", tablet2: "0px 100px" },
                 }}
               >
