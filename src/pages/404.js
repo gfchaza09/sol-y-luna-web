@@ -22,9 +22,9 @@ const NotFoundPage = () => {
         <Typography component="h2" variant="h4" sx={{ textAlign: "center" }}>
           Lo siento, no hay nada para ver aquí
         </Typography>
-        <div>
+        <Container sx={{ padding: "0px", width: "100%" }}>
           <ButtonComponent href="/">Volver al inicio</ButtonComponent>
-        </div>
+        </Container>
       </Container>
     </>
   );
